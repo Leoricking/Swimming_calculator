@@ -1,4 +1,4 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SwimLab v2.0.3</title><style>
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SwimLab v3.0.1</title><style>
 :root{--bg:#06111d;--p:#0d2031;--p2:#0a1927;--t:#eaf6ff;--m:#98b2c8;--c:#51e1ff;--g:#4ed79a;--y:#ffc95c;--r:#ff6b6b;--l:#23425a}*{box-sizing:border-box}body{margin:0;background:linear-gradient(#06111d,#081827);color:var(--t);font-family:Inter,"Microsoft JhengHei",sans-serif}header{position:sticky;top:0;z-index:9;background:#071521eF;border-bottom:1px solid var(--l);backdrop-filter:blur(10px)}.top{max-width:1400px;margin:auto;padding:12px 18px;display:flex;gap:12px;align-items:center}.brand{font-weight:900;font-size:20px}.brand b{color:var(--c)}nav{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}nav button,.tab{border:1px solid var(--l);background:#0b1e2d;color:#afc7d8;border-radius:999px;padding:7px 10px;cursor:pointer}nav button.active,.tab:hover{color:#fff;border-color:#4b9fc1}main{max-width:1400px;margin:auto;padding:24px 18px 80px}.hero,.g2,.g3{display:grid;gap:15px}.hero{grid-template-columns:1.35fr .65fr}.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.card{background:linear-gradient(180deg,#0e2235,#0a1a29);border:1px solid var(--l);border-radius:18px;padding:19px;box-shadow:0 18px 55px #0004}.hero h1{font-size:clamp(34px,5vw,60px);line-height:1.04;margin:6px 0 10px}.hero h1 span{color:var(--c)}p,li{line-height:1.65}.muted{color:var(--m)}.badge,.pill{display:inline-block;border:1px solid #2a5874;background:#0c2940;color:#a9e7f5;border-radius:999px;padding:5px 9px;font-size:12px;margin:3px}.kpis{display:grid;grid-template-columns:1fr 1fr;gap:9px}.kpi{background:#071725;border:1px solid var(--l);border-radius:14px;padding:12px}.kpi small{color:var(--m)}.kpi b{display:block;font-size:28px;margin-top:4px}.sec{display:none}.sec.active{display:block}h2{font-size:29px;margin:0 0 7px}h3{margin:4px 0 11px}.field{display:flex;flex-direction:column;gap:5px;margin-bottom:11px}.field label{font-size:13px;color:#a8c0d2}input,select{width:100%;padding:10px 11px;border-radius:10px;border:1px solid #2a4b63;background:#071826;color:#fff}.btn{border:0;border-radius:10px;padding:10px 13px;font-weight:800;cursor:pointer;background:linear-gradient(90deg,var(--c),#7b9eff);color:#06121b}.btn.s{background:#102b40;color:#d8efff;border:1px solid #2a536e}.btn.g{background:linear-gradient(90deg,#55e09f,#52d8c9)}.result,.call{background:#071725;border:1px solid #29475f;border-radius:13px;padding:14px;margin-top:11px}.call{border-left:4px solid var(--c)}.warn{border-left-color:var(--y)}.danger{border-left-color:var(--r)}.big{font-size:39px;font-weight:900;color:var(--c)}table{width:100%;border-collapse:collapse;font-size:14px}th,td{padding:9px;border-bottom:1px solid var(--l);text-align:left}th{color:#91dff0}.zone{display:grid;grid-template-columns:80px 1fr 120px;gap:9px;padding:10px 0;border-bottom:1px solid var(--l);align-items:center}.bar{height:8px;background:#081724;border-radius:99px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--c),#6f86ff)}.checks{display:grid;grid-template-columns:1fr 1fr;gap:7px}.checks label{display:flex;gap:7px;align-items:center;padding:8px;border:1px solid #1d3a52;border-radius:10px;background:#081a29}.checks input{width:auto}.set{display:grid;grid-template-columns:110px 1fr 95px;gap:10px;background:#081a29;border:1px solid #1d3d55;border-radius:12px;padding:11px;margin:8px 0}.set b{color:#92e9f8}.set em{font-style:normal;color:#95acbf;text-align:right}.drill{background:#081a29;border:1px solid #24465f;border-radius:14px;padding:14px}.drill h4{margin:5px 0}.drill p{color:#adc3d3;margin:6px 0}.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}.accordion details{background:#081a29;border:1px solid #24445c;border-radius:12px;padding:11px 13px;margin:8px 0}.accordion summary{font-weight:800;cursor:pointer}.footer{font-size:12px;color:#6f899e;margin-top:30px}.source{font-size:12px;color:#7892a7}@media(max-width:900px){.hero,.g2,.g3{grid-template-columns:1fr}nav{display:none}.checks{grid-template-columns:1fr}.set{grid-template-columns:90px 1fr}.set em{grid-column:2;text-align:left}.zone{grid-template-columns:65px 1fr}.zone span:last-child{grid-column:2}}
 
 .tagchip{display:inline-block;padding:3px 7px;border-radius:999px;background:#133047;border:1px solid #2a536f;color:#9fe8f5;font-size:11px;margin:2px}
@@ -45,7 +45,276 @@
 .training-row.locked .tagmulti input{pointer-events:none}
 .training-row.editing{outline:1px solid #4de3ff;outline-offset:-1px}
 
-</style></head><body><header><div class="top"><div class="brand">🏊 <b>SwimLab</b> v2.0.3</div><nav id="nav"></nav></div></header><main>
+
+/* v2.1 compact Garmin review UI */
+.tagpicker{min-width:150px;max-width:230px}
+.tagpicker summary{
+  cursor:pointer;list-style:none;border:1px solid #274a63;border-radius:10px;
+  padding:7px 9px;background:#0a2132;color:#bcd7e8;white-space:nowrap
+}
+.tagpicker summary::-webkit-details-marker{display:none}
+.tagpicker[open] summary{border-color:#4de3ff}
+.tagpicker .tagmulti{
+  margin-top:6px;padding:8px;min-width:210px;max-width:250px;max-height:190px;
+  overflow:auto;border:1px solid #274a63;border-radius:10px;background:#071827
+}
+.tagpicker .tagmulti label{display:flex;width:100%;margin:2px 0}
+.training-row td{vertical-align:top}
+.training-row textarea{min-width:150px}
+.import-summary-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:10px}
+.import-summary-grid>div{padding:9px;border:1px solid var(--line);border-radius:10px;background:#071827}
+.group-hint{font-size:12px;color:var(--muted);margin-top:5px}
+@media(max-width:900px){.import-summary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+
+.tag-explain-card{border:1px solid var(--line);background:#081927;border-radius:14px;padding:14px}
+.tag-explain-card h4{margin:0 0 8px;font-size:17px}
+.tag-explain-card p{margin:6px 0;color:#b4cadb;line-height:1.55}
+.tag-explain-card b{color:#9be9f5}
+.tag-explain-card .when{margin-top:8px;padding-top:8px;border-top:1px solid var(--line)}
+
+
+/* ===== v2.3 Training Editor UX ===== */
+#trainingInputTable{
+  border-collapse:separate;
+  border-spacing:0 14px;
+}
+#trainingInputTable thead{display:none}
+#trainingInputTable tbody{
+  display:block;
+}
+#trainingInputTable tr.training-row{
+  display:grid;
+  grid-template-columns: 150px minmax(0,1fr);
+  gap:14px;
+  padding:16px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:#081a29;
+  margin-bottom:14px;
+}
+#trainingInputTable td{
+  border:0!important;
+  padding:0!important;
+  min-width:0;
+}
+#trainingInputTable td.action-col{
+  position:static!important;
+  width:auto!important;
+  min-width:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+#trainingInputTable td:not(.action-col):not(.training-card){
+  display:none;
+}
+#trainingInputTable td.training-card{
+  display:block!important;
+}
+#trainingInputTable .rowno{
+  display:block!important;
+  grid-column:1;
+  font-size:22px;
+  font-weight:800;
+  color:var(--cyan);
+  margin-bottom:8px;
+}
+.row-actions{
+  display:grid!important;
+  grid-template-columns:1fr 1fr;
+  gap:8px!important;
+}
+.row-actions .btn{
+  width:100%;
+  padding:8px 10px!important;
+  font-size:13px!important;
+}
+.training-card{
+  grid-column:2;
+  min-width:0;
+}
+.training-card-top{
+  display:grid;
+  grid-template-columns:110px 80px minmax(220px,1.25fr) 150px 150px 190px;
+  gap:12px;
+  align-items:end;
+}
+.training-card-bottom{
+  display:grid;
+  grid-template-columns:minmax(180px,1fr) minmax(180px,1fr) 110px 160px 140px 140px;
+  gap:12px;
+  margin-top:12px;
+  padding-top:12px;
+  border-top:1px solid var(--line);
+  align-items:end;
+}
+.training-field{
+  min-width:0;
+}
+.training-field label{
+  display:block;
+  font-size:12px;
+  color:var(--muted);
+  margin-bottom:6px;
+  line-height:1.35;
+}
+.training-field input,
+.training-field select,
+.training-field textarea{
+  width:100%;
+  min-width:0!important;
+}
+.training-field textarea{
+  min-height:50px;
+  resize:vertical;
+}
+.training-field .tagpicker{
+  min-width:0!important;
+  max-width:none!important;
+  width:100%;
+}
+.training-field .tagpicker summary{
+  width:100%;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.training-field .tagpicker .tagmulti{
+  min-width:260px;
+  max-width:360px;
+}
+.training-row.locked .training-card{opacity:.88}
+.training-row.editing{outline:1px solid #4de3ff;outline-offset:0}
+
+@media(max-width:1250px){
+  .training-card-top{
+    grid-template-columns:110px 80px minmax(200px,1fr) 140px;
+  }
+  .training-card-top .purpose-field{grid-column:1 / -1}
+  .training-card-bottom{
+    grid-template-columns:1fr 1fr 100px 1fr 1fr;
+  }
+  .training-card-bottom .hr-field{grid-column:auto}
+}
+@media(max-width:900px){
+  #trainingInputTable tr.training-row{
+    grid-template-columns:1fr;
+  }
+  #trainingInputTable .rowno,
+  .training-card{grid-column:1}
+  .row-actions{
+    grid-template-columns:repeat(4,1fr);
+  }
+  .training-card-top,
+  .training-card-bottom{
+    grid-template-columns:1fr 1fr;
+  }
+  .training-card-top .time-field,
+  .training-card-top .purpose-field,
+  .training-card-bottom .equip-field,
+  .training-card-bottom .drill-field{
+    grid-column:1 / -1;
+  }
+}
+@media(max-width:560px){
+  .training-card-top,
+  .training-card-bottom,
+  .row-actions{
+    grid-template-columns:1fr;
+  }
+  #trainingInputTable tr.training-row{padding:12px}
+}
+
+
+/* v3.0.1 visibility fix + clearer card layout */
+#trainingInputTable tr.training-row{
+  grid-template-columns:130px minmax(0,1fr);
+}
+#trainingInputTable td.training-card{
+  grid-column:2;
+  min-width:0;
+}
+#trainingInputTable td.action-col{
+  align-self:start;
+}
+#trainingInputTable .rowno{
+  font-size:18px;
+  margin-bottom:10px;
+}
+@media(max-width:900px){
+  #trainingInputTable td.training-card{
+    grid-column:1;
+  }
+}
+
+
+/* v2.5 completed rows stay readable */
+.training-row.locked input,
+.training-row.locked textarea,
+.training-row.locked select{
+  pointer-events:none;
+  opacity:1!important;
+  color:#dff7ff!important;
+  -webkit-text-fill-color:#dff7ff!important;
+  background:#0a1b29!important;
+  border-color:#23465f!important;
+}
+.training-row.locked .tagpicker{
+  pointer-events:none;
+  opacity:.88;
+}
+.training-row.locked .training-card{
+  opacity:1!important;
+}
+
+
+/* ===== v2.7 Plan vs Actual ===== */
+.plan-match-box{border:1px solid var(--line);background:#081927;border-radius:14px;padding:14px;margin-top:12px}
+.plan-match-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.plan-match-kpi{padding:10px;border:1px solid var(--line);background:#071827;border-radius:11px}
+.plan-match-kpi small{color:var(--muted)}
+.plan-match-kpi strong{display:block;font-size:24px;margin-top:3px}
+.match-ok{color:#56e0a4}.match-mid{color:#ffd166}.match-bad{color:#ff7b7b}
+.match-table td,.match-table th{vertical-align:top}
+.match-chip{display:inline-block;padding:3px 7px;border-radius:999px;background:#123049;border:1px solid #2a536f;font-size:11px;margin:2px}
+@media(max-width:900px){.plan-match-grid{grid-template-columns:1fr 1fr}}
+
+
+/* ===== v2.9 Garmin Smart Matching Engine ===== */
+.smart-match-summary{
+  display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:12px 0
+}
+.smart-match-summary>div{
+  border:1px solid var(--line);background:#071827;border-radius:12px;padding:10px
+}
+.smart-match-summary small{display:block;color:var(--muted)}
+.smart-match-summary strong{display:block;font-size:24px;margin-top:3px}
+.smart-match-table td,.smart-match-table th{vertical-align:top}
+.smart-match-ok{color:#56e0a4}.smart-match-mid{color:#ffd166}.smart-match-bad{color:#ff7b7b}
+.smart-match-chip{display:inline-block;padding:3px 7px;border-radius:999px;border:1px solid #2a536f;background:#123049;font-size:11px;margin:2px}
+.smart-match-group{font-size:12px;color:#a9c6d9}
+@media(max-width:900px){.smart-match-summary{grid-template-columns:1fr 1fr}}
+
+
+/* ===== v3.0 CSS / Critical Speed Lab ===== */
+.cs-hero{display:grid;grid-template-columns:1.15fr .85fr;gap:14px}
+.cs-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.cs-kpi{padding:12px;border:1px solid var(--line);background:#071827;border-radius:12px}
+.cs-kpi small{display:block;color:var(--muted)}
+.cs-kpi b{display:block;font-size:22px;margin-top:4px}
+.cs-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.cs-step{border:1px solid var(--line);border-radius:12px;padding:12px;background:#081927}
+.cs-step h4{margin:0 0 6px}
+.cs-good{color:#58e3a7}.cs-warn{color:#ffd166}.cs-bad{color:#ff7b7b}
+.cs-note{font-size:12px;color:var(--muted);line-height:1.65}
+.cs-table td,.cs-table th{vertical-align:top}
+.cs-progress{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.cs-progress .card{margin:0}
+@media(max-width:900px){
+  .cs-hero,.cs-grid,.cs-progress{grid-template-columns:1fr}
+  .cs-kpis{grid-template-columns:1fr 1fr}
+}
+
+</style></head><body><header><div class="top"><div class="brand">🏊 <b>SwimLab</b> v3.0.1</div><nav id="nav"></nav></div></header><main>
 <div class="hero"><div class="card"><span class="badge">泳力評估 × 技術診斷 × 個人化課表</span><h1>把訓練數據轉成<br><span>真正有效的游泳進步策略</span></h1><p class="muted">輸入 50 / 100 / 200 / 400 / 800 / 1500m 成績，估算泳力、CSS、六區泳速；再依程度、目標、弱點與器材，自動組合技術、耐力、速度、蝶式、三鐵與自潛訓練。</p><span class="pill">3E</span><span class="pill">十類技術</span><span class="pill">CSS</span><span class="pill">泳力</span><span class="pill">裸游轉換</span><span class="pill">固定課表診斷</span></div><div class="card"><h3>目前基準</h3><div class="kpis"><div class="kpi"><small>400m</small><b id="h400">8:00</b></div><div class="kpi"><small>200m</small><b id="h200">3:45</b></div><div class="kpi"><small>CSS</small><b id="hcss">2:07.5</b></div><div class="kpi"><small>泳力</small><b id="hpow">≈49</b></div></div><button class="btn s" style="width:100%;margin-top:10px" onclick="go('calc')">更新成績</button></div></div>
 <section id="home" class="sec active"><div class="g3"><div class="card"><h3>① 先換算</h3><p class="muted">任意距離＋時間，自動換算 25 / 50 / 100 / 200 / 400 / 800 / 1500m 配速。</p><button class="btn s" onclick="go('pace')">配速計算器</button></div><div class="card"><h3>② 再診斷與選工具</h3><p class="muted">踢腿、水感、滾動、換氣、節奏、均速、抓水與轉換。</p><button class="btn s" onclick="go('drill')">Drill 資料庫</button></div><div class="card"><h3>③ 組成課表</h3><p class="muted">把技術、CSS、速度與器材整合成一堂可執行課表。</p><button class="btn" onclick="go('plan')">產生課表</button></div></div><div class="card" style="margin-top:15px"><h3>核心邏輯</h3><div class="call"><b>診斷由外而內，訓練由內而外。</b> 掉速、腿沉、換氣亂、划次增加是表象；先找平衡、節奏、水感、支撐與協調，再處理表面動作。</div><div class="g3"><p><b>Effortless｜省力</b><br><span class="muted">先減阻、放鬆、水平身體。</span></p><p><b>Efficient｜效率</b><br><span class="muted">同速更少無效動作、速度更穩。</span></p><p><b>Enduring｜耐力</b><br><span class="muted">動作品質延長，再把速度加上去。</span></p></div></div></section>
 
@@ -56,7 +325,158 @@
 </div>
 <div class="card" style="margin-top:15px"><div class="g2"><div><h3>標準距離一覽</h3><p class="muted">以目前 100m 配速同步換算常用距離。</p></div><div class="field"><label>自訂額外距離（m）</label><input id="customEqDist" type="number" min="1" step="1" placeholder="例如 1425"></div></div><div style="overflow-x:auto"><table id="paceTable"><thead><tr><th>距離</th><th>等速完成時間</th><th>25m</th><th>50m</th><th>100m配速</th><th>200m</th></tr></thead><tbody></tbody></table></div><div class="call"><b>例：</b>CSS = 2:07.5/100m 時，200m 約 4:15；50m 約 1:03.8。可直接用於間歇出發與目標配速。</div></div>
 <div class="card" style="margin-top:15px"><h3>模式 C｜實測成績 → 平均拆分</h3><p class="muted">例如輸入 Garmin 記錄 1425m / 25:30，可快速看到平均 25 / 50 / 100 / 200 / 400 / 800 / 1500m 等速時間。</p><div class="g3"><div class="field"><label>實測距離（m）</label><input id="splitDist" type="number" min="1" value="1425"></div><div class="field"><label>實測時間</label><input id="splitTime" value="25:30"></div><div class="field"><label>泳池長度</label><select id="splitPool"><option value="25">25m</option><option value="50">50m</option></select></div></div><button class="btn g" onclick="calcSplits()">分析拆分</button><div class="result" id="splitResult"></div></div>
-</section><section id="calc" class="sec"><h2>泳力・CSS・配速換算</h2><p class="muted">只填你有的距離即可。CSS 用 400m 與 200m TT；泳力用書中泳力表的可見錨點做分段插值。</p><div class="g2"><div class="card"><div class="g3"><div class="field"><label>50m</label><input id="t50" placeholder="0:46"></div><div class="field"><label>100m</label><input id="t100" placeholder="1:43"></div><div class="field"><label>200m</label><input id="t200" value="3:45"></div><div class="field"><label>400m</label><input id="t400" value="8:00"></div><div class="field"><label>800m</label><input id="t800" placeholder="16:37"></div><div class="field"><label>1500m</label><input id="t1500" placeholder="32:00"></div></div><button class="btn" onclick="calc()">計算</button> <button class="btn s" onclick="saveProfile()">儲存基準</button><div id="calcOut" class="result"></div></div><div class="card"><h3>CSS</h3><div class="call"><b>CSS 秒/100m = (400m 秒數 − 200m 秒數) ÷ 2</b></div><p class="muted">例：8:00 與 3:45 → (480−225)/2 = 127.5 秒 → 2:07.5/100m。</p><h3>泳力</h3><p class="muted">把不同距離換到共同尺度，目的不是貼標籤，而是選課表速度與負荷。不同距離泳力落差也能看出「速度型 vs 耐力型」差異。</p></div></div><div class="card" style="margin-top:15px"><h3>六區泳速</h3><div id="zones"></div></div></section>
+</section><section id="calc" class="sec"><h2>泳力・CSS・配速換算</h2><p class="muted">只填你有的距離即可。CSS 用 400m 與 200m TT；泳力用書中泳力表的可見錨點做分段插值。</p><div class="g2"><div class="card"><div class="g3"><div class="field"><label>50m</label><input id="t50" placeholder="0:46"></div><div class="field"><label>100m</label><input id="t100" placeholder="1:43"></div><div class="field"><label>200m</label><input id="t200" value="3:45"></div><div class="field"><label>400m</label><input id="t400" value="8:00"></div><div class="field"><label>800m</label><input id="t800" placeholder="16:37"></div><div class="field"><label>1500m</label><input id="t1500" placeholder="32:00"></div></div><button class="btn" onclick="calc()">計算</button> <button class="btn s" onclick="saveProfile()">儲存基準</button><div id="calcOut" class="result"></div></div><div class="card"><h3>CSS</h3><div class="call"><b>CSS 秒/100m = (400m 秒數 − 200m 秒數) ÷ 2</b></div><button class="btn s" onclick="go('csslab')">開啟 CSS／臨界泳速完整測試</button><p class="muted">例：8:00 與 3:45 → (480−225)/2 = 127.5 秒 → 2:07.5/100m。</p><h3>泳力</h3><p class="muted">把不同距離換到共同尺度，目的不是貼標籤，而是選課表速度與負荷。不同距離泳力落差也能看出「速度型 vs 耐力型」差異。</p></div></div><div class="card" style="margin-top:15px"><h3>六區泳速</h3><div id="zones"></div></div></section>
+
+<section id="csslab" class="sec">
+  <h2>CSS／臨界泳速測試中心</h2>
+  <p class="muted">把書中的「臨界游速」轉成可直接測試、計算、追蹤與排課的工具。</p>
+
+  <div class="cs-hero">
+    <div class="card">
+      <h3>這就是 CSS 嗎？</h3>
+      <div class="call">
+        <b>概念上高度相近。</b> 書中的「臨界游速 Critical Swimming Speed / Critical Velocity」與現在常用的 CSS，
+        都是在估計「可長時間維持、接近乳酸閾值的游泳速度」。
+      </div>
+      <p class="muted">
+        書中用 400m 與 200m 的粗略公式：
+        <b>速度 = (400−200) ÷ (T400−T200)</b>。
+        換成 CSS 秒/100m，正好等價於：
+        <b>CSS = (T400−T200) ÷ 2</b>。
+      </p>
+      <div class="call">
+        <b>差別：</b>書中還介紹「多距離時間－距離回歸線」求斜率，這是較精細的 Critical Speed；
+        SwimLab 原本的 CSS 則是 400/200 兩點法。兩者可同時保留，不要混成同一個數字。
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>目前基準</h3>
+      <div class="cs-kpis">
+        <div class="cs-kpi"><small>400/200 CSS</small><b id="csCssNow">—</b></div>
+        <div class="cs-kpi"><small>多點 Critical Speed</small><b id="csRegNow">—</b></div>
+        <div class="cs-kpi"><small>兩者差</small><b id="csDiffNow">—</b></div>
+        <div class="cs-kpi"><small>回歸 R²</small><b id="csR2Now">—</b></div>
+      </div>
+      <p class="cs-note">R² 越接近 1，代表距離－時間資料越接近線性，臨界速度估計越穩定。</p>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:15px">
+    <h3>臨界泳速測試計算器</h3>
+    <div class="g3">
+      <div class="field"><label>25m</label><input id="cs25" placeholder="0:13"></div>
+      <div class="field"><label>50m</label><input id="cs50" placeholder="0:32"></div>
+      <div class="field"><label>100m</label><input id="cs100" placeholder="1:11"></div>
+      <div class="field"><label>200m</label><input id="cs200" placeholder="2:53"></div>
+      <div class="field"><label>400m</label><input id="cs400" placeholder="6:05"></div>
+      <div class="field"><label>800m</label><input id="cs800" placeholder="12:48"></div>
+      <div class="field"><label>1500m</label><input id="cs1500" placeholder="24:20"></div>
+    </div>
+    <button class="btn" onclick="runCriticalSpeedTest()">計算臨界泳速</button>
+    <button class="btn s" onclick="loadCriticalExample()">載入書中範例</button>
+    <button class="btn s" onclick="copyCriticalToProfile()">同步到泳力 / CSS</button>
+    <div id="csResult" class="result"></div>
+    <div id="csPointTable" style="margin-top:12px"></div>
+  </div>
+
+  <div class="card" style="margin-top:15px">
+    <h3>測試方式</h3>
+    <div class="cs-grid">
+      <div class="cs-step">
+        <h4>① 測試前 2 天</h4>
+        <p>避免激烈訓練，讓測試反映當下真實能力，而不是疲勞。</p>
+      </div>
+      <div class="cs-step">
+        <h4>② 同一週完成</h4>
+        <p>盡可能在同一週完成各距離測試，減少體能狀態差異。</p>
+      </div>
+      <div class="cs-step">
+        <h4>③ 中短距離</h4>
+        <p>25 / 50 / 100 / 200 / 400m 可在同一天測。充分熱身後，建議先長後短。</p>
+      </div>
+      <div class="cs-step">
+        <h4>④ 長距離</h4>
+        <p>800m、1500m 建議分開到其他天測，避免前一個長距離干擾下一個。</p>
+      </div>
+      <div class="cs-step">
+        <h4>⑤ 每一項都盡力</h4>
+        <p>測驗本身是能力測試，不是一般有氧課；每個距離要接近當日最佳表現。</p>
+      </div>
+      <div class="cs-step">
+        <h4>⑥ 時間有限時</h4>
+        <p>書中建議可用 50 / 100 / 200 / 400m 四個點作圖；SwimLab 也可用任意 ≥2 點回歸。</p>
+      </div>
+    </div>
+    <div class="call" style="margin-top:12px">
+      <b>實務建議：</b>若目的只是快速更新 CSS，可做 400m + 200m TT；
+      若要分析速度型／耐力型與長距離能力，使用 4–7 個距離的回歸會更完整。
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:15px">
+    <h3>如何讀臨界速度圖</h3>
+    <div class="g2">
+      <div>
+        <h4>斜率＝臨界速度</h4>
+        <p class="muted">以距離為 Y、時間為 X 做線性回歸，趨勢線斜率就是 m/s 的臨界速度。</p>
+      </div>
+      <div>
+        <h4>截距＝短距離／無氧特性線索</h4>
+        <p class="muted">書中用截距與斜率一起觀察有氧與無氧能力的變化。不要只看 50m PB。</p>
+      </div>
+    </div>
+    <div class="call">
+      <b>核心理念：</b>「變快」不能只看短距離 PB。50m 變快、但 400 / 800m 變慢，可能只是爆發力提升；
+      真正整體進步應看臨界速度是否提高，以及相同速度能否維持更久。
+    </div>
+    <div class="call warn" style="margin-top:10px">
+      <b>來源頁面數字提醒：</b>你提供的頁面圖上標示約 1.035 m/s，但若直接用同頁表格的
+      25 / 50 / 100 / 200 / 400 / 800 / 1500m 成績做線性回歸，結果約為 1.014 m/s。
+      SwimLab 不強行校正成書圖數字，而是以實際輸入成績重新計算。
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:15px">
+    <h3>用臨界速度做間歇訓練</h3>
+    <p class="muted">來源頁面的核心原則是：一次只調整一個變數，穩定 2 週以上再進下一階段。</p>
+    <div class="cs-progress">
+      <div class="card">
+        <h4>調整 1｜增加趟數</h4>
+        <p>先維持同一到岸時間與同一出發週期，再逐步增加趟數。</p>
+        <small class="muted">例：100m ×8 → ×10 → ×12 → …；若後段明顯掉速則退回。</small>
+      </div>
+      <div class="card">
+        <h4>調整 2｜縮短休息</h4>
+        <p>到岸時間先不變，逐步縮短出發週期，訓練快速恢復。</p>
+        <small class="muted">例：2:00 出發 → 1:55 出發；先維持數週再繼續。</small>
+      </div>
+      <div class="card">
+        <h4>調整 3｜增加距離</h4>
+        <p>把 100m 間歇延長到 200m 等更長距離，重點仍是均速與技術穩定。</p>
+        <small class="muted">書中示例用 200m 間歇作為另一種速度耐力刺激。</small>
+      </div>
+      <div class="card">
+        <h4>調整 4｜縮短到岸時間</h4>
+        <p>耐力基礎穩定後才真正提高目標速度；回到原出發週期，但每趟游得更快。</p>
+        <small class="muted">一次只改一個變數，不要同時加量、縮休息又加速。</small>
+      </div>
+    </div>
+    <div class="call warn" style="margin-top:12px">
+      <b>停止條件：</b>若到岸時間明顯偏離目標、連續多趟掉速，或技術開始崩，
+      應減少趟數／延長休息，而不是硬撐。
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:15px">
+    <h3>多久重新測一次？</h3>
+    <p class="muted">
+      書中建議持續做間歇時可定期重新測臨界游速；頁面範例提到約每兩個月重新測量一次。
+      SwimLab 建議把它當成 6–8 週訓練週期的檢查點，並與 Garmin 長期趨勢一起看。
+    </p>
+  </div>
+</section>
+
 <section id="plan" class="sec"><h2>智慧課表產生器</h2><div class="g2"><div class="card"><div class="g2"><div class="field"><label>目標</label><select id="goal"><option value="1500">1500m 自由式</option><option value="tech">自由式技術／裸游轉換</option><option value="fly">100m 蝶式</option><option value="tri">三鐵游泳</option><option value="sprint">短距離速度</option><option value="recovery">恢復／技術日</option><option value="freedive">自由潛水輔助</option></select></div><div class="field"><label>總量</label><select id="vol"><option>2000</option><option selected>3000</option><option>4000</option><option>5000</option></select></div><div class="field"><label>狀態</label><select id="state"><option value="fresh">精神好</option><option value="normal" selected>一般</option><option value="tired">疲勞／前一天重訓</option></select></div><div class="field"><label>泳池</label><select id="pool"><option>25</option><option>50</option></select></div></div><div class="checks" id="gear"><label><input type="checkbox" value="snorkel" checked> FINIS 呼吸管</label><label><input type="checkbox" value="agility" checked> Agility</label><label><input type="checkbox" value="mp" checked> MP Strength Paddle</label><label><input type="checkbox" value="dmc" checked> DMC Elite Max</label><label><input type="checkbox" value="zoomer"> Zoomer Z2</label><label><input type="checkbox" value="edge"> EDGE FIN</label></div><button class="btn g" style="margin-top:12px" onclick="makePlan()">產生課表</button> <button class="btn s" onclick="copyPlan()">複製</button></div><div class="card"><h3>排課規則</h3><ul class="muted"><li>先減阻、平衡與支撐，再增加推進。</li><li>器材段後必做裸游轉換。</li><li>CSS 主課先守均速，再談縮短休息。</li><li>速度課在技術仍穩定時才加碼。</li><li>蝶式以 25–50m 高品質累積，避免疲勞硬撐。</li><li>固定課表可當「試紙」看掉速拐點。</li></ul></div></div><div class="card" style="margin-top:15px" id="planOut"></div></section>
 <section id="diag" class="sec"><h2>技術診斷</h2><div class="g2"><div class="card"><div class="checks" id="problems"><label><input type="checkbox" value="sink"> 腿／髖下沉</label><label><input type="checkbox" value="breath"> 換氣歪／停頓</label><label><input type="checkbox" value="drop"> 每划掉速／過度滑行</label><label><input type="checkbox" value="rate"> 有效划頻低</label><label><input type="checkbox" value="catch"> 抓水沒有支撐</label><label><input type="checkbox" value="cross"> 入水跨中線／過度旋轉</label><label><input type="checkbox" value="gear"> 器材快、裸游回不去</label><label><input type="checkbox" value="fatigue"> 100–200m 後動作崩</label><label><input type="checkbox" value="kick"> 打水幅度過大</label><label><input type="checkbox" value="fly"> 蝶式第二下腿亂</label></div><button class="btn" style="margin-top:12px" onclick="diagnose()">分析</button></div><div class="card" id="diagOut"><p class="muted">勾選問題後分析。</p></div></div></section>
 <section id="drill" class="sec"><h2>Drill 資料庫</h2><p class="muted">將教材概念轉成「目的、做法、成功標準」，不是逐字重製。</p><div class="tabs" id="tabs"></div><div class="g3" id="drills"></div></section>
@@ -81,18 +501,44 @@
   <div class="field"><label>備註</label><textarea id="sessionNotes" rows="2" placeholder="例如：肩膀正常、後半腿沉、晚上還有跑步"></textarea></div>
 </div>
 
+
+<div class="card" style="margin-bottom:15px">
+  <h3>課表文字解析器</h3>
+  <p class="muted">貼上你原本寫的課表文字，系統會嘗試拆成訓練組，並自動套用泳姿、器材、Drill、訓練目的與休息。解析後仍可手動修改。</p>
+  
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px">
+  <button class="btn s" type="button" onclick="loadWorkoutExample(1)">載入範例 1</button>
+  <button class="btn s" type="button" onclick="loadWorkoutExample(2)">載入範例 2</button>
+</div>
+
+<div class="field">
+    <label>課表文字</label>
+    <textarea id="workoutTextInput" rows="5" placeholder="例如：200m easy 自由式 + (100m 自 + 休30s)*8 + (50m 自(呼吸管 + Agility 划手板) + 50m 自裸游)*4 + 50m 蝶打水*4"></textarea>
+  </div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap">
+    <button class="btn" type="button" onclick="parseWorkoutTextToRows()">解析並建立訓練組</button>
+    <button class="btn s" type="button" onclick="previewWorkoutText()">只預覽</button>
+    <button class="btn s" type="button" onclick="savePlannedWorkout()">儲存為本次計畫</button>
+    <button class="btn g" type="button" onclick="matchPlanToActual()">課表 vs Garmin 對照</button>
+    <button class="btn" type="button" onclick="smartMatchPlanToGarmin()">Garmin 智慧配對</button>
+  </div>
+  <div id="workoutParseStatus" class="smallnote" style="margin-top:10px"></div>
+  <div id="workoutParsePreview" style="margin-top:10px"></div>
+<div id="planMatchResult" class="plan-match-box" style="display:none"></div>
+</div>
+
 <div class="card importbox">
   <h3>Garmin 匯入</h3>
   <div class="g2">
     <div class="field">
       <label>Garmin CSV</label>
       <input id="garminCsvFile" type="file" accept=".csv,text/csv">
-      <div class="smallnote">支援 Garmin Connect 匯出的 CSV。系統會嘗試辨識距離、時間、配速、心率、SWOLF、划水數等欄位。</div>
+      <div class="smallnote">支援 Garmin Connect 匯出的 CSV。匯入時會優先依 Interval/Lap 或休息列自動合併成訓練組。</div>
     </div>
     <div class="field">
       <label>Garmin FIT</label>
       <input id="garminFitFile" type="file" accept=".fit,application/octet-stream">
-      <div class="smallnote">FIT 是二進位格式。v2.0.3 先保留匯入入口與檔案偵測；離線完整解析器將放在後續版本。</div>
+      <div class="smallnote">FIT 是二進位格式。v3.0.1 先保留匯入入口與檔案偵測；離線完整解析器將放在後續版本。</div>
     </div>
   </div>
   <div style="display:flex;gap:8px;flex-wrap:wrap">
@@ -100,14 +546,32 @@
     <button class="btn s" onclick="importGarminFIT()">匯入 FIT</button>
   </div>
   <div id="importStatus" class="smallnote" style="margin-top:10px"></div><div class="g3" style="margin-top:12px">
-  <div class="field"><label>FIT 匯入層級</label><select id="fitImportLevel"><option value="length" selected>Length（每趟）</option><option value="lap">Lap（每組）</option><option value="auto">Auto</option></select></div>
+  <div class="field"><label>FIT 匯入方式</label><select id="fitImportLevel">
+<option value="lap" selected>Garmin Interval / Lap（建議）</option>
+<option value="group">Length 自動分組</option>
+<option value="length">Length（每趟細節）</option>
+</select><div class="group-hint">Garmin Swim 2 建議用 Interval / Lap：會直接對應 Garmin Connect 表格，例如 200m / 4:22.8 / 休48.6s。Length 模式只用於查看每個25m細節。</div></div>
   <div class="field"><label>自動排除休息 Length</label><select id="fitExcludeRest"><option value="yes" selected>是</option><option value="no">否</option></select></div>
-  <div class="field"><label>匯入後</label><select id="fitPostAction"><option value="review" selected>先檢查再分析</option><option value="analyze">自動分析</option></select></div>
+  <div class="field"><label>匯入後</label><select id="fitPostAction">
+<option value="review" selected>先檢查再分析</option>
+<option value="smartmatch">Garmin 智慧配對並套用 Tag</option>
+<option value="match">舊版單組配對</option>
+<option value="analyze">自動分析</option>
+</select></div>
 </div>
-<div id="fitImportSummary" class="smallnote"></div>
+<div id="fitImportSummary" class="smallnote"></div><div class="call" style="margin-top:10px"><b>Garmin Swim 2 建議：</b>以 Lap / Interval 當訓練組，Length 只當組內細節。這樣會和 Garmin Connect 的「間歇訓練」表格一致。</div>
 </div>
 
 <div class="card">
+
+<div class="call" style="margin-top:10px"><b>怎麼看：</b>每張卡就是一個訓練組。上半部看距離、趟數、每趟成績、泳姿與訓練目的；下半部補器材、Drill、休息、划水數、SWOLF 與 HR。</div>
+<div id="groupingHelp" class="import-summary-grid">
+  <div><b>① 自動分組</b><br><span class="smallnote">休息 / Lap / 距離變化作為分組界線。</span></div>
+  <div><b>② 一組一卡</b><br><span class="smallnote">例如 25m × 4，四個成績集中在同一卡片。</span></div>
+  <div><b>③ Tag 摺疊</b><br><span class="smallnote">器材與 Drill 點開才顯示，不再鋪滿整頁。</span></div>
+  <div><b>④ 可再編輯</b><br><span class="smallnote">自動分組錯了仍可刪除、複製或修改。</span></div>
+</div>
+
 <div class="call"><b>範例：</b>100m × 10 → 距離填 100、趟數填 10；成績可輸入
 <code>1:58,1:58,1:59,2:00,2:00,2:02,2:04...</code>。若使用器材或 Drill，請加 Tag，避免把器材成績直接拿去和裸游比較。</div>
 <div style="overflow-x:auto">
@@ -137,6 +601,23 @@
 <div class="card" style="margin-top:15px"><h3>已儲存訓練紀錄</h3><div id="trainingHistory"></div></div>
 </section>
 
+
+
+<section id="tags" class="sec">
+<h2>Tag 說明</h2>
+<p class="muted">Tag 不只是分類名稱，而是訓練判斷的基礎。選對 Tag，SwimLab 才能把同類型成績拿來比較，避免把 Drill、器材、裸游混在一起。</p>
+
+<div class="tabs" id="tagExplainTabs">
+  <button class="active" type="button" data-mode="type" onclick="renderTagExplain('type')">泳姿 / 類型 Type</button>
+  <button type="button" data-mode="drill" onclick="renderTagExplain('type')">分解動作 Drill</button>
+  <button type="button" data-mode="purpose" onclick="renderTagExplain('purpose')">訓練目的 Purpose</button>
+  <button type="button" data-mode="equipment" onclick="renderTagExplain('equipment')">器材 Equipment</button>
+</div>
+
+<div class="card">
+  <div id="tagExplainGrid" class="grid3"></div>
+</div>
+</section>
 
 <section id="trends" class="sec">
 <h2>長期趨勢</h2>
@@ -214,9 +695,9 @@
 </div>
 </section>
 
-<section id="src" class="sec"><h2>來源與方法</h2><div class="card"><p>此工具將教材與公開資料轉成摘要、計算、診斷與課表邏輯，不逐字重製整本書或網站。</p><ul class="muted"><li>《在水裡自由練功》：減阻、水平身體、水感、五階段划手、轉肩、划頻／划距、換氣、腿部與游泳力量。</li><li>《提升泳速的50堂訓練課》：各泳式分解 Drill、打水、換氣、抓水、出發與轉身。</li><li>《自由式的科學化訓練》：泳力、CSS、六區泳速、耐力與速度框架。</li><li>《InSwim核心游泳》＋ inswim.tw 公開架構：3E、十類技術、診斷循環、固定課表。</li></ul><p class="source"></p></div></section>
-<div class="footer">SwimLab v2.0.3｜訓練規劃工具。疼痛、暈眩、胸悶或異常疲勞時停止訓練。</div></main><script>
-const pages=[['home','首頁'],['pace','配速換算'],['calc','泳力 / CSS'],['plan','課表'],['diag','診斷'],['drill','Drill'],['equip','器材'],['know','知識庫'],['strength','重訓'],['freedive','自潛'],['analysis','訓練分析'],['trends','長期趨勢'],['src','來源']];pages.forEach(([id,n])=>{let b=document.createElement('button');b.textContent=n;b.dataset.id=id;b.onclick=()=>go(id);nav.appendChild(b)});function go(id){document.querySelectorAll('.sec').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('active',x.dataset.id===id));scrollTo({top:0,behavior:'smooth'})}go('home');
+<section id="src" class="sec"><h2>來源與方法</h2><div class="card"><p>此工具將教材與公開資料轉成摘要、計算、診斷與課表邏輯，不逐字重製整本書或網站。</p><ul class="muted"><li>《在水裡自由練功》：減阻、水平身體、水感、五階段划手、轉肩、划頻／划距、換氣、腿部與游泳力量。</li><li>《提升泳速的50堂訓練課》：各泳式分解 Drill、打水、換氣、抓水、出發與轉身。</li><li>《自由式的科學化訓練》：泳力、臨界游速／CSS、時間－距離回歸、測試流程、耐力與速度框架。</li><li>《InSwim核心游泳》＋ inswim.tw 公開架構：3E、十類技術、診斷循環、固定課表。</li></ul><p class="source"></p></div></section>
+<div class="footer">SwimLab v3.0.1｜訓練規劃工具。疼痛、暈眩、胸悶或異常疲勞時停止訓練。</div></main><script>
+const pages=[['home','首頁'],['pace','配速換算'],['calc','泳力 / CSS'],['csslab','CSS測試'],['plan','課表'],['diag','診斷'],['drill','Drill'],['equip','器材'],['know','知識庫'],['strength','重訓'],['freedive','自潛'],['analysis','訓練分析'],['tags','Tag說明'],['trends','長期趨勢'],['src','來源']];pages.forEach(([id,n])=>{let b=document.createElement('button');b.textContent=n;b.dataset.id=id;b.onclick=()=>go(id);nav.appendChild(b)});function go(id){document.querySelectorAll('.sec').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('active',x.dataset.id===id));scrollTo({top:0,behavior:'smooth'})}go('home');
 function sec(v){if(!v)return null;let s=String(v).trim();if(/^\d+(\.\d+)?$/.test(s))return +s;let p=s.split(':').map(Number);if(p.some(isNaN))return null;return p.length===2?p[0]*60+p[1]:p[0]*3600+p[1]*60+p[2]}function fmt(s,d=false){if(!s||!isFinite(s))return'—';let m=Math.floor(s/60),r=s-m*60;return m+':'+r.toFixed(d?1:0).padStart(d?4:2,'0')}
 const eqD=[25,50,100,200,400,800,1500];
 function fmtFull(s){if(s==null||!isFinite(s)||s<0)return'—';let h=Math.floor(s/3600),r=s-h*3600,m=Math.floor(r/60),q=r-m*60,ss=q.toFixed(1).padStart(4,'0');return h>0?h+':'+String(m).padStart(2,'0')+':'+ss:m+':'+ss}
@@ -229,18 +710,147 @@ function calcSplits(){let d=+splitDist.value,t=sec(splitTime.value),pool=+splitP
 
 const anchors=[[1,80.66,180.95,393,849,1744,3360],[13,72.02,161.56,351,758,1557,3000],[14,71.30,159.95,348,750,1542,2970],[38,54.02,121.17,263,569,1168,2250],[39,53.29,119.56,260,561,1152,2220],[49,46.09,103.40,225,485,997,1920],[50,45.37,101.79,221,478,981,1890],[63,36.01,80.78,176,379,779,1500],[64,35.29,79.17,172,371,763,1470],[75,27.37,61.39,133,288,592,1140],[82,22.33,50.08,109,235,483,930],[85,20.17,45.24,98,212,436,840]],ds=[50,100,200,400,800,1500];
 function ref(l,i){let a=anchors[0],b=anchors.at(-1);for(let j=0;j<anchors.length-1;j++)if(l>=anchors[j][0]&&l<=anchors[j+1][0]){a=anchors[j];b=anchors[j+1];break}let f=(l-a[0])/(b[0]-a[0]||1);return a[i+1]+f*(b[i+1]-a[i+1])}function power(d,t){let i=ds.indexOf(d),best=[1,1e9];for(let l=1;l<=85;l+=.05){let e=Math.abs(ref(l,i)-t);if(e<best[1])best=[l,e]}return best[0]}function css(){let a=sec(t400.value),b=sec(t200.value);return a&&b?(a-b)/2:null}
+
+function linRegXY(xs,ys){
+  const n=xs.length;
+  if(n<2)return null;
+  const mx=xs.reduce((a,b)=>a+b,0)/n;
+  const my=ys.reduce((a,b)=>a+b,0)/n;
+  let sxx=0,sxy=0,syy=0;
+  for(let i=0;i<n;i++){
+    const dx=xs[i]-mx,dy=ys[i]-my;
+    sxx+=dx*dx;sxy+=dx*dy;syy+=dy*dy;
+  }
+  if(!sxx)return null;
+  const slope=sxy/sxx;
+  const intercept=my-slope*mx;
+  const r2=(sxx&&syy)?(sxy*sxy/(sxx*syy)):1;
+  return {slope,intercept,r2};
+}
+function criticalPoints(){
+  const ds=[25,50,100,200,400,800,1500];
+  return ds.map(d=>{
+    const el=document.getElementById('cs'+d);
+    const t=el?sec(el.value):null;
+    return t?{d,t}:null;
+  }).filter(Boolean);
+}
+function runCriticalSpeedTest(){
+  const pts=criticalPoints();
+  const t200=sec(document.getElementById('cs200')?.value||'');
+  const t400=sec(document.getElementById('cs400')?.value||'');
+  const css200400=(t200&&t400&&t400>t200)?(t400-t200)/2:null;
+
+  let reg=null;
+  if(pts.length>=2){
+    reg=linRegXY(pts.map(p=>p.t),pts.map(p=>p.d));
+  }
+  const regPace=reg&&reg.slope>0?100/reg.slope:null;
+  const diff=(css200400&&regPace)?regPace-css200400:null;
+
+  document.getElementById('csCssNow').textContent=css200400?fmt(css200400,true)+'/100m':'—';
+  document.getElementById('csRegNow').textContent=regPace?fmt(regPace,true)+'/100m':'—';
+  document.getElementById('csDiffNow').textContent=diff!=null?(diff>=0?'+':'')+diff.toFixed(1)+'s':'—';
+  document.getElementById('csR2Now').textContent=reg?reg.r2.toFixed(4):'—';
+
+  let interp='';
+  if(diff!=null){
+    const ad=Math.abs(diff);
+    interp=ad<=2
+      ? '<span class="cs-good">兩種方法非常接近。</span>'
+      : ad<=5
+        ? '<span class="cs-warn">兩種估計有小幅差異，建議看多距離能力分布。</span>'
+        : '<span class="cs-bad">兩種估計差距較大，可能有明顯速度型／耐力型特徵或某次測驗失常。</span>';
+  }
+
+  csResult.innerHTML=`
+    <div class="big">${regPace?fmt(regPace,true):'—'}</div>
+    <span class="muted">多點回歸 Critical Speed / 100m</span>
+    <p>400/200 CSS：<b>${css200400?fmt(css200400,true)+'/100m':'需要200m＋400m'}</b></p>
+    <p>回歸速度：<b>${reg?reg.slope.toFixed(3)+' m/s':'至少需要2個距離'}</b>　
+       截距：<b>${reg?reg.intercept.toFixed(1)+' m':'—'}</b>　
+       R²：<b>${reg?reg.r2.toFixed(4):'—'}</b></p>
+    ${interp}
+  `;
+
+  csPointTable.innerHTML=pts.length?`
+    <div style="overflow-x:auto"><table class="cs-table">
+      <thead><tr><th>距離</th><th>時間</th><th>平均速度</th><th>100m等速配速</th></tr></thead>
+      <tbody>${pts.map(p=>`<tr>
+        <td>${p.d}m</td><td>${fmtFull(p.t)}</td>
+        <td>${(p.d/p.t).toFixed(3)} m/s</td>
+        <td>${fmt(p.t*100/p.d,true)}/100m</td>
+      </tr>`).join('')}</tbody>
+    </table></div>`:'';
+  return {pts,css200400,reg,regPace,diff};
+}
+function loadCriticalExample(){
+  const ex={25:'0:13',50:'0:32',100:'1:11',200:'2:53',400:'6:05',800:'12:48',1500:'24:20'};
+  Object.entries(ex).forEach(([d,v])=>{const e=document.getElementById('cs'+d);if(e)e.value=v});
+  runCriticalSpeedTest();
+}
+function copyCriticalToProfile(){
+  const r=runCriticalSpeedTest();
+  const pairs=[[200,'t200'],[400,'t400'],[50,'t50'],[100,'t100'],[800,'t800'],[1500,'t1500']];
+  pairs.forEach(([d,id])=>{
+    const src=document.getElementById('cs'+d),dst=document.getElementById(id);
+    if(src&&dst&&src.value)dst.value=src.value;
+  });
+  calc();
+  alert('已把測試成績同步到「泳力 / CSS」。');
+}
+
 function calc(){let vals={},ps=[];ds.forEach(d=>{let t=sec(document.getElementById('t'+d).value);if(t){vals[d]=t;ps.push([d,power(d,t)])}});let avg=ps.length?ps.reduce((a,x)=>a+x[1],0)/ps.length:null,c=css(),spread=ps.length?Math.max(...ps.map(x=>x[1]))-Math.min(...ps.map(x=>x[1])):0;calcOut.innerHTML=`<div class="big">${avg?avg.toFixed(1):'—'}</div><span class="muted">綜合泳力估算</span><p>CSS：<b>${c?fmt(c,true)+'/100m':'需要 200m + 400m'}</b></p><p>${ps.map(x=>x[0]+'m ≈ 泳力 '+x[1].toFixed(1)).join('　')||'—'}</p>${spread>7?'<div class="call warn">不同距離泳力差距較大，可用來判斷速度／耐力不均。</div>':''}`;zonesRender(c);return{avg,c}}function zonesRender(c){if(!c){zones.innerHTML='<p class="muted">先輸入 200m + 400m。</p>';return}let z=[['Z1 恢復',c+25,c+45,'熱身／恢復'],['Z2 有氧',c+12,c+25,'長距離／三鐵'],['Z3 CSS',c-3,c+8,'巡航／臨界'],['Z4 無氧耐力',c-10,c-3,'100–200m'],['Z5 VO₂',c-18,c-10,'50–100m'],['Z6 衝刺',Math.max(1,c-35),c-18,'25–50m']];zones.innerHTML=z.map((x,i)=>`<div class="zone"><b>${x[0]}</b><div><div class="bar"><i style="width:${40+i*9}%"></i></div><small class="muted">${x[3]}</small></div><span>${fmt(x[1],true)}–${fmt(x[2],true)}</span></div>`).join('')}
 function saveProfile(){let r=calc();localStorage.setItem('swimlab',JSON.stringify({a:t200.value,b:t400.value,p:r.avg,c:r.c}));hero();alert('已儲存於瀏覽器')}function hero(){let p=JSON.parse(localStorage.getItem('swimlab')||'{}');if(p.a)h200.textContent=p.a;if(p.b)h400.textContent=p.b;if(p.c)hcss.textContent=fmt(p.c,true);if(p.p)hpow.textContent='≈'+p.p.toFixed(0)}hero();calc();if(document.getElementById('customEqDist'))customEqDist.addEventListener('input',()=>{let p=sec(pace100B.value);if(p)renderPaceTable(p)});if(document.getElementById('paceDistA'))calcPaceFromTime();
 const D=[['踢腿','流線小幅打水','降低腿部阻力、建立髖帶動。','身體拉長，膝蓋放鬆，腳背延伸，水花小。','髖近水面、腿不張大。'],['踢腿','6 Kick Switch','側身平衡、滾動、髖腿控制。','側身打6下再由核心換邊。','不剪刀腳、不抬頭。'],['踢腿','2-beat Kick','1500m／三鐵省能節奏。','每手臂週期兩下主要踢腿，配合轉體。','踢腿像節拍器。'],['踢腿','6-beat Kick','高速穩定髖位。','每週期六下小幅打水，25–50m。','頻率高但幅度小。'],['水感','Scull','建立掌＋前臂水壓感。','手肘相對穩定，小幅內外掃。','前臂持續有壓力。'],['水感','Agility → 裸游','把方向回饋轉成裸游。','50m Agility + 50m 裸游。','裸游划次不暴增。'],['抓水','Catch / Hold','避免聳肩、拉肘、滑手。','肩放鬆，先讓前臂形成受力面再向後。','手掌與前臂同向。'],['抓水','單臂自由式','隔離抓水、推水與軀幹。','一手前伸固定，另一手完整划水。','不蛇行、不跨中線。'],['節奏','3-3-3 Drill','單臂控制接回完整游。','右3、左3、完整3。','切換不斷節奏。'],['節奏','拳頭游 → 正常','提高前臂參與。','25m拳頭＋25m正常。','恢復手掌後推進更明顯。'],['換氣','側身換氣','避免抬頭腿沉。','一眼留水中，頭隨軀幹轉。','前伸手不塌。'],['換氣','呼吸管直線游','去掉換氣干擾。','100–200m專注頭位與身體線。','左右划手對稱。'],['均速','50m 均速控制','減少加速—滑掉—再加速。','同趟維持連續划頻。','前後25m差距小。'],['均速','100m Pace Lock','建立CSS配速感。','固定出發，誤差±2秒。','後半不暴力加頻。'],['滾動','側躺平衡＋轉體','肩髖同步、減少蛇行。','髖肩一起滾動。','頭穩、腿不交叉。'],['滾動','Shark Drill','高肘恢復＋側身穩定。','高肘恢復位置停住，側身打水。','肩不聳。'],['蝶式','Body Dolphin','胸→髖→腿波動鏈。','胸微壓、髖跟進、膝只末端傳遞。','不是膝蓋猛踢。'],['蝶式','3-3-3 Fly','降低完整蝶負荷。','右3、左3、完整3。','完整蝶保留波動。'],['蝶式','第二下腿配推水','強化出水與前進。','手臂推水末段做第二下腿。','把身體送前不是送上。'],['轉換','DMC → 裸游','把高髖感轉回裸游。','50m DMC + 50m裸游2-beat。','拿掉蛙鞋髖不沉。'],['轉換','MP → Agility → 裸游','力量→方向→自然游。','25m MP +25m Agility +50m裸游。','裸游抓水穩、肩仍鬆。'],['自潛','Streamline + Fin','流線與蛙鞋效率。','低頻高效率，維持窄長身體線。','每踢推進距離增加。']];let cat='全部';function drawDrills(){let cs=['全部',...new Set(D.map(x=>x[0]))];tabs.innerHTML=cs.map(c=>`<button class="tab" onclick="cat='${c}';drawDrills()">${c}</button>`).join('');drills.innerHTML=D.filter(x=>cat==='全部'||x[0]===cat).map(x=>`<div class="drill"><span class="pill">${x[0]}</span><h4>${x[1]}</h4><p><b>目的：</b>${x[2]}</p><p><b>做法：</b>${x[3]}</p><p><b>成功標準：</b>${x[4]}</p></div>`).join('')}drawDrills();
 const M={sink:['身體平衡／頭位／踢腿協調','重踢腿、重滾動','呼吸管流線打水、6 Kick Switch、DMC→裸游'],breath:['換氣破壞頭位與支撐','重換氣、重前伸手','側身換氣、單臂＋呼吸管'],drop:['過度滑行、划頻低','重節奏、重均速','50m均速、拳頭→正常、25m節奏'],rate:['等待時間太長','重節奏、重水感','3-3-3、Scull、節拍器25m'],catch:['肩抬／肘先拉／前臂沒支撐','重水感、重水中划手','Catch/Hold、Agility→裸游'],cross:['前伸不穩、滾動過度','重滾動、重前伸','側躺平衡、單臂、呼吸管'],gear:['器材補了身體位置或推進','轉換、均速','DMC→裸游、MP→Agility→裸游'],fatigue:['技術耐力不足','重均速＋CSS','100m Pace Lock、200–400m CSS'],kick:['膝主導、幅度大','重踢腿','流線小幅、2-beat、6-beat'],fly:['第二下腿與手腳時機','蝶式節奏','Body Dolphin、3-3-3 Fly、第二下腿']};function diagnose(){let xs=[...document.querySelectorAll('#problems input:checked')].map(x=>x.value);diagOut.innerHTML=xs.length?'<h3>優先處理</h3>'+xs.map(k=>`<div class="call"><b>${M[k][0]}</b><br><span class="muted">${M[k][1]}</span><br>${M[k][2]}</div>`).join(''):'<p class="muted">至少選一項。</p>'}
 function gears(){return[...document.querySelectorAll('#gear input:checked')].map(x=>x.value)}function makePlan(){let G=goal.value,V=+vol.value,S=state.value,C=(JSON.parse(localStorage.getItem('swimlab')||'{}').c)||css()||127.5,gs=gears(),A=[];let add=(n,d,m)=>A.push([n,d,m]);add('暖身',S==='tired'?'300m easy：自由式＋仰式':'400m：200 easy + 4×50漸快',400);if(G==='tech'){add('技術1','4×50 呼吸管：頭位＋水平身體',200);add('技術2',gs.includes('agility')?'4×50 Agility + 4×50 裸游':'8×50 Scull／單臂／3-3-3',400);if(gs.includes('dmc'))add('轉換','4×(50 DMC + 50 裸游 2-beat)',400);add('裸游主課',`8×100 @ ${fmt(C+8,true)}–${fmt(C+3,true)}，休20s；看划次與掉速`,800);add('速度','8×25 裸游快，全休',200)}else if(G==='1500'||G==='tri'){add('技術','6×50：2呼吸管＋2 Agility＋2裸游',300);add('CSS',`6×200 @ ${fmt(C+5,true)}–${fmt(C,true)}，休20–30s`,1200);add('速度耐力',`6×50 @ ${fmt(C-12,true)} 感覺，休30–40s`,300);if(G==='tri')add('三鐵','4×100 sighting：抬頭2–4次後回低頭節奏',400)}else if(G==='fly'){add('蝶技術','4×50 Body Dolphin / 3-3-3 Fly',200);add('蝶節奏','8×25 第二下腿配推水',200);add('主課','6×50 蝶：25快＋25 easy free',300);add('自由式有氧',`6×100 @ ${fmt(C+5,true)}`,600)}else if(G==='sprint'){add('技術','6×50 水感＋均速＋3-3-3',300);add('神經速度','2組×(4×25 95–100% +100 easy)，全休',400);add('速度耐力','6×50 90%，休45–60s',300);add('轉換','4×50器材快感→4×50裸游',400)}else if(G==='recovery'){add('技術巡迴','8×50：踢腿／水感／側身／換氣／單臂／3-3-3／拳頭／完整',400);add('有氧',`6×100 @ ${fmt(C+20,true)}–${fmt(C+12,true)}`,600)}else{add('流線＋蛙鞋','8×50 easy，流線與踢腿效率',400);add('技術自由式','6×50 呼吸管／裸游轉換',300);add('有氧','6×100 easy–steady；不做水中極限閉氣',600);add('安全','CO₂／靜態閉氣另做；水中需 buddy',0)}let cur=A.reduce((s,x)=>s+x[2],0);if(cur<V-300)add('補量',`${Math.round((V-cur)/100)}×100 easy–steady @ ${fmt(C+18,true)}–${fmt(C+10,true)}`,V-cur);add('收操','100–200m easy + 胸椎／闊背／小腿放鬆',150);planOut.innerHTML=`<div class="result"><b>CSS：</b>${fmt(C,true)}/100m　<b>總量：</b>約 ${A.reduce((s,x)=>s+x[2],0)}m</div>`+A.map(x=>`<div class="set"><b>${x[0]}</b><span>${x[1]}</span><em>${x[2]?x[2]+'m':'陸上'}</em></div>`).join('');localStorage.setItem('lastPlan',planOut.innerText)}function copyPlan(){navigator.clipboard.writeText(planOut.innerText||'');alert('已複製')}
-const K=[['先減阻，再增加推進','身體線差、頭位高、髖腿沉時，先加力通常只會一起放大阻力。先做長、做窄、做穩，再談推進。'],['水平身體線與髖腿','頭、胸、髖、腳接近同一長軸。呼吸管、側身平衡、小幅打水與核心穩定可降低腿沉。'],['水感與支撐','有效划水不是快速把手拉過水，而是先建立支撐，再讓身體越過支撐點。掌＋前臂一起感受水壓。'],['五階段划手','Entry 入水、Catch 抓水、Hold 抱水、Push 推水、Recovery 提臂。每段都服務於減阻、支撐或推進。'],['高肘抓水','目的不是抬肩，而是讓肘相對穩定、前臂形成受力面。聳肩、拉肘容易讓手掌側翻、失去水感。'],['划頻 vs 划距','划距太短浪費能量；刻意滑太久也會掉速。長距離要找可持續的划頻與足夠划距，不在每划之間停住。'],['均速','每划大幅加速再滑慢，需要一直重新加速身體，能耗高。均速訓練就是縮小速度谷底。'],['轉肩與軀幹','滾動要肩髖協調，不是腰單獨扭。核心把手臂支撐、軀幹旋轉與腿部節奏連成動力鏈。'],['換氣','先吐氣、快速吸氣；頭隨軀幹轉，不抬下巴。換氣若造成前伸手塌或腿沉，先修平衡與支撐。'],['打水','自由式以小幅、高效率為主；髖帶動、膝放鬆、腳踝延伸。2-beat省能，6-beat支援高速。'],['3E','省力 Effortless → 效率 Efficient → 耐力 Enduring；速度是三者累積的結果。'],['十類技術','1重踢腿、2重水感、3重滾動及軀幹穩定、4重換氣、5重節奏、6重均速、7重提臂、8重前伸手、9重划手時踢腿幅度、10重水中划手。'],['固定課表＝試紙','課表內容固定，身體狀態成為變數。觀察第幾趟掉速、划次增加、換氣亂或動作崩，就能定位弱點。'],['CSS／六區','CSS在主要耐力與臨界速度之間。先把Z3技術耐力拉長，再用Z4–Z6補無氧耐力、VO₂與衝刺。'],['器材策略','呼吸管、手槳、蛙鞋是放大感覺或限制錯誤的工具。每段器材都要明確知道拿掉後要保留什麼。'],['蝶式','重點是胸—髖—腿波動、兩次踢腿時機、低阻力前進與呼吸節奏。25–50m高品質比疲勞硬游更有效。'],['力量訓練','肩胛穩定、背闊／胸／三頭、核心抗旋轉與髖伸是重點。力量要轉成水中穩定支撐，不是單純增加肌力。'],['技術耐力','會做正確動作，不等於能在400–1500m保持。把25m的正確動作逐步延長，就是技術耐力。'],['訓練順序','暖身→技術→器材／限制式Drill→裸游轉換→CSS主課→速度→收操。動作崩時不再硬加速。'],['自潛整合','放鬆、呼吸控制、CO₂耐受、流線、蛙鞋效率與耳壓平衡可提升水感；閉氣訓練必須遵守安全規範。']];knowledge.innerHTML=K.map((x,i)=>`<details ${i<2?'open':''}><summary>${String(i+1).padStart(2,'0')}｜${x[0]}</summary><p class="muted">${x[1]}</p></details>`).join('');makePlan();
+const K=[['先減阻，再增加推進','身體線差、頭位高、髖腿沉時，先加力通常只會一起放大阻力。先做長、做窄、做穩，再談推進。'],['水平身體線與髖腿','頭、胸、髖、腳接近同一長軸。呼吸管、側身平衡、小幅打水與核心穩定可降低腿沉。'],['水感與支撐','有效划水不是快速把手拉過水，而是先建立支撐，再讓身體越過支撐點。掌＋前臂一起感受水壓。'],['五階段划手','Entry 入水、Catch 抓水、Hold 抱水、Push 推水、Recovery 提臂。每段都服務於減阻、支撐或推進。'],['高肘抓水','目的不是抬肩，而是讓肘相對穩定、前臂形成受力面。聳肩、拉肘容易讓手掌側翻、失去水感。'],['划頻 vs 划距','划距太短浪費能量；刻意滑太久也會掉速。長距離要找可持續的划頻與足夠划距，不在每划之間停住。'],['均速','每划大幅加速再滑慢，需要一直重新加速身體，能耗高。均速訓練就是縮小速度谷底。'],['轉肩與軀幹','滾動要肩髖協調，不是腰單獨扭。核心把手臂支撐、軀幹旋轉與腿部節奏連成動力鏈。'],['換氣','先吐氣、快速吸氣；頭隨軀幹轉，不抬下巴。換氣若造成前伸手塌或腿沉，先修平衡與支撐。'],['打水','自由式以小幅、高效率為主；髖帶動、膝放鬆、腳踝延伸。2-beat省能，6-beat支援高速。'],['3E','省力 Effortless → 效率 Efficient → 耐力 Enduring；速度是三者累積的結果。'],['十類技術','1重踢腿、2重水感、3重滾動及軀幹穩定、4重換氣、5重節奏、6重均速、7重提臂、8重前伸手、9重划手時踢腿幅度、10重水中划手。'],['固定課表＝試紙','課表內容固定，身體狀態成為變數。觀察第幾趟掉速、划次增加、換氣亂或動作崩，就能定位弱點。'],['CSS／六區','CSS在主要耐力與臨界速度之間。先把Z3技術耐力拉長，再用Z4–Z6補無氧耐力、VO₂與衝刺。'],['臨界泳速＝CSS嗎？','概念高度相近。400/200兩點法可直接換成CSS配速；多距離時間－距離回歸則是更完整的Critical Speed估計。SwimLab同時保留兩者，避免混為一談。'],['臨界泳速測試','測試前兩天避免高強度；盡量同週完成。25–400m可同日先長後短；800/1500m建議分日。時間有限可用50/100/200/400m四點回歸。'],['臨界速度進階','提高速度耐力時一次只改一個變數：增加趟數、縮短休息、增加距離、最後才縮短到岸時間。每個階段先維持至少約2週，掉速或技術崩就退階。'],['器材策略','呼吸管、手槳、蛙鞋是放大感覺或限制錯誤的工具。每段器材都要明確知道拿掉後要保留什麼。'],['蝶式','重點是胸—髖—腿波動、兩次踢腿時機、低阻力前進與呼吸節奏。25–50m高品質比疲勞硬游更有效。'],['力量訓練','肩胛穩定、背闊／胸／三頭、核心抗旋轉與髖伸是重點。力量要轉成水中穩定支撐，不是單純增加肌力。'],['技術耐力','會做正確動作，不等於能在400–1500m保持。把25m的正確動作逐步延長，就是技術耐力。'],['訓練順序','暖身→技術→器材／限制式Drill→裸游轉換→CSS主課→速度→收操。動作崩時不再硬加速。'],['自潛整合','放鬆、呼吸控制、CO₂耐受、流線、蛙鞋效率與耳壓平衡可提升水感；閉氣訓練必須遵守安全規範。']];knowledge.innerHTML=K.map((x,i)=>`<details ${i<2?'open':''}><summary>${String(i+1).padStart(2,'0')}｜${x[0]}</summary><p class="muted">${x[1]}</p></details>`).join('');makePlan();
 
-const TRAIN_TYPES=['裸游','Warm-up','CSS','Sprint','Drill','蝶式','抬頭捷','Recovery','Kick','Mixed'];
+const TRAIN_TYPES=['自由式裸游 Freestyle','熱身 Warm-up','臨界泳速 CSS','衝刺 Sprint','分解動作 Drill','蝶式 Butterfly','抬頭捷 Head-up Freestyle','恢復 Recovery','踢腿 Kick','混合 Mixed'];
 const EQUIP_TAGS=['Agility','MP Strength Paddle','DMC Elite Max','Zoomer Z2','EDGE FIN','FINIS 呼吸管','腰間挖水器','Pull Buoy','Kickboard','腳蹼/蛙鞋其他','划手板其他'];
-const DRILL_TAGS=['單臂划手','只踢水','Scull','3-3-3','Shark Drill','側身打水','6 Kick Switch','拳頭游','Catch/Hold','Body Dolphin','蝶式單臂','抬頭捷','划頻練習','均速練習'];
+const DRILL_TAGS=['單臂划手 Single-arm','只踢水 Kick-only','水感小划 Scull','3-3-3 Drill','鯊魚式 Shark Drill','側身打水 Side Kick','六下換邊 6 Kick Switch','拳頭游 Fist Drill','抓水／抱水 Catch / Hold','身體海豚波 Body Dolphin','蝶式單臂 Single-arm Butterfly','抬頭捷 Head-up Freestyle','划頻練習 Stroke Rate','均速練習 Pace Control','姿勢游泳 Technique Swim'];
 const PURPOSE_TAGS=['技術 Technique','臨界泳速 CSS','有氧 Aerobic','衝刺 Sprint','恢復 Recovery','器材→裸游 Equipment→Naked','身體位置 Body Position','踢腿 Kick','抓水 Catch','換氣 Breathing','三鐵 Triathlon','蝶式 Butterfly','自潛 Freedive'];
 
+
+
+
+function typeKey(v){
+  const map={
+    '自由式裸游 Freestyle':'裸游',
+    '熱身 Warm-up':'Warm-up',
+    '臨界泳速 CSS':'CSS',
+    '衝刺 Sprint':'Sprint',
+    '分解動作 Drill':'Drill',
+    '蝶式 Butterfly':'蝶式',
+    '抬頭捷 Head-up Freestyle':'抬頭捷',
+    '恢復 Recovery':'Recovery',
+    '踢腿 Kick':'Kick',
+    '混合 Mixed':'Mixed'
+  };
+  return map[v]||v;
+}
+
+function drillKey(v){
+  const map={
+    '單臂划手 Single-arm':'單臂划手',
+    '只踢水 Kick-only':'只踢水',
+    '水感小划 Scull':'Scull',
+    '3-3-3 Drill':'3-3-3',
+    '鯊魚式 Shark Drill':'Shark Drill',
+    '側身打水 Side Kick':'側身打水',
+    '六下換邊 6 Kick Switch':'6 Kick Switch',
+    '拳頭游 Fist Drill':'拳頭游',
+    '抓水／抱水 Catch / Hold':'Catch/Hold',
+    '身體海豚波 Body Dolphin':'Body Dolphin',
+    '蝶式單臂 Single-arm Butterfly':'蝶式單臂',
+    '抬頭捷 Head-up Freestyle':'抬頭捷',
+    '划頻練習 Stroke Rate':'划頻練習',
+    '均速練習 Pace Control':'均速練習',
+    '姿勢游泳 Technique Swim':'姿勢游泳'
+  };
+  return map[v]||v;
+}
 
 function purposeKey(v){
   const map={
@@ -269,38 +879,92 @@ function parseNums(v){
   if(!v)return[];
   return String(v).split(/[,\n;\/]+/).map(x=>+x.trim()).filter(x=>isFinite(x)&&x>0);
 }
-function tagChecks(cls,items,selected=[]){
+function tagChecks(cls,items,selected=[],label='Tag'){
   const ss=new Set(Array.isArray(selected)?selected:String(selected||'').split('|').filter(Boolean));
-  return `<div class="tagmulti">${items.map(x=>`<label><input type="checkbox" class="${cls}" value="${x}" ${ss.has(x)?'checked':''}>${x}</label>`).join('')}</div>`;
+  const count=[...ss].filter(x=>items.includes(x)).length;
+  return `<details class="tagpicker">
+    <summary>${label} <span class="${cls}Count">${count?`(${count})`:''}</span></summary>
+    <div class="tagmulti">${items.map(x=>`<label><input type="checkbox" class="${cls}" value="${x}" ${ss.has(x)?'checked':''} onchange="updateTagCount(this,'${cls}')">${x}</label>`).join('')}</div>
+  </details>`;
+}
+function updateTagCount(input,cls){
+  const details=input.closest('.tagpicker'); if(!details)return;
+  const n=details.querySelectorAll('.'+cls+':checked').length;
+  const span=details.querySelector('.'+cls+'Count');
+  if(span)span.textContent=n?`(${n})`:'';
 }
 function addTrainingRow(data={}){
   const tb=document.getElementById('trainingRows'); if(!tb)return;
   const tr=document.createElement('tr');
   tr.className='training-row editing';
   tr.innerHTML=`
-  <td class="action-col">
-    <div class="row-actions">
-      <button class="btn s rowEditBtn" type="button" onclick="toggleTrainingRowEdit(this)">完成</button>
-      <button class="btn s" type="button" onclick="duplicateTrainingRow(this)">複製</button>
-      <button class="btn s" type="button" onclick="deleteTrainingRow(this)">刪除</button>
-    </div>
-  </td>
-  <td class="rowno"></td>
-  <td><input class="trDist" type="number" min="1" value="${data.dist||100}" style="min-width:82px"></td>
-  <td><input class="trReps" type="number" min="1" value="${data.reps||1}" style="min-width:68px"></td>
-  <td><textarea class="trTimes" rows="2" placeholder="1:58,1:59,2:00">${data.times||''}</textarea></td>
-  <td><select class="trType">${TRAIN_TYPES.map(x=>`<option ${x===data.type?'selected':''}>${x}</option>`).join('')}</select></td>
-  <td>${tagChecks('trEquip',EQUIP_TAGS,data.equip||[])}</td>
-  <td>${tagChecks('trDrill',DRILL_TAGS,data.drill||[])}</td>
-  <td><select class="trPurpose">${PURPOSE_TAGS.map(x=>`<option ${(purposeKey(x)===(data.purpose||'Technique'))?'selected':''}>${x}</option>`).join('')}</select></td>
-  <td><input class="trRest" value="${data.rest||''}" placeholder="20s"></td>
-  <td><textarea class="trStrokes" rows="2" placeholder="22,22,23">${data.strokes||''}</textarea></td>
-  <td><textarea class="trSwolf" rows="2" placeholder="80,81,82">${data.swolf||''}</textarea></td>
-  <td><textarea class="trHR" rows="2" placeholder="145,149,152">${data.hr||''}</textarea></td>`;
+    <td class="action-col">
+      <div class="rowno"></div>
+      <div class="row-actions">
+        <button class="btn s rowEditBtn" type="button" onclick="toggleTrainingRowEdit(this)">完成</button>
+        <button class="btn s" type="button" onclick="duplicateTrainingRow(this)">複製</button>
+        <button class="btn s" type="button" onclick="deleteTrainingRow(this)">刪除</button>
+      </div>
+    </td>
+    <td class="training-card">
+      <div class="training-card-top">
+        <div class="training-field">
+          <label>距離 / 趟</label>
+          <input class="trDist" type="number" min="1" value="${data.dist||100}">
+        </div>
+        <div class="training-field">
+          <label>趟數</label>
+          <input class="trReps" type="number" min="1" value="${data.reps||1}">
+        </div>
+        <div class="training-field time-field">
+          <label>每趟成績</label>
+          <textarea class="trTimes" rows="2" placeholder="1:58, 1:59, 2:00">${data.times||''}</textarea>
+        </div>
+        <div class="training-field">
+          <label>目標配速 / 備註</label>
+          <input class="trTarget" value="${data.target||''}" placeholder="例如 1:40–1:45 / easy">
+        </div>
+        <div class="training-field">
+          <label>泳姿 / 類型</label>
+          <select class="trType">${TRAIN_TYPES.map(x=>`<option ${typeKey(x)===(data.type||'裸游')?'selected':''}>${x}</option>`).join('')}</select>
+        </div>
+        <div class="training-field purpose-field">
+          <label>訓練目的</label>
+          <select class="trPurpose">${PURPOSE_TAGS.map(x=>`<option ${(purposeKey(x)===(data.purpose||'Technique'))?'selected':''}>${x}</option>`).join('')}</select>
+        </div>
+      </div>
+
+      <div class="training-card-bottom">
+        <div class="training-field equip-field">
+          <label>器材 Tag</label>
+          ${tagChecks('trEquip',EQUIP_TAGS,data.equip||[],'器材')}
+        </div>
+        <div class="training-field drill-field">
+          <label>分解動作 Tag</label>
+          ${tagChecks('trDrill',DRILL_TAGS,(data.drill||[]).map(d=>DRILL_TAGS.find(x=>drillKey(x)===d)||d),'Drill')}
+        </div>
+        <div class="training-field">
+          <label>休息</label>
+          <input class="trRest" value="${data.rest||''}" placeholder="例如 20s">
+        </div>
+        <div class="training-field">
+          <label>划水數</label>
+          <textarea class="trStrokes" rows="2" placeholder="Garmin 未記錄">${data.strokes||''}</textarea>
+        </div>
+        <div class="training-field">
+          <label>SWOLF</label>
+          <textarea class="trSwolf" rows="2" placeholder="Garmin 未記錄">${data.swolf||''}</textarea>
+        </div>
+        <div class="training-field hr-field">
+          <label>平均 HR</label>
+          <textarea class="trHR" rows="2" placeholder="Garmin 未記錄">${data.hr||''}</textarea>
+        </div>
+      </div>
+    </td>`;
   tb.appendChild(tr);
   renumberTrainingRows();
 }
-function renumberTrainingRows(){[...document.querySelectorAll('#trainingRows tr')].forEach((tr,i)=>tr.querySelector('.rowno').textContent=i+1)}
+function renumberTrainingRows(){[...document.querySelectorAll('#trainingRows tr')].forEach((tr,i)=>{const n=tr.querySelector('.rowno');if(n)n.textContent='# '+(i+1)})}
 function toggleTrainingRowEdit(btn){
   const tr=btn.closest('tr');
   const editing=tr.classList.contains('editing');
@@ -338,9 +1002,10 @@ function duplicateTrainingRow(btn){
     dist:+tr.querySelector('.trDist').value||100,
     reps:+tr.querySelector('.trReps').value||1,
     times:tr.querySelector('.trTimes').value,
-    type:tr.querySelector('.trType').value,
+    target:tr.querySelector('.trTarget')?.value||'',
+    type:typeKey(tr.querySelector('.trType').value),
     equip:[...tr.querySelectorAll('.trEquip:checked')].map(x=>x.value),
-    drill:[...tr.querySelectorAll('.trDrill:checked')].map(x=>x.value),
+    drill:[...tr.querySelectorAll('.trDrill:checked')].map(x=>drillKey(x.value)),
     purpose:purposeKey(tr.querySelector('.trPurpose').value),
     rest:tr.querySelector('.trRest').value,
     strokes:tr.querySelector('.trStrokes').value,
@@ -356,9 +1021,10 @@ function collectTrainingRows(){
     dist:+tr.querySelector('.trDist').value||0,
     reps:+tr.querySelector('.trReps').value||0,
     times:tr.querySelector('.trTimes').value,
-    type:tr.querySelector('.trType').value,
+    target:tr.querySelector('.trTarget')?.value||'',
+    type:typeKey(tr.querySelector('.trType').value),
     equip:[...tr.querySelectorAll('.trEquip:checked')].map(x=>x.value),
-    drill:[...tr.querySelectorAll('.trDrill:checked')].map(x=>x.value),
+    drill:[...tr.querySelectorAll('.trDrill:checked')].map(x=>drillKey(x.value)),
     purpose:purposeKey(tr.querySelector('.trPurpose').value),
     rest:tr.querySelector('.trRest').value,
     strokes:tr.querySelector('.trStrokes').value,
@@ -527,7 +1193,7 @@ function saveTrainingSession(){
   hist.unshift(item);
   localStorage.setItem('swimlabTrainingHistory',JSON.stringify(hist.slice(0,200)));
   renderTrainingHistory();
-  if(document.getElementById('trends'))renderTrends();
+  if(document.getElementById('tags'))renderTagExplain('drill');if(document.getElementById('trends'))renderTrends();
   alert('已儲存本次訓練');
 }
 
@@ -613,6 +1279,75 @@ function renderTrendSvg(data,key){
   }).join('');
   return `<svg class="trend-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${metricMeta(key)[0]}趨勢圖">${grid}<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" class="trend-axis"/><path d="${path}" class="trend-line"/>${dots}</svg>`;
 }
+
+const TAG_EXPLAIN={
+  type:[
+    {name:'自由式裸游 Freestyle',purpose:'作為主要基準泳姿，用來評估真正的裸游巡航速度與技術效率。',principle:'不依賴器材補償，最能反映身體線、抓水、划頻、換氣與技術耐力。',use:'CSS主課、1500m、長距離、器材轉裸游後驗證。',mistake:'把器材組成績和裸游直接混在一起比較。',pair:'Technique、CSS、Aerobic、Equipment→Naked。'},
+    {name:'熱身 Warm-up',purpose:'提高體溫、關節活動度與水感，讓主課前進入穩定狀態。',principle:'以低強度逐步啟動神經、心肺與划水感覺。',use:'每堂課前段。',mistake:'熱身就游太快，主課前已累積疲勞。',pair:'Easy Freestyle、Kick、Scull、呼吸管。'},
+    {name:'臨界泳速 CSS',purpose:'提升接近臨界速度下的可持續能力。',principle:'在接近 CSS 的強度累積穩定時間，建立1500m與三鐵巡航能力。',use:'100 / 200 / 400m 間歇。',mistake:'前兩趟過快，後段大幅掉速。',pair:'臨界泳速 CSS、均速練習 Pace Control。'},
+    {name:'衝刺 Sprint',purpose:'提升最高速度、爆發與高划頻神經能力。',principle:'短距離、高強度、充分休息，讓每趟維持高品質。',use:'25 / 50m速度、100蝶專項。',mistake:'休息太短，變成乳酸耐力而非衝刺。',pair:'衝刺 Sprint、划頻練習 Stroke Rate。'},
+    {name:'分解動作 Drill',purpose:'隔離某一項技術問題，降低完整游的複雜度。',principle:'把完整動作拆成可控制的單一技能，再轉回完整泳姿。',use:'技術修正、學習新動作、課前技術段。',mistake:'只做 Drill，不做完整游轉換。',pair:'Technique + 對應 Drill Tag。'},
+    {name:'蝶式 Butterfly',purpose:'訓練蝶式波動、手腳節奏、第二下腿與速度耐力。',principle:'胸—髖—腿波動與雙臂划水協調，短距離高品質累積。',use:'100蝶專項。',mistake:'疲勞下硬撐長距離，動作越游越壞。',pair:'Body Dolphin、Single-arm Butterfly、Sprint。'},
+    {name:'抬頭捷 Head-up Freestyle',purpose:'訓練前端支撐、較高划頻與開放水域 sighting。',principle:'抬頭會增加阻力，因此會放大抓水與核心穩定需求。',use:'三鐵、開放水域、短距離技術刺激。',mistake:'長距離大量做，造成頸肩疲勞與腿沉。',pair:'Triathlon、Catch、短距離25–50m。'},
+    {name:'恢復 Recovery',purpose:'降低整體訓練壓力，同時維持水感與活動度。',principle:'低強度促進恢復，不追求速度與乳酸刺激。',use:'高強度隔天、重訓後、疲勞日。',mistake:'恢復組又偷偷追配速。',pair:'恢復 Recovery、Easy Freestyle、輕技術 Drill。'},
+    {name:'踢腿 Kick',purpose:'專注腿部節奏、髖部穩定、2-beat / 6-beat 與身體位置。',principle:'拿掉手臂推進後，直接暴露腿沉與踢腿效率問題。',use:'腿部技術、蝶腿、身體位置修正。',mistake:'膝蓋主導、踢腿幅度過大。',pair:'Kick-only、DMC / Zoomer、Body Position。'},
+    {name:'混合 Mixed',purpose:'記錄同一組中包含多種泳姿或技術內容。',principle:'用於無法單一分類的組合訓練。',use:'IM、混合技術循環、組合課表。',mistake:'過度使用 Mixed，導致後續趨勢分析失去可比較性。',pair:'只有真的無法拆分時才使用。'}
+  ],
+  drill:[
+    {name:'單臂划手 Single-arm',purpose:'隔離單側抓水、推水、轉肩與換氣協調。',principle:'降低動作複雜度，讓注意力集中在單側划手路徑與身體穩定。',use:'左右不對稱、換氣側動作亂、入水跨中線。',mistake:'固定手塌陷、身體蛇行、只用手臂拉水。',pair:'呼吸管、Agility；做完接完整裸游。'},
+    {name:'只踢水 Kick-only',purpose:'改善腿部位置、髖部帶動與踢腿節奏。',principle:'拿掉手臂推進後，能直接暴露腿沉、膝蓋主導與踢腿過大的問題。',use:'腿沉、踢腿耗能、2-beat / 6-beat 協調差。',mistake:'膝蓋過度彎曲、幅度過大、腳踝僵硬。',pair:'板踢、側身踢、DMC/Zoomer。'},
+    {name:'水感小划 Scull',purpose:'建立手掌＋前臂對水壓的感知。',principle:'用小幅內外掃找穩定壓力，學會「支撐水」而不是快速拉手。',use:'抓水滑掉、手掌沒有壓力感、前臂沒參與。',mistake:'動作太大、手肘亂跑、只動手腕。',pair:'Agility、拳頭游、裸游轉換。'},
+    {name:'3-3-3 Drill',purpose:'把單臂控制轉回完整自由式。',principle:'單側重複建立節奏，再切回完整游，訓練左右銜接。',use:'左右不對稱、完整游一快就亂。',mistake:'三次單臂之間停太久、轉換時失去節奏。',pair:'單臂划手、完整裸游。'},
+    {name:'鯊魚式 Shark Drill',purpose:'練高肘恢復手與側身平衡。',principle:'在恢復手階段放慢動作，強化肩胛與身體滾動控制。',use:'甩手、恢復手太低、肩髖不同步。',mistake:'聳肩、過度側躺、手肘刻意抬太高。',pair:'側身打水、6 Kick Switch。'},
+    {name:'側身打水 Side Kick',purpose:'建立側身平衡、核心穩定與換氣姿勢。',principle:'用側身姿勢強迫身體找到低阻力平衡點。',use:'轉肩過度、換氣撞水道繩、腿沉。',mistake:'身體翻過頭、頭抬高、剪刀腳。',pair:'6 Kick Switch、換氣 Drill。'},
+    {name:'六下換邊 6 Kick Switch',purpose:'整合打水、滾動、前伸與換邊時機。',principle:'用固定踢腿數當節拍，建立穩定轉體。',use:'手腳不同步、轉肩失控、前伸手不穩。',mistake:'換邊靠手硬拉、轉太快、踢腿變大。',pair:'側身打水、完整自由式。'},
+    {name:'拳頭游 Fist Drill',purpose:'提高前臂抓水參與。',principle:'減少手掌面積後，迫使前臂建立受力面。',use:'只靠手掌抓水、前臂沒有壓力。',mistake:'變成快速亂划、肩膀過度用力。',pair:'25m 拳頭游 + 25m 正常手掌。'},
+    {name:'抓水／抱水 Catch / Hold',purpose:'建立高品質前段抓水與穩定支撐。',principle:'先固定肩胛與手肘，再讓前臂形成向後受力面。',use:'聳肩抓水、肘先往後、手掌滑掉。',mistake:'刻意追求高肘造成肩膀緊繃。',pair:'Scull、Agility、單臂。'},
+    {name:'身體海豚波 Body Dolphin',purpose:'建立蝶式胸—髖—腿波動鏈。',principle:'由軀幹產生波動，腿只做末端放大。',use:'蝶式用膝蓋踢、上下跳太多、節奏斷裂。',mistake:'膝蓋主動猛踢、腰椎過度折彎。',pair:'蝶式單臂、25m完整蝶。'},
+    {name:'蝶式單臂 Single-arm Butterfly',purpose:'降低完整蝶式負荷並保留波動與抓水。',principle:'減少雙臂同步負荷，讓注意力放在節奏與呼吸。',use:'完整蝶很快崩、第二下腿抓不到時機。',mistake:'單臂變自由式划法、波動消失。',pair:'3-3-3 Fly、完整蝶25m。'},
+    {name:'抬頭捷 Head-up Freestyle',purpose:'強化前端支撐、划頻與開放水域抬頭能力。',principle:'提高頭位後阻力增加，迫使抓水與核心支撐更積極。',use:'三鐵 sighting、前端抓水弱、划頻過低。',mistake:'長距離大量做造成頸肩疲勞、腰沉。',pair:'短距離25–50m，之後回低頭裸游。'},
+    {name:'划頻練習 Stroke Rate',purpose:'減少過度滑行與每划掉速。',principle:'透過提高有效划頻，降低速度谷底。',use:'划頻太低、每划之間停頓明顯。',mistake:'只加手速但抓水變差。',pair:'25m節奏加速、裸游均速。'},
+    {name:'均速練習 Pace Control',purpose:'建立穩定配速與技術耐力。',principle:'降低前快後崩，讓每趟輸出與動作一致。',use:'CSS組後段掉速、長距離巡航不穩。',mistake:'只盯秒數，為守秒數犧牲動作。',pair:'100m / 200m CSS 主課。'},
+    {name:'姿勢游泳 Technique Swim',purpose:'以完整自由式泳姿練技術，不把動作拆成單一 Drill。',principle:'在完整游中降低速度與壓力，把注意力放在身體線、抓水、換氣與節奏。',use:'暖身後技術段、Drill 轉完整泳姿、動作品質重建。',mistake:'把姿勢游做成衝速度，失去技術練習目的。',pair:'Technique、呼吸管、Agility 或短距離裸游。'}
+  ],
+  purpose:[
+    {name:'技術 Technique',purpose:'修正動作、建立新動作模式。',principle:'低到中強度下保留注意力，優先動作品質。',use:'學習新 Drill、修正姿勢、器材轉裸游。',mistake:'把 Technique 做成高乳酸課。',pair:'短距離、高休息、明確技術提示。'},
+    {name:'臨界泳速 CSS',purpose:'提升可持續高速與1500m巡航能力。',principle:'長時間停留在接近臨界速度的強度。',use:'1500m、三鐵、耐力速度。',mistake:'前兩趟過快導致後段崩。',pair:'100 / 200 / 400m 間歇。'},
+    {name:'有氧 Aerobic',purpose:'建立長時間低到中強度耐力。',principle:'累積可恢復的有氧訓練量。',use:'基礎期、恢復日、三鐵長距離。',mistake:'每趟都游成中高強度。',pair:'長距離easy/steady。'},
+    {name:'衝刺 Sprint',purpose:'提升神經速度、爆發與最高划頻。',principle:'短時間高品質輸出，搭配充分休息。',use:'25/50m速度、100蝶速度。',mistake:'休息太短變成耐乳酸課。',pair:'25m / 50m 全休。'},
+    {name:'恢復 Recovery',purpose:'促進恢復、維持水感。',principle:'降低總壓力但保留動作頻率與水感。',use:'高強度隔天、重訓後、疲勞日。',mistake:'恢復日又偷偷追配速。',pair:'easy + 技術 Drill。'},
+    {name:'器材→裸游 Equipment→Naked',purpose:'把器材提供的速度／姿勢轉回裸游。',principle:'先放大正確感覺，再立即拿掉器材重現。',use:'器材快但裸游慢。',mistake:'器材段太長、裸游轉換太少。',pair:'50器材 + 50裸游。'},
+    {name:'身體位置 Body Position',purpose:'降低阻力、改善髖腿高度。',principle:'先處理水平線與核心，再談推進。',use:'腿沉、頭抬高、腰折。',mistake:'只靠蛙鞋把腿撐高。',pair:'呼吸管、側身打水、DMC→裸游。'},
+    {name:'踢腿 Kick',purpose:'改善腿部節奏、髖部穩定與速度支持。',principle:'打水是姿勢控制與節奏工具，不只是推進。',use:'2-beat/6-beat、腿沉、蝶腿。',mistake:'膝蓋主導、大幅度打水。',pair:'Kick-only、短蛙鞋。'},
+    {name:'抓水 Catch',purpose:'提高前端支撐與推進效率。',principle:'手掌＋前臂形成有效受力面。',use:'抓水滑、DPS低、划水沒支撐。',mistake:'聳肩、拉肘、手掌側翻。',pair:'Scull、Agility、單臂。'},
+    {name:'換氣 Breathing',purpose:'改善換氣時平衡與節奏。',principle:'頭跟著軀幹轉，而不是單獨抬頭。',use:'換氣停頓、腿沉、前伸手塌。',mistake:'只練頭部動作，不修身體平衡。',pair:'側身打水、單臂、呼吸管轉換。'},
+    {name:'三鐵 Triathlon',purpose:'提升開放水域巡航、sighting與穩定輸出。',principle:'兼顧效率、持續性與環境適應。',use:'113/226三鐵。',mistake:'只練泳池短間歇。',pair:'長距離、抬頭捷、CSS。'},
+    {name:'蝶式 Butterfly',purpose:'提升蝶式節奏、速度與技術耐力。',principle:'短距離高品質累積，避免疲勞下硬撐。',use:'100蝶。',mistake:'用手臂硬拉、第二下腿錯位。',pair:'Body Dolphin、單臂蝶、25m完整蝶。'},
+    {name:'自潛 Freedive',purpose:'改善放鬆、流線與蛙鞋效率。',principle:'降低不必要張力與阻力。',use:'自潛技術輔助。',mistake:'水中單獨做極限閉氣。',pair:'安全buddy、陸上CO₂訓練。'}
+  ],
+  equipment:[
+    {name:'Agility',purpose:'提供抓水方向與水感回饋。',principle:'手槳會因手掌方向錯誤而偏移，提供即時技術回饋。',use:'抓水、入水、前臂支撐。',mistake:'只追求速度。',pair:'Agility 50 → 裸游 50。'},
+    {name:'MP Strength Paddle',purpose:'提高划水負荷與推進力量。',principle:'增加手掌受力面積，提高抓水/推水負荷。',use:'力量耐力。',mistake:'肩膀疲勞下大量使用。',pair:'短距離 + 裸游轉換。'},
+    {name:'DMC Elite Max',purpose:'提高髖位、踢腿節奏與高速感。',principle:'增加腳部推進與速度，讓身體體驗高位姿勢。',use:'腿部節奏、蝶腿、速度。',mistake:'依賴蛙鞋掩蓋腿沉。',pair:'DMC 50 → 裸游 50。'},
+    {name:'FINIS 呼吸管',purpose:'移除換氣干擾，專注頭位與抓水。',principle:'讓頭保持穩定，減少呼吸造成的姿勢變化。',use:'身體線、抓水、對稱性。',mistake:'長期只靠呼吸管不練換氣。',pair:'呼吸管技術段 → 裸游。'},
+    {name:'腰間挖水器',purpose:'增加阻力，強化推進與身體穩定。',principle:'額外阻力會放大划水不足與身體線問題。',use:'力量耐力、抓水、核心。',mistake:'技術未穩就長距離使用。',pair:'短距離阻力游 → 裸游快速轉換。'}
+  ]
+};
+
+function renderTagExplain(mode='drill'){
+  document.querySelectorAll('#tagExplainTabs button').forEach(b=>b.classList.toggle('active',b.dataset.mode===mode));
+  const data=TAG_EXPLAIN[mode]||[];
+  tagExplainGrid.innerHTML=data.map(x=>`
+    <div class="tag-explain-card">
+      <h4>${x.name}</h4>
+      <p><b>目的：</b>${x.purpose}</p>
+      <p><b>原理：</b>${x.principle}</p>
+      <p><b>適合：</b>${x.use}</p>
+      <p><b>常見錯誤：</b>${x.mistake}</p>
+      <p class="when"><b>建議搭配：</b>${x.pair}</p>
+    </div>`).join('');
+}
+
 function renderTrends(){
   if(!document.getElementById('trendSummary'))return;
   const hist=JSON.parse(localStorage.getItem('swimlabTrainingHistory')||'[]');
@@ -699,6 +1434,803 @@ function loadTrainingHistory(i){
 }
 
 
+
+function groupedRowFromObs(obs){
+  if(!obs.length)return null;
+  const first=obs[0];
+  const times=obs.map(x=>secondsText(x.time)).filter(Boolean).join(',');
+  const strokes=obs.map(x=>x.strokes??'').filter(x=>x!==''&&x!=null).join(',');
+  const swolf=obs.map(x=>x.swolf??'').filter(x=>x!==''&&x!=null).join(',');
+  const hr=obs.map(x=>x.hr??'').filter(x=>x!==''&&x!=null).join(',');
+  const restSec = first.restSec ?? first.groupRestSec ?? null;
+  return {
+    dist:Math.round(first.dist), reps:obs.length, times,
+    type:first.type||'裸游', equip:first.equip||[], drill:first.drill||[],
+    purpose:first.purpose||'Technique',
+    rest:restSec!=null ? (Number(restSec).toFixed(restSec%1?1:0)+'s') : '',
+    strokes, swolf, hr
+  };
+}
+function addGroupedObservations(groups){
+  trainingRows.innerHTML='';
+  let count=0,totalObs=0;
+  for(const g of groups){
+    const row=groupedRowFromObs(g);
+    if(row){addTrainingRow(row);count++;totalObs+=g.length}
+  }
+  return {groups:count,observations:totalObs};
+}
+
+
+
+
+const WORKOUT_EXAMPLES={
+1:`200 m easy 自由式 + 分解動作 50m*4 + 50m 呼吸管+蛙鞋 *4 + 50m 蛙鞋 *4 + 50m 呼吸管+划手板 *4 + 50m 划手板 *4 + (100m 自 + 休 30s)*8 + (200m 自 蛙鞋*3 + 休 40s)*3 + 50m 蝶打水*4 + 50m 蝶分解*4 + 50m 蝶*6 + 100m緩`,
+2:`200m 自暖身 + 50m 自姿勢游泳*4 + (50m 自(呼吸管 + Agility 划手板) + 50m 自裸游)*4 + (50m 自(呼吸管 + DMC 蛙鞋) + 50m 自裸游)*4 + (50m 自(划手板 + DMC 蛙鞋) + 50m 自裸游)*4 + 100m 自 DMC 蛙鞋 打水 *4 + (100m 自裸游 1'40-1'45 + 休20s)*8 + (200m 自 DMC 蛙鞋 + 休20s)*3 + 50m DMC 蛙鞋蝶腳*4 + 50m 蝶 DMC 蛙鞋慢游*4 + 100m 緩`
+};
+function loadWorkoutExample(n){
+  workoutTextInput.value=WORKOUT_EXAMPLES[n]||'';
+  previewWorkoutText();
+}
+
+function normWorkoutText(s){
+  return String(s||'')
+    .replace(/[×xX]/g,'*')
+    .replace(/＋/g,'+')
+    .replace(/，/g,',')
+    .replace(/；/g,';')
+    .replace(/[–—]/g,'-')
+    .replace(/\s+/g,' ')
+    .trim();
+}
+function detectEquipFromText(s){
+  const a=[];
+  const hasAgility=/agility/i.test(s);
+  const hasExplicitMP=/\bmp\b|mp strength/i.test(s);
+
+  if(/呼吸管/.test(s))a.push('FINIS 呼吸管');
+  if(hasAgility)a.push('Agility');
+
+  // Generic "划手板 / 手槳" means MP only when no named paddle is present.
+  if(hasExplicitMP || ((!hasAgility) && /划手板|手槳/i.test(s))){
+    a.push('MP Strength Paddle');
+  }
+
+  if(/dmc|elite max/i.test(s))a.push('DMC Elite Max');
+  else if(/蛙鞋|腳蹼/.test(s))a.push('DMC Elite Max');
+
+  if(/zoomer/i.test(s))a.push('Zoomer Z2');
+  if(/edge fin/i.test(s))a.push('EDGE FIN');
+  if(/腰間挖水器|阻力器/.test(s))a.push('腰間挖水器');
+  if(/pull buoy|浮球/i.test(s))a.push('Pull Buoy');
+  if(/kickboard|浮板/i.test(s))a.push('Kickboard');
+
+  return [...new Set(a)];
+}
+function detectDrillFromText(s){
+  const a=[];
+  if(/單臂/.test(s))a.push('單臂划手');
+  if(/只踢|打水|踢水|蝶腳/.test(s))a.push('只踢水');
+  if(/scull|水感小划/i.test(s))a.push('Scull');
+  if(/3-3-3/.test(s))a.push('3-3-3');
+  if(/shark|鯊魚/i.test(s))a.push('Shark Drill');
+  if(/側身打水|側打/.test(s))a.push('側身打水');
+  if(/6 kick|六下換邊/i.test(s))a.push('6 Kick Switch');
+  if(/拳頭/.test(s))a.push('拳頭游');
+  if(/catch|hold|抓水|抱水/i.test(s))a.push('Catch/Hold');
+  if(/body dolphin|海豚波/i.test(s))a.push('Body Dolphin');
+  if(/蝶.*單臂|單臂.*蝶/.test(s))a.push('蝶式單臂');
+  if(/抬頭捷/.test(s))a.push('抬頭捷');
+  if(/划頻/.test(s))a.push('划頻練習');
+  if(/均速/.test(s))a.push('均速練習');
+  if(/姿勢游泳|姿勢游/.test(s))a.push('姿勢游泳');
+  return [...new Set(a)];
+}
+function detectTypePurpose(s){
+  let type='裸游',purpose='Technique';
+  if(/easy|暖身/i.test(s)){type='Warm-up';purpose='Recovery'}
+  if(/緩|恢復|recovery/i.test(s)){type='Recovery';purpose='Recovery'}
+  if(/css/i.test(s)){type='CSS';purpose='CSS'}
+  if(/sprint|衝刺|全力/i.test(s)){type='Sprint';purpose='Sprint'}
+  if(/蝶/.test(s)){type='蝶式';purpose='Butterfly'}
+  if(/抬頭捷/.test(s)){type='抬頭捷';purpose='Triathlon'}
+  if(/分解|drill|單臂|scull/i.test(s)){type='Drill';purpose='Technique'}
+  if(/姿勢游泳|姿勢游/.test(s)){type='裸游';purpose='Technique'}
+  if(/只踢|打水|踢水|蝶腳/.test(s)){type='Kick';purpose='Kick'}
+  if(/有氧|aerobic/i.test(s))purpose='Aerobic';
+  if(/三鐵|triathlon/i.test(s))purpose='Triathlon';
+  if(/換氣|breath/i.test(s))purpose='Breathing';
+  if(/抓水|catch/i.test(s))purpose='Catch';
+  if(/裸游/.test(s)){type='裸游';}
+  return {type,purpose};
+}
+function parseRestSec(s){
+  const m=String(s).match(/(?:休|rest)\s*([0-9]+(?:\.[0-9]+)?)\s*s?/i);
+  return m?+m[1]:null;
+}
+function detectTargetPace(s){
+  // Supports 1'40-1'45, 1:40-1:45, @1:40
+  let m=String(s).match(/(\d+)\s*[':]\s*(\d{1,2})(?:\s*-\s*(\d+)\s*[':]\s*(\d{1,2}))?/);
+  if(!m)return '';
+  const a=`${m[1]}:${String(m[2]).padStart(2,'0')}`;
+  if(m[3]!=null)return `${a}-${m[3]}:${String(m[4]).padStart(2,'0')}`;
+  return a;
+}
+function splitTopLevel(str,sep='+'){
+  const out=[];let cur='',depth=0;
+
+  function isInternalPlus(s,idx){
+    const left=s.slice(0,idx).trim();
+    const right=s.slice(idx+1).trim();
+
+    // If the right side begins with a known equipment token and does NOT begin
+    // a new distance/set, this "+" belongs to the same training item.
+    const equipStart=/^(呼吸管|蛙鞋|腳蹼|划手板|手槳|Agility\b|DMC\b|MP\b|Zoomer\b|EDGE\b|FINIS\b|Pull\s*Buoy\b|Kickboard\b|腰間挖水器\b)/i;
+    const newSetStart=/^(\(?\s*\d+\s*m?\s*(?:自|自由式|蝶|蛙|仰|混|easy|warm|recovery|drill|分解|姿勢|抬頭|css|sprint)?\b|\()/i;
+
+    if(equipStart.test(right) && !newSetStart.test(right)) return true;
+
+    // "自(呼吸管 + Agility 划手板)" is protected by parentheses via depth,
+    // but this also covers unparenthesized named-equipment combinations.
+    return false;
+  }
+
+  for(let i=0;i<str.length;i++){
+    const c=str[i];
+    if(c==='(')depth++;
+    if(c===')')depth=Math.max(0,depth-1);
+
+    if(c===sep && depth===0 && !isInternalPlus(str,i)){
+      if(cur.trim())out.push(cur.trim());
+      cur='';
+    }else{
+      cur+=c;
+    }
+  }
+  if(cur.trim())out.push(cur.trim());
+  return out;
+}
+function stripOuterParens(s){
+  s=s.trim();
+  if(!(s.startsWith('(')&&s.endsWith(')')))return s;
+  let d=0;
+  for(let i=0;i<s.length;i++){
+    if(s[i]==='(')d++;
+    else if(s[i]===')')d--;
+    if(d===0 && i<s.length-1)return s;
+  }
+  return s.slice(1,-1).trim();
+}
+function parseTrailingRepeat(s){
+  // Only treat *N as a repeat when it is the final token of this segment.
+  const m=s.trim().match(/^(.*?)(?:\s*\*\s*(\d+))\s*$/);
+  if(!m)return {body:s.trim(),repeat:1};
+  return {body:m[1].trim(),repeat:+m[2]};
+}
+function parseWorkoutAtomic(seg, inheritedRepeat=1, inheritedRest=null){
+  const s=seg.trim();
+  if(!s)return null;
+  const explicitM=s.match(/(\d+(?:\.\d+)?)\s*m\b/i);
+  const shorthand=s.match(/(\d+(?:\.\d+)?)(?=\s*(?:自|自由式|蝶|蛙|仰|混|easy|warm|recovery|drill|分解|姿勢|抬頭|css|sprint))/i);
+  const dm=explicitM||shorthand;
+  if(!dm){
+    if(/^(呼吸管|蛙鞋|腳蹼|划手板|手槳|Agility|DMC|MP|Zoomer|EDGE|FINIS)/i.test(s))
+      return {warning:'器材片段被單獨切開：'+s+'（通常代表前一個 + 應屬於同一組）'};
+    return {warning:'無法辨識距離：'+s};
+  }
+
+  const dist=+dm[1];
+  const ownRep=parseTrailingRepeat(s);
+  let reps=Math.max(1,ownRep.repeat) * Math.max(1,inheritedRepeat);
+  const rest=parseRestSec(s) ?? inheritedRest;
+  const equip=detectEquipFromText(s);
+  const drill=detectDrillFromText(s);
+  const tp=detectTypePurpose(s);
+  const target=detectTargetPace(s);
+
+  if(/自由式|(?:^|\s)自(?:\s|\*|\+|\)|$)/.test(s) && !/分解|打水|踢水|蝶腳|單臂/.test(s)){
+    tp.type='裸游';
+  }
+  if(target && tp.type==='裸游' && !drill.includes('均速練習')){
+    drill.push('均速練習');
+  }
+  // Equipment alone is not automatically an Equipment→Naked set.
+  // That purpose is assigned only when a repeated equipment set is paired
+  // with a same-distance naked freestyle set in the surrounding group.
+  if(/裸游/.test(s) && equip.length)tp.purpose='Equipment→Naked';
+
+  return {
+    dist,reps,times:'',target,
+    type:tp.type,equip,drill,purpose:tp.purpose,
+    rest:rest!=null?rest+'s':'',source:s
+  };
+}
+function parseWorkoutExpression(expr, multiplier=1, inheritedRest=null, depth=0){
+  if(depth>10)return {rows:[],warnings:['括號層級過深，請檢查課表文字。']};
+  let s=expr.trim();
+  const warnings=[],rows=[];
+  if(!s)return {rows,warnings};
+
+  // Group repeat, e.g. (A + B)*4
+  let gm=s.match(/^\((.*)\)\s*\*\s*(\d+)\s*$/);
+  if(gm){
+    const inside=gm[1], rep=+gm[2];
+    const parts=splitTopLevel(inside,'+');
+
+    // If one of the parts is just "休 30s", apply it to all actual work segments in the group.
+    let groupRest=null;
+    const workParts=[];
+    for(const p of parts){
+      const r=parseRestSec(p);
+      if(r!=null && !/\d+\s*m?(?=\s*(?:自|自由式|蝶|蛙|仰|混|easy|warm|recovery|drill|分解|姿勢|抬頭|css|sprint|\(|\*|$))/i.test(p)) groupRest=r;
+      else workParts.push(p);
+    }
+
+    const groupRows=[];
+    const oneWorkOnly=workParts.length===1;
+    for(const p of workParts){
+      const inner=parseTrailingRepeat(p);
+      let effectiveMultiplier=multiplier*rep;
+      if(oneWorkOnly && inner.repeat>1 && rep>1){
+        // Redundant/ambiguous double repeat. Prefer the explicit repeat on the work item
+        // instead of multiplying both (e.g. (200m*3 + rest)*3 => 200m x3, not x9).
+        effectiveMultiplier=multiplier;
+        warnings.push(`偵測到內外雙重趟數「${p}」×${rep}；已採內層 ×${inner.repeat}，避免誤乘成 ×${inner.repeat*rep}。`);
+      }
+      const sub=parseWorkoutExpression(p,effectiveMultiplier,groupRest,depth+1);
+      groupRows.push(...sub.rows);warnings.push(...sub.warnings);
+    }
+
+    // If this repeated group contains an equipment set immediately followed by naked freestyle,
+    // treat the pair as Equipment→Naked transition training.
+    for(let i=0;i<groupRows.length-1;i++){
+      const a=groupRows[i], b=groupRows[i+1];
+      if((a.equip||[]).length>0 && (b.equip||[]).length===0 &&
+         a.dist===b.dist && b.type==='裸游'){
+        a.purpose='Equipment→Naked';
+        b.purpose='Equipment→Naked';
+      }
+    }
+    rows.push(...groupRows);
+    return {rows,warnings};
+  }
+
+  // Top-level A + B
+  const parts=splitTopLevel(s,'+');
+  if(parts.length>1){
+    let pendingRest=null;
+    for(let i=0;i<parts.length;i++){
+      const p=parts[i];
+      const r=parseRestSec(p);
+      if(r!=null && !/\d+\s*m?(?=\s*(?:自|自由式|蝶|蛙|仰|混|easy|warm|recovery|drill|分解|姿勢|抬頭|css|sprint|\(|\*|$))/i.test(p)){
+        // attach to previous generated row
+        if(rows.length) rows[rows.length-1].rest=r+'s';
+        else pendingRest=r;
+        continue;
+      }
+      const sub=parseWorkoutExpression(p,multiplier,pendingRest,depth+1);
+      rows.push(...sub.rows);warnings.push(...sub.warnings);
+      pendingRest=null;
+    }
+    return {rows,warnings};
+  }
+
+  const atom=parseWorkoutAtomic(s,multiplier,inheritedRest);
+  if(atom?.warning)warnings.push(atom.warning);
+  else if(atom)rows.push(atom);
+  return {rows,warnings};
+}
+function parseWorkoutText(raw){
+  const s=normWorkoutText(raw);
+  if(!s)return {rows:[],warnings:[]};
+  return parseWorkoutExpression(s,1,null,0);
+}
+
+function validateParsedWorkout(parsed){
+  const issues=[];
+  parsed.rows.forEach((r,i)=>{
+    if(!r.dist || r.dist<=0) issues.push(`#${i+1} 距離異常`);
+    if(!r.reps || r.reps<=0) issues.push(`#${i+1} 趟數異常`);
+    if(r.equip?.includes('Agility') && r.equip?.includes('MP Strength Paddle'))
+      issues.push(`#${i+1} 同時出現 Agility 與 MP，請確認是否真的使用兩種划手板`);
+    if(r.rest && parseRestTextSec(r.rest)>180)
+      issues.push(`#${i+1} 休息 ${r.rest} 偏長，請確認 Garmin/文字是否解析正確`);
+  });
+  return issues;
+}
+
+function renderWorkoutPreview(parsed){
+  workoutParsePreview.innerHTML=parsed.rows.length?`
+    <div style="overflow-x:auto"><table>
+      <thead><tr><th>#</th><th>距離</th><th>趟數</th><th>泳姿/類型</th><th>器材</th><th>Drill</th><th>目的</th><th>目標配速</th><th>休息</th></tr></thead>
+      <tbody>${parsed.rows.map((r,i)=>`<tr>
+        <td>${i+1}</td><td>${r.dist}m</td><td>${r.reps}</td><td>${r.type}</td>
+        <td>${r.equip.join(' + ')||'—'}</td><td>${r.drill.join(' + ')||'—'}</td>
+        <td>${r.purpose}</td><td>${r.target||'—'}</td><td>${r.rest||'—'}</td></tr>`).join('')}</tbody>
+    </table></div>`:'<div class="muted">沒有解析出可用訓練組。</div>';
+  const checkIssues=validateParsedWorkout(parsed);
+  workoutParseStatus.innerHTML=`解析出 <b>${parsed.rows.length}</b> 組。${parsed.warnings.length?'<br>⚠ '+parsed.warnings.join('<br>⚠ '):''}${checkIssues.length?'<br>🔎 '+checkIssues.join('<br>🔎 '):''}`;
+}
+
+function savePlannedWorkout(){
+  const parsed=parseWorkoutText(workoutTextInput.value);
+  renderWorkoutPreview(parsed);
+  if(!parsed.rows.length){
+    workoutParseStatus.innerHTML += '<br>沒有可儲存的課表組。';
+    return;
+  }
+  localStorage.setItem('swimlabPlannedWorkout',JSON.stringify({
+    savedAt:new Date().toISOString(),
+    raw:workoutTextInput.value,
+    rows:parsed.rows
+  }));
+  workoutParseStatus.innerHTML += `<br>已儲存本次計畫：<b>${parsed.rows.length}</b> 組。`;
+}
+function getPlannedWorkout(){
+  const saved=JSON.parse(localStorage.getItem('swimlabPlannedWorkout')||'null');
+  if(saved?.rows?.length)return saved;
+  const parsed=parseWorkoutText(workoutTextInput.value);
+  return parsed.rows.length?{raw:workoutTextInput.value,rows:parsed.rows}:null;
+}
+function actualRowsForMatch(){
+  return collectTrainingRows().map((r,idx)=>({
+    index:idx,
+    dist:r.dist,
+    reps:r.reps,
+    times:parseSeries(r.times),
+    type:r.type,
+    equip:r.equip||[],
+    drill:r.drill||[],
+    purpose:r.purpose,
+    rest:r.rest||'',
+    target:r.target||''
+  }));
+}
+function parseRestTextSec(v){
+  const m=String(v||'').match(/([0-9]+(?:\.[0-9]+)?)/);
+  return m?+m[1]:null;
+}
+function planActualScore(p,a){
+  if(!p||!a)return -999;
+  let s=0;
+  if(p.dist===a.dist)s+=50;
+  else{
+    const dd=Math.abs(p.dist-a.dist);
+    if(dd<=25)s+=20;
+    else if(dd<=50)s+=5;
+    else s-=20;
+  }
+  if(p.reps===a.reps)s+=20;
+  else s+=Math.max(-10,10-Math.abs((p.reps||1)-(a.reps||1))*3);
+
+  if(p.type===a.type)s+=12;
+  if((p.equip||[]).length && (a.equip||[]).length){
+    const common=p.equip.filter(x=>a.equip.includes(x)).length;
+    s+=common*6;
+  }
+  const pr=parseRestTextSec(p.rest), ar=parseRestTextSec(a.rest);
+  if(pr!=null&&ar!=null){
+    const d=Math.abs(pr-ar);
+    if(d<=2)s+=8;
+    else if(d<=5)s+=5;
+    else if(d<=10)s+=2;
+  }
+  return s;
+}
+function greedyMatchPlanActual(plan,actual){
+  const used=new Set(),matches=[];
+  for(let i=0;i<plan.length;i++){
+    let bestJ=-1,best=-999;
+    // Favor forward/local ordering to avoid matching distant identical sets.
+    for(let j=0;j<actual.length;j++){
+      if(used.has(j))continue;
+      const orderPenalty=Math.abs(j-i)*1.5;
+      const sc=planActualScore(plan[i],actual[j])-orderPenalty;
+      if(sc>best){best=sc;bestJ=j}
+    }
+    if(bestJ>=0 && best>=20){
+      used.add(bestJ);
+      matches.push({planIndex:i,actualIndex:bestJ,score:best});
+    }else matches.push({planIndex:i,actualIndex:null,score:null});
+  }
+  return matches;
+}
+function applyPlanMetaToActual(plan,actual,matches){
+  matches.forEach(m=>{
+    if(m.actualIndex==null)return;
+    const p=plan[m.planIndex], tr=document.querySelectorAll('#trainingRows tr')[m.actualIndex];
+    if(!tr)return;
+
+    // Type
+    const typeSel=tr.querySelector('.trType');
+    if(typeSel){
+      [...typeSel.options].forEach((o,i)=>{if(typeKey(o.textContent)===p.type)typeSel.selectedIndex=i});
+    }
+    // Purpose
+    const purSel=tr.querySelector('.trPurpose');
+    if(purSel){
+      [...purSel.options].forEach((o,i)=>{if(purposeKey(o.textContent)===p.purpose)purSel.selectedIndex=i});
+    }
+    // Rest / target
+    if(p.rest && tr.querySelector('.trRest'))tr.querySelector('.trRest').value=p.rest;
+    if(p.target && tr.querySelector('.trTarget'))tr.querySelector('.trTarget').value=p.target;
+
+    // Equip/drill
+    tr.querySelectorAll('.trEquip').forEach(cb=>{cb.checked=(p.equip||[]).includes(cb.value)});
+    tr.querySelectorAll('.trDrill').forEach(cb=>{cb.checked=(p.drill||[]).includes(drillKey(cb.value))});
+    tr.querySelectorAll('.trEquip,.trDrill').forEach(cb=>{
+      const cls=cb.classList.contains('trEquip')?'trEquip':'trDrill';
+      updateTagCount(cb,cls);
+    });
+  });
+}
+function secFromTarget(v){
+  const m=String(v||'').match(/(\d+):(\d{1,2})(?:-(\d+):(\d{1,2}))?/);
+  if(!m)return null;
+  const a=+m[1]*60 + +m[2];
+  if(m[3]!=null){
+    const b=+m[3]*60 + +m[4];
+    return {min:Math.min(a,b),max:Math.max(a,b)};
+  }
+  return {min:a,max:a};
+}
+function summarizeMatch(plan,actual,matches){
+  let matched=0,completed=0,targetHits=0,targetTotal=0;
+  const rows=[];
+  matches.forEach((m,i)=>{
+    const p=plan[i];
+    const a=m.actualIndex!=null?actual[m.actualIndex]:null;
+    if(a)matched++;
+    let status='未匹配', cls='match-bad', avgPace=null, targetStatus='—';
+    if(a){
+      const totalDist=a.dist*Math.max(1,a.reps||1);
+      const plannedDist=p.dist*Math.max(1,p.reps||1);
+      const compRatio=plannedDist?totalDist/plannedDist:0;
+      if(compRatio>=.95 && compRatio<=1.05){completed++;status='完成';cls='match-ok'}
+      else if(compRatio>=.7){status='部分完成';cls='match-mid'}
+      else {status='偏離';cls='match-bad'}
+
+      if(a.times.length){
+        const avgTime=avg(a.times);
+        avgPace=avgTime*100/a.dist;
+      }
+      const tgt=secFromTarget(p.target);
+      if(tgt && avgPace!=null){
+        targetTotal++;
+        if(avgPace>=tgt.min && avgPace<=tgt.max){targetHits++;targetStatus='達標'}
+        else if(avgPace<tgt.min)targetStatus='快於目標';
+        else targetStatus='慢於目標';
+      }
+    }
+    rows.push({i,p,a,status,cls,avgPace,targetStatus});
+  });
+  return {matched,completed,targetHits,targetTotal,rows};
+}
+
+function flattenActualLaps(){
+  return collectTrainingRows().map((r,idx)=>({
+    index:idx,
+    dist:+r.dist||0,
+    reps:+r.reps||1,
+    times:parseSeries(r.times),
+    type:r.type,
+    equip:r.equip||[],
+    drill:r.drill||[],
+    purpose:r.purpose,
+    rest:r.rest||'',
+    target:r.target||''
+  }));
+}
+function actualLapUnitRows(){
+  // Convert each Garmin row into one logical lap unit.
+  // Lap-import mode normally has reps=1. If a row has reps>1, keep it as one grouped unit.
+  return flattenActualLaps();
+}
+function plannedDistance(p){ return (+p.dist||0) * Math.max(1,+p.reps||1); }
+function actualDistance(a){ return (+a.dist||0) * Math.max(1,+a.reps||1); }
+
+function targetRangeSec(target){
+  if(!target)return null;
+  const m=String(target).match(/(\d+):(\d{1,2})(?:-(\d+):(\d{1,2}))?/);
+  if(!m)return null;
+  const a=+m[1]*60 + +m[2];
+  if(m[3]!=null){
+    const b=+m[3]*60 + +m[4];
+    return {min:Math.min(a,b),max:Math.max(a,b)};
+  }
+  return {min:a,max:a};
+}
+function aggregateActualWindow(actual,start,end){
+  const seg=actual.slice(start,end);
+  const totalDistance=seg.reduce((s,x)=>s+actualDistance(x),0);
+  const totalSwimSeconds=seg.reduce((s,x)=>s+parseSeries(x.times).reduce((a,b)=>a+b,0),0);
+  const rests=seg.map(x=>parseRestTextSec(x.rest)).filter(x=>x!=null);
+  const avgRest=rests.length?rests.reduce((a,b)=>a+b,0)/rests.length:null;
+  const totalRest=rests.length?rests.reduce((a,b)=>a+b,0):0;
+  const allTimes=seg.flatMap(x=>parseSeries(x.times));
+  const avgPace=totalDistance>0 && totalSwimSeconds>0 ? totalSwimSeconds*100/totalDistance : null;
+  return {seg,totalDistance,totalSwimSeconds,avgRest,totalRest,allTimes,avgPace};
+}
+function scorePlanWindow(plan,agg){
+  if(!plan||!agg)return -999;
+  const pd=plannedDistance(plan);
+  let s=0;
+
+  // Total distance is the strongest signal.
+  const dd=Math.abs(pd-agg.totalDistance);
+  const tol=Math.max(25,pd*0.08);
+  if(dd<=1)s+=70;
+  else if(dd<=tol)s+=55;
+  else if(dd<=Math.max(50,pd*0.2))s+=25;
+  else s-=40;
+
+  // Prefer exact number of logical repeats when Garmin uses same-distance laps.
+  const sameDist=agg.seg.filter(x=>Math.abs(x.dist-plan.dist)<=1).length;
+  if(sameDist===plan.reps)s+=25;
+  else if(sameDist>0)s+=Math.max(-10,15-Math.abs(sameDist-plan.reps)*4);
+
+  // Order-compatible type hints.
+  const sameType=agg.seg.filter(x=>x.type===plan.type).length;
+  if(sameType===agg.seg.length && agg.seg.length)s+=10;
+  else if(sameType>0)s+=4;
+
+  // Rest closeness if plan specifies rest.
+  const pr=parseRestTextSec(plan.rest);
+  if(pr!=null && agg.avgRest!=null){
+    const rd=Math.abs(pr-agg.avgRest);
+    if(rd<=2)s+=10;
+    else if(rd<=5)s+=7;
+    else if(rd<=10)s+=3;
+    else s-=3;
+  }
+  return s;
+}
+function buildSmartMatches(plan,actual){
+  const out=[];
+  let cursor=0;
+
+  function exactRepWindow(p,start){
+    const reps=Math.max(1,+p.reps||1);
+    const end=start+reps;
+    if(end>actual.length)return null;
+    const seg=actual.slice(start,end);
+    // In Lap mode, each Garmin row is one interval. For a planned 50x4,
+    // require four consecutive 50m intervals; never substitute 2x100m.
+    if(!seg.every(x=>Math.abs((+x.dist||0)-(+p.dist||0))<=1 && Math.max(1,+x.reps||1)===1))return null;
+    const agg=aggregateActualWindow(actual,start,end);
+    return {start,end,agg,score:scorePlanWindow(p,agg)+40};
+  }
+
+  function singleWindow(p,start){
+    if(start>=actual.length)return null;
+    const a=actual[start];
+    if(Math.abs(actualDistance(a)-plannedDistance(p))>Math.max(1,plannedDistance(p)*0.02))return null;
+    const agg=aggregateActualWindow(actual,start,start+1);
+    return {start,end:start+1,agg,score:scorePlanWindow(p,agg)+30};
+  }
+
+  for(let pi=0;pi<plan.length;pi++){
+    const p=plan[pi];
+    const reps=Math.max(1,+p.reps||1);
+    let best=null;
+
+    // Search only forward and prefer the earliest exact structural match.
+    const maxStart=Math.min(actual.length-1,cursor+12);
+    for(let start=cursor;start<=maxStart;start++){
+      const candidate=reps>1?exactRepWindow(p,start):singleWindow(p,start);
+      if(!candidate)continue;
+      const typeMatches=candidate.agg.seg.filter(x=>x.type===p.type).length;
+      candidate.score += typeMatches*3;
+      candidate.score -= (start-cursor)*2;
+      if(!best || candidate.score>best.score || (candidate.score===best.score && start<best.start))best=candidate;
+    }
+
+    // Conservative fallback: one Garmin row may already represent the entire set.
+    if(!best){
+      for(let start=cursor;start<=maxStart;start++){
+        const a=actual[start];
+        if(Math.abs(actualDistance(a)-plannedDistance(p))<=Math.max(1,plannedDistance(p)*0.02)){
+          const agg=aggregateActualWindow(actual,start,start+1);
+          best={start,end:start+1,agg,score:scorePlanWindow(p,agg)-10-(start-cursor)*2};
+          break;
+        }
+      }
+    }
+
+    if(best && best.score>=35){
+      out.push({planIndex:pi,...best});
+      cursor=best.end;
+    }else{
+      out.push({planIndex:pi,start:null,end:null,score:null,agg:null});
+    }
+  }
+  return out;
+}
+function applyPlanToWindow(plan,actual,matches){
+  const trs=[...document.querySelectorAll('#trainingRows tr')];
+  matches.forEach(m=>{
+    if(m.start==null)return;
+    const p=plan[m.planIndex];
+    for(let j=m.start;j<m.end;j++){
+      const tr=trs[j];
+      if(!tr)continue;
+
+      const typeSel=tr.querySelector('.trType');
+      if(typeSel){
+        [...typeSel.options].forEach((o,i)=>{
+          if(typeKey(o.textContent)===p.type)typeSel.selectedIndex=i
+        });
+      }
+      const purSel=tr.querySelector('.trPurpose');
+      if(purSel){
+        [...purSel.options].forEach((o,i)=>{
+          if(purposeKey(o.textContent)===p.purpose)purSel.selectedIndex=i
+        });
+      }
+      if(p.target && tr.querySelector('.trTarget'))tr.querySelector('.trTarget').value=p.target;
+
+      // Do not overwrite Garmin-measured rest unless empty.
+      const restEl=tr.querySelector('.trRest');
+      if(restEl && !restEl.value && p.rest)restEl.value=p.rest;
+
+      tr.querySelectorAll('.trEquip').forEach(cb=>{cb.checked=(p.equip||[]).includes(cb.value)});
+      tr.querySelectorAll('.trDrill').forEach(cb=>{cb.checked=(p.drill||[]).includes(drillKey(cb.value))});
+      tr.querySelectorAll('.trEquip,.trDrill').forEach(cb=>{
+        const cls=cb.classList.contains('trEquip')?'trEquip':'trDrill';
+        updateTagCount(cb,cls);
+      });
+    }
+  });
+}
+function summarizeSmartMatches(plan,actual,matches){
+  let matched=0,complete=0,targetHit=0,targetTotal=0;
+  const rows=[];
+  matches.forEach((m,idx)=>{
+    const p=plan[idx];
+    if(m.start==null){
+      rows.push({idx,p,status:'未匹配',cls:'smart-match-bad',agg:null,targetStatus:'—'});
+      return;
+    }
+    matched++;
+    const agg=m.agg;
+    const pd=plannedDistance(p);
+    const ratio=pd?agg.totalDistance/pd:0;
+    let status='偏離',cls='smart-match-bad';
+    if(ratio>=.95 && ratio<=1.05){status='完成';cls='smart-match-ok';complete++}
+    else if(ratio>=.75 && ratio<=1.2){status='部分完成';cls='smart-match-mid'}
+
+    let targetStatus='—';
+    const tr=targetRangeSec(p.target);
+    if(tr && agg.avgPace!=null){
+      targetTotal++;
+      if(agg.avgPace>=tr.min && agg.avgPace<=tr.max){targetStatus='達標';targetHit++}
+      else if(agg.avgPace<tr.min)targetStatus='快於目標';
+      else targetStatus='慢於目標';
+    }
+    rows.push({idx,p,status,cls,agg,targetStatus,start:m.start,end:m.end,score:m.score});
+  });
+  return {matched,complete,targetHit,targetTotal,rows};
+}
+function smartMatchPlanToGarmin(){
+  const saved=getPlannedWorkout();
+  const box=document.getElementById('planMatchResult');
+  if(!box)return;
+
+  if(!saved?.rows?.length){
+    box.style.display='block';
+    box.innerHTML='<div class="muted">請先把課表文字「儲存為本次計畫」。</div>';
+    return;
+  }
+  const actual=actualLapUnitRows();
+  if(!actual.length){
+    box.style.display='block';
+    box.innerHTML='<div class="muted">請先匯入 Garmin FIT / CSV。</div>';
+    return;
+  }
+
+  const matches=buildSmartMatches(saved.rows,actual);
+  applyPlanToWindow(saved.rows,actual,matches);
+  const sumry=summarizeSmartMatches(saved.rows,actual,matches);
+
+  const matchRate=Math.round(sumry.matched/saved.rows.length*100);
+  const completion=Math.round(sumry.complete/saved.rows.length*100);
+  const targetRate=sumry.targetTotal?Math.round(sumry.targetHit/sumry.targetTotal*100):null;
+
+  box.style.display='block';
+  box.innerHTML=`
+    <h3>Garmin 智慧配對結果 <small class="muted">v3.0.1</small></h3>
+    <div class="smart-match-summary">
+      <div><small>課表組數</small><strong>${saved.rows.length}</strong></div>
+      <div><small>Garmin Interval</small><strong>${actual.length}</strong></div>
+      <div><small>自動匹配率</small><strong class="${matchRate>=80?'smart-match-ok':matchRate>=60?'smart-match-mid':'smart-match-bad'}">${matchRate}%</strong></div>
+      <div><small>完成率</small><strong class="${completion>=80?'smart-match-ok':completion>=60?'smart-match-mid':'smart-match-bad'}">${completion}%</strong></div>
+      <div><small>目標配速達成</small><strong>${targetRate==null?'N/A':targetRate+'%'}</strong></div>
+    </div>
+    <div style="overflow-x:auto">
+      <table class="smart-match-table">
+        <thead>
+          <tr><th>#</th><th>計畫</th><th>Garmin 配對範圍</th><th>實際距離</th><th>平均配速</th><th>平均休息</th><th>目標</th><th>結果</th></tr>
+        </thead>
+        <tbody>${sumry.rows.map(r=>`
+          <tr>
+            <td>${r.idx+1}</td>
+            <td>
+              ${r.p.dist}m × ${r.p.reps}
+              ${r.p.equip?.length?'<br>'+r.p.equip.map(x=>`<span class="smart-match-chip">${x}</span>`).join(''):''}
+              ${r.p.drill?.length?'<br>'+r.p.drill.map(x=>`<span class="smart-match-chip">${x}</span>`).join(''):''}
+            </td>
+            <td>${r.agg?`Garmin #${r.start+1}–${r.end}<br><span class="smart-match-group">${r.end-r.start} 個 Interval</span>`:'—'}</td>
+            <td>${r.agg?r.agg.totalDistance+'m':'—'}</td>
+            <td>${r.agg?.avgPace!=null?fmtFull(r.agg.avgPace)+'/100m':'—'}</td>
+            <td>${r.agg?.avgRest!=null?r.agg.avgRest.toFixed(1)+'s':'—'}</td>
+            <td>${r.p.target||'—'}${r.targetStatus!=='—'?'<br>'+r.targetStatus:''}</td>
+            <td class="${r.cls}"><b>${r.status}</b></td>
+          </tr>`).join('')}</tbody>
+      </table>
+    </div>
+    <div class="call" style="margin-top:12px"><b>已自動套用 Tag：</b>匹配到的 Garmin Interval 會一起套用課表中的泳姿、器材、Drill、訓練目的與目標配速；Garmin 實測休息不會被課表文字覆蓋。</div>`;
+}
+
+function matchPlanToActual(){
+  const saved=getPlannedWorkout();
+  if(!saved?.rows?.length){
+    planMatchResult.style.display='block';
+    planMatchResult.innerHTML='<div class="muted">請先貼課表並儲存為本次計畫。</div>';
+    return;
+  }
+  const actual=actualRowsForMatch();
+  if(!actual.length){
+    planMatchResult.style.display='block';
+    planMatchResult.innerHTML='<div class="muted">請先匯入 Garmin FIT/CSV 或手動建立實際訓練資料。</div>';
+    return;
+  }
+  const matches=greedyMatchPlanActual(saved.rows,actual);
+  applyPlanMetaToActual(saved.rows,actual,matches);
+  const sum=summarizeMatch(saved.rows,actual,matches);
+
+  const completion=saved.rows.length?Math.round(sum.completed/saved.rows.length*100):0;
+  const matchRate=saved.rows.length?Math.round(sum.matched/saved.rows.length*100):0;
+  const targetRate=sum.targetTotal?Math.round(sum.targetHits/sum.targetTotal*100):null;
+
+  planMatchResult.style.display='block';
+  planMatchResult.innerHTML=`
+    <h3>課表 vs Garmin 實際訓練</h3>
+    <div class="plan-match-grid">
+      <div class="plan-match-kpi"><small>課表組數</small><strong>${saved.rows.length}</strong></div>
+      <div class="plan-match-kpi"><small>自動匹配率</small><strong class="${matchRate>=80?'match-ok':matchRate>=60?'match-mid':'match-bad'}">${matchRate}%</strong></div>
+      <div class="plan-match-kpi"><small>完成率</small><strong class="${completion>=80?'match-ok':completion>=60?'match-mid':'match-bad'}">${completion}%</strong></div>
+      <div class="plan-match-kpi"><small>目標配速達成</small><strong>${targetRate==null?'N/A':targetRate+'%'}</strong></div>
+    </div>
+    <div style="overflow-x:auto;margin-top:12px">
+      <table class="match-table">
+        <thead><tr><th>#</th><th>計畫</th><th>Garmin</th><th>平均配速</th><th>目標</th><th>結果</th></tr></thead>
+        <tbody>${sum.rows.map(r=>`
+          <tr>
+            <td>${r.i+1}</td>
+            <td>${r.p.dist}m × ${r.p.reps}${r.p.equip?.length?'<br>'+r.p.equip.map(x=>`<span class="match-chip">${x}</span>`).join(''):''}</td>
+            <td>${r.a?`${r.a.dist}m × ${r.a.reps}`:'—'}</td>
+            <td>${r.avgPace!=null?fmtFull(r.avgPace)+'/100m':'—'}</td>
+            <td>${r.p.target||'—'}${r.targetStatus!=='—'?'<br>'+r.targetStatus:''}</td>
+            <td class="${r.cls}"><b>${r.status}</b></td>
+          </tr>`).join('')}</tbody>
+      </table>
+    </div>
+    <div class="call" style="margin-top:12px"><b>已自動套用：</b>匹配成功的 Garmin 組會補上課表的泳姿、器材、Drill、訓練目的、休息與目標配速。請人工快速檢查後再按「分析訓練」。</div>`;
+}
+
+function previewWorkoutText(){
+  renderWorkoutPreview(parseWorkoutText(workoutTextInput.value));
+}
+function parseWorkoutTextToRows(){
+  const parsed=parseWorkoutText(workoutTextInput.value);
+  renderWorkoutPreview(parsed);
+  if(!parsed.rows.length)return;
+  if(trainingRows.children.length && !confirm('要用解析結果取代目前訓練組嗎？'))return;
+  trainingRows.innerHTML='';
+  parsed.rows.forEach(r=>addTrainingRow(r));
+  workoutParseStatus.innerHTML+=`<br>已建立 <b>${parsed.rows.length}</b> 個可編輯訓練組。`;
+}
+
 function csvSplitLine(line){
   const out=[];let cur='',q=false;
   for(let i=0;i<line.length;i++){
@@ -724,40 +2256,83 @@ async function importGarminCSV(){
   const f=document.getElementById('garminCsvFile')?.files?.[0];
   if(!f){importStatus.textContent='請先選擇 CSV 檔。';return}
   const raw=await f.text();
-  const lines=raw.split(/\r?\n/).filter(x=>x.trim());
-  if(lines.length<2){importStatus.textContent='CSV 內容不足。';return}
-  const headers=csvSplitLine(lines[0]);
+  const lines=raw.split(/\r?\n/);
+  const nonEmpty=lines.filter(x=>x.trim());
+  if(nonEmpty.length<2){importStatus.textContent='CSV 內容不足。';return}
+
+  const headers=csvSplitLine(nonEmpty[0]);
   const iDist=findCol(headers,['distance','距離']);
-  const iTime=findCol(headers,['time','duration','時間']);
+  const iTime=findCol(headers,['time','duration','時間','計時時間']);
   const iHR=findCol(headers,['avg hr','average hr','平均心率']);
   const iSwolf=findCol(headers,['swolf']);
   const iStroke=findCol(headers,['strokes','stroke count','總划水數','划水數']);
-  const iType=findCol(headers,['stroke type','泳姿','type']);
-  if(iDist<0||iTime<0){importStatus.textContent='找不到距離或時間欄位。Garmin 不同匯出格式欄位可能不同，可改用手動輸入。';return}
+  const iType=findCol(headers,['stroke type','泳姿','type','游泳姿勢']);
+  const iInterval=findCol(headers,['interval','lap','間歇','區間','interval number']);
+  const iRest=findCol(headers,['rest','休息']);
 
-  trainingRows.innerHTML='';
-  let count=0;
-  for(let li=1;li<lines.length;li++){
-    const cols=csvSplitLine(lines[li]);
-    let dRaw=String(cols[iDist]||'').replace(/[^\d.]/g,'');
-    let dist=parseFloat(dRaw);
-    if(!dist||dist<=0)continue;
-    // Garmin sometimes exports km; infer small decimals as km
+  if(iDist<0||iTime<0){
+    importStatus.textContent='找不到距離或時間欄位。可改用 FIT 或手動輸入。';
+    return;
+  }
+
+  let groups=[],cur=[],lastInterval=null;
+  function flush(){if(cur.length){groups.push(cur);cur=[]}}
+
+  for(let li=1;li<nonEmpty.length;li++){
+    const cols=csvSplitLine(nonEmpty[li]);
+    const rawLine=nonEmpty[li].toLowerCase();
+    const distRaw=String(cols[iDist]||'').replace(/[^\d.]/g,'');
+    let dist=parseFloat(distRaw);
+    const time=parseGarminTime(cols[iTime]);
+
+    const isRestText=/休息|rest|idle/.test(rawLine) ||
+      (iRest>=0 && /休息|rest|idle|yes|true/i.test(String(cols[iRest]||'')));
+
+    if(isRestText || !dist || !time){
+      flush();
+      if(isRestText && time && groups.length){
+        groups[groups.length-1].forEach(o=>o.groupRestSec=time);
+      }
+      lastInterval=null;
+      continue;
+    }
+
     if(dist<10)dist*=1000;
-    const t=parseGarminTime(cols[iTime]); if(!t)continue;
+
+    const interval=iInterval>=0?String(cols[iInterval]||'').trim():'';
+    if(interval && lastInterval!=null && interval!==lastInterval)flush();
+    if(interval)lastInterval=interval;
+
     const typeRaw=String(iType>=0?cols[iType]:'').toLowerCase();
-    let type='裸游';
+    let type='裸游',drill=[];
     if(typeRaw.includes('butter')||typeRaw.includes('蝶'))type='蝶式';
     else if(typeRaw.includes('drill')||typeRaw.includes('分解'))type='Drill';
-    else if(typeRaw.includes('kick')||typeRaw.includes('踢'))type='Kick';
-    addTrainingRow({
-      dist:Math.round(dist),reps:1,times:fmtFull?fmtFull(t):fmt(t,true),type,
-      strokes:iStroke>=0?cols[iStroke]:'',swolf:iSwolf>=0?cols[iSwolf]:'',hr:iHR>=0?cols[iHR]:'',
-      purpose:type==='Drill'?'Technique':'Technique'
-    });
-    count++;
+    else if(typeRaw.includes('kick')||typeRaw.includes('踢')){type='Kick';drill=['只踢水'];}
+
+    const obs={
+      dist,time,type,drill,purpose:'Technique',
+      strokes:iStroke>=0?(parseFloat(String(cols[iStroke]).replace(/[^\d.]/g,''))||null):null,
+      swolf:iSwolf>=0?(parseFloat(String(cols[iSwolf]).replace(/[^\d.]/g,''))||null):null,
+      hr:iHR>=0?(parseFloat(String(cols[iHR]).replace(/[^\d.]/g,''))||null):null
+    };
+
+    if(iInterval<0 && cur.length && (cur[0].dist!==obs.dist || cur[0].type!==obs.type))flush();
+    cur.push(obs);
   }
-  importStatus.innerHTML=`已匯入 <b>${count}</b> 筆 interval。請確認距離/時間，再補器材、分解動作與訓練目的 Tag。`;
+  flush();
+
+  const safeGroups=[];
+  for(const g of groups){
+    if(g.length<=20)safeGroups.push(g);
+    else for(let i=0;i<g.length;i+=20)safeGroups.push(g.slice(i,i+20));
+  }
+
+  const result=addGroupedObservations(safeGroups);
+  importStatus.innerHTML=`CSV 匯入完成：原始有效資料 <b>${result.observations}</b> 筆 → 自動整理為 <b>${result.groups}</b> 個訓練組。請檢查分組並補 Tag。`;
+  const post=document.getElementById('fitPostAction')?.value||'review';
+  if(post==='smartmatch')smartMatchPlanToGarmin();
+  if(post==='match')matchPlanToActual();
+  if(post==='analyze')analyzeTraining();
 }
 
 // ==================== Offline Garmin FIT parser ====================
@@ -903,12 +2478,15 @@ function fitNormalizeSwim(messages){
         elapsed:fitScale(f[7],1000),
         timer:fitScale(f[8],1000),
         distance:fitScale(f[9],100),
-        totalCycles:f[10]??null,
+        totalCycles:(f[10]!=null && f[10]!==4294967295)?f[10]:null,
         avgSpeed:fitScale(f[13],1000),
         maxSpeed:fitScale(f[14],1000),
-        avgHR:f[15]??null,
-        maxHR:f[16]??null,
-        avgCadence:f[17]??null,
+        avgHR:(f[15]!=null && f[15]!==255)?f[15]:null,
+        maxHR:(f[16]!=null && f[16]!==255)?f[16]:null,
+        avgCadence:(f[17]!=null && f[17]!==255)?f[17]:null,
+        numLengths:(f[32]!=null && f[32]!==65535)?f[32]:null,
+        swolf:(f[73]!=null && f[73]!==65535)?f[73]:null,
+        swimStroke:(f[38]!=null && f[38]!==255)?fitStrokeName(f[38]):null,
         intensity:f[23]??null,
         sport:f[25]??null,
         subSport:f[26]??null,
@@ -945,48 +2523,215 @@ function secondsText(s){
   if(s==null||!isFinite(s))return'';
   return fmtFull(s);
 }
+
+function isoMs(v){
+  const n=Date.parse(v||'');
+  return isFinite(n)?n:null;
+}
+
+function inferLapTypesFromLengths(laps,lengths){
+  const activeLengths=lengths.filter(x=>x.lengthType==='Active');
+  let cursor=0;
+  const out=[];
+  for(const lap of laps){
+    if(!lap.distance || lap.distance<=0){out.push(null);continue}
+    const n=Math.max(1,lap.numLengths||Math.round((lap.distance||0)/25)||1);
+    const seg=activeLengths.slice(cursor,cursor+n);
+    cursor+=n;
+
+    // Garmin Lap swim_stroke is the canonical classification when present.
+    // Values such as Mixed and Drill must not be overwritten by a dominant Length guess.
+    let type=null;
+    const ls=lap.swimStroke;
+    if(ls==='Freestyle')type='裸游';
+    else if(ls==='Butterfly')type='蝶式';
+    else if(ls==='Drill')type='Drill';
+    else if(ls==='Mixed'||ls==='IM')type='Mixed';
+
+    if(!type){
+      const counts={};
+      seg.forEach(x=>counts[x.stroke]=(counts[x.stroke]||0)+1);
+      const kinds=Object.keys(counts).filter(k=>k && k!=='Unknown');
+      if(kinds.length>1) type='Mixed';
+      else{
+        let dominant=null,best=-1;
+        Object.entries(counts).forEach(([k,v])=>{if(v>best){best=v;dominant=k}});
+        if(dominant==='Butterfly')type='蝶式';
+        else if(dominant==='Drill')type='Drill';
+        else if(dominant==='Mixed'||dominant==='IM')type='Mixed';
+        else type='裸游';
+      }
+    }
+    out.push({type,drill:[],strokes:seg});
+  }
+  return out;
+}
+
+function inferRestAfterActiveLaps(laps){
+  // Returns rest seconds keyed by sequential active-lap index.
+  const active=[], rests={};
+  for(let i=0;i<laps.length;i++){
+    const lap=laps[i];
+    const dist=+lap.distance||0;
+    if(dist>0){
+      active.push({lap,sourceIndex:i});
+      continue;
+    }
+    // Explicit zero-distance Garmin rest lap.
+    if(active.length){
+      const r=lap.timer||lap.elapsed;
+      if(r && r>0) rests[active.length-1]=r;
+    }
+  }
+
+  // If there was no explicit rest lap, infer from timing gaps or elapsed-timer.
+  for(let ai=0;ai<active.length;ai++){
+    if(rests[ai]!=null)continue;
+    const cur=active[ai].lap;
+    let inferred=null;
+
+    if(cur.elapsed!=null && cur.timer!=null){
+      const d=cur.elapsed-cur.timer;
+      if(d>0.5) inferred=d;
+    }
+
+    if(ai+1<active.length){
+      const next=active[ai+1].lap;
+      const cs=isoMs(cur.startTime), ns=isoMs(next.startTime);
+      const dur=cur.elapsed||cur.timer;
+      if(cs!=null && ns!=null && dur!=null){
+        const gap=(ns-cs)/1000-dur;
+        if(gap>0.5 && (inferred==null || gap>inferred)) inferred=gap;
+      }
+    }
+    if(inferred!=null && inferred<900)rests[ai]=inferred;
+  }
+  return {active,rests};
+}
+function attachLapRestsToGroups(groups,laps){
+  if(!groups.length || !laps?.length)return groups;
+  const info=inferRestAfterActiveLaps(laps);
+  const active=info.active, rests=info.rests;
+  if(!active.length)return groups;
+
+  // Match each grouped swim block to the next compatible active Garmin lap.
+  let cursor=0;
+  for(const g of groups){
+    if(!g.length)continue;
+    const gd=g[0].dist*g.length;
+    let chosen=-1;
+    for(let j=cursor;j<active.length;j++){
+      const ld=+active[j].lap.distance||0;
+      if(Math.abs(ld-gd)<=Math.max(25,gd*0.15)){chosen=j;break}
+    }
+    if(chosen<0 && cursor<active.length)chosen=cursor;
+    if(chosen>=0){
+      const r=rests[chosen];
+      if(r!=null && r>0){
+        g.forEach(o=>o.groupRestSec=r);
+      }
+      cursor=chosen+1;
+    }
+  }
+  return groups;
+}
+
 async function importGarminFIT(){
   const f=document.getElementById('garminFitFile')?.files?.[0];
   if(!f){importStatus.textContent='請先選擇 FIT 檔。';return}
   try{
     importStatus.textContent='解析 FIT 中…';
     const parsed=parseFITBuffer(await f.arrayBuffer());
-    const level=document.getElementById('fitImportLevel')?.value||'length';
+    const level=document.getElementById('fitImportLevel')?.value||'lap';
     const excludeRest=(document.getElementById('fitExcludeRest')?.value||'yes')==='yes';
     const pool=parsed.poolLength || 25;
-    trainingRows.innerHTML='';
-    let count=0;
-    if((level==='length'||level==='auto') && parsed.lengths.length){
+    let result={groups:0,observations:0};
+
+    if(level==='group' && parsed.lengths.length){
+      let groups=[],cur=[];
+      const flush=()=>{if(cur.length){groups.push(cur);cur=[]}};
       for(const x of parsed.lengths){
-        if(excludeRest && x.lengthType==='Idle')continue;
+        const isIdle=x.lengthType==='Idle';
+        if(isIdle){
+          flush();
+          const rest=x.timer||x.elapsed;
+          if(rest && groups.length){
+            groups[groups.length-1].forEach(o=>o.groupRestSec=rest);
+          }
+          continue;
+        }
         const t=x.timer||x.elapsed;
         if(!t||t<=0)continue;
-        const dist=pool;
-        const drill=x.stroke==='Drill'?['只踢水']:[]; // best-effort: Garmin only says "Drill", exact drill is user-supplied
-        addTrainingRow({
-          dist:Math.round(dist),reps:1,times:secondsText(t),type:fitTypeFromStroke(x.stroke),
-          equip:[],drill,purpose:x.stroke==='Drill'?'Technique':'Technique',
-          strokes:x.totalStrokes||'',swolf:'',hr:x.avgHR||''
-        });
-        count++;
+
+        const type=fitTypeFromStroke(x.stroke);
+        const obs={
+          dist:pool,time:t,type,drill:[],purpose:'Technique',
+          strokes:x.totalStrokes||null,swolf:null,hr:x.avgHR||null
+        };
+
+        if(cur.length && cur[0].type!==obs.type)flush();
+        cur.push(obs);
       }
+      flush();
+      // Garmin Swim often stores rest as separate zero-distance Lap rows rather
+      // than Idle Lengths. Merge both sources so the card gets the real rest.
+      attachLapRestsToGroups(groups,parsed.laps);
+      result=addGroupedObservations(groups);
+
+    }else if(level==='length' && parsed.lengths.length){
+      const groups=[];
+      for(const x of parsed.lengths){
+        if(excludeRest && x.lengthType==='Idle')continue;
+        if(x.lengthType==='Idle')continue;
+        const t=x.timer||x.elapsed;if(!t||t<=0)continue;
+        groups.push([{
+          dist:pool,time:t,type:fitTypeFromStroke(x.stroke),drill:[],
+          purpose:'Technique',strokes:x.totalStrokes||null,swolf:null,hr:x.avgHR||null
+        }]);
+      }
+      result=addGroupedObservations(groups);
+
     }else if(parsed.laps.length){
-      for(const x of parsed.laps){
+      const groups=[];
+      const info=inferRestAfterActiveLaps(parsed.laps);
+      const inferred=inferLapTypesFromLengths(parsed.laps,parsed.lengths);
+      let activeTypeIndex=0;
+      info.active.forEach((entry,ai)=>{
+        const x=entry.lap;
         const t=x.timer||x.elapsed;
-        if(!t||t<=0||!x.distance)continue;
-        addTrainingRow({
-          dist:Math.round(x.distance),reps:1,times:secondsText(t),type:'裸游',
-          equip:[],drill:[],purpose:'Technique',strokes:x.totalCycles||'',swolf:'',hr:x.avgHR||''
-        });
-        count++;
-      }
+        if(!t||t<=0||!x.distance)return;
+
+        // Map active lap to inferred type using the original lap index.
+        const originalIndex=entry.sourceIndex;
+        const typeInfo=inferred[originalIndex]||{type:'裸游',drill:[]};
+        const purpose=typeInfo.type==='蝶式'?'Butterfly':
+                      typeInfo.type==='Drill'?'Technique':'Technique';
+
+        const obs={
+          dist:x.distance,time:t,type:typeInfo.type,drill:typeInfo.drill||[],purpose,
+          strokes:x.totalCycles||null,
+          swolf:(x.swolf!=null && x.swolf!==65535)?x.swolf:null,
+          hr:x.avgHR||null
+        };
+        if(info.rests[ai]!=null)obs.groupRestSec=info.rests[ai];
+        groups.push([obs]);
+        activeTypeIndex++;
+      });
+      result=addGroupedObservations(groups);
     }
+
     const s=parsed.sessions[0];
     if(s?.startTime && document.getElementById('sessionDate'))sessionDate.value=s.startTime.slice(0,10);
     if(document.getElementById('sessionTitle'))sessionTitle.value='Garmin FIT｜'+f.name.replace(/\.fit$/i,'');
-    fitImportSummary.innerHTML=`FIT 解析完成：Length <b>${parsed.lengths.length}</b>、Lap <b>${parsed.laps.length}</b>、Session <b>${parsed.sessions.length}</b>、偵測池長 <b>${parsed.poolLength?parsed.poolLength+'m':'未提供（暫用25m）'}</b>。`;
-    importStatus.innerHTML=`已建立 <b>${count}</b> 筆訓練資料。請補器材與精確 Drill Tag，再進行分析。`;
-    if((document.getElementById('fitPostAction')?.value||'review')==='analyze')analyzeTraining();
+
+    fitImportSummary.innerHTML=`FIT：Length <b>${parsed.lengths.length}</b>、Lap <b>${parsed.laps.length}</b>、Session <b>${parsed.sessions.length}</b>、池長 <b>${parsed.poolLength?parsed.poolLength+'m':'未提供（暫用25m）'}</b>。休息會優先讀 Garmin 的 0m Rest Lap，再用 elapsed / timer 與下一組開始時間補算。`;
+    importStatus.innerHTML=`已匯入 <b>${result.groups}</b> 個 Garmin 訓練 Interval。Lap 模式會保留 Garmin 的距離、時間、休息、划水數、SWOLF 與平均 HR，並用 Length 判斷自由式 / Drill / 蝶式；再用課表對照補器材與更細的 Drill Tag。`;
+
+    const post=(document.getElementById('fitPostAction')?.value||'review');
+    if(post==='smartmatch')smartMatchPlanToGarmin();
+    if(post==='match')matchPlanToActual();
+    if(post==='analyze')analyzeTraining();
+
   }catch(e){
     importStatus.innerHTML=`FIT 解析失敗：<b>${String(e.message||e)}</b>。可改用 Garmin CSV 或手動輸入。`;
   }
