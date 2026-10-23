@@ -4,7 +4,9 @@ SwimLab 是一套可離線使用的游泳訓練分析與課表系統，核心目
 
 **測量 → 分析 → 找問題 → 技術訓練 → 主課 → Garmin 驗證 → 下一堂課**
 
-目前版本：**SwimLab v3.0.1**
+目前版本：**SwimLab v3.1.0**
+
+---
 
 ## ✨ 主要功能
 
@@ -12,6 +14,8 @@ SwimLab 是一套可離線使用的游泳訓練分析與課表系統，核心目
 - 泳力估算
 - CSS / Critical Swimming Speed
 - 多距離 Critical Speed 線性回歸
+- 臨界速度耐受度 Critical Speed Durability
+- 假性進步偵測
 - 六區泳速
 - 個人化課表產生
 - 技術診斷
@@ -90,7 +94,100 @@ SwimLab 會以時間－距離線性回歸計算：
 
 ---
 
-## 3. 建議測試流程
+## 3. 臨界速度耐受度 Critical Speed Durability
+
+SwimLab v3.1.0 新增：
+
+**Critical Speed Durability**
+
+目的不是只看 CSS 有多快，而是看：
+
+> 你能不能把這個速度穩定維持下去。
+
+系統分析：
+
+- 達標趟數
+- CSS ±5 秒達標率
+- 平均配速偏差
+- 後段掉速
+- CSS 可持續距離
+- 配速變異 CV
+- Durability Score
+
+例如：
+
+```text
+CSS = 1:40 /100m
+
+100m ×8
+1:39
+1:40
+1:40
+1:41
+1:40
+1:40
+1:41
+1:40
+```
+
+代表速度穩定、耐受度高。
+
+如果：
+
+```text
+1:38
+1:39
+1:40
+1:43
+1:46
+1:48
+1:50
+1:52
+```
+
+即使前幾趟很快，也代表後段耐受度不足。
+
+---
+
+## 4. 假性進步偵測
+
+SwimLab 會避免只看「CSS 變快」就判定進步。
+
+如果出現：
+
+```text
+CSS 變快 ≥ 2 秒 /100m
+但
+Critical Speed Durability 下降 ≥ 10 分
+```
+
+系統會提示：
+
+**可能是假性進步**
+
+也就是：
+
+- 短距離速度提高
+- 臨界速度數字變快
+- 但實際維持能力下降
+
+真正理想的進步應該是：
+
+```text
+CSS Speed ↑
+CSS Durability ↑
+```
+
+而不是：
+
+```text
+CSS Speed ↑
+CSS Durability ↓
+```
+
+---
+
+## 5. 建議臨界速度測試流程
 
 ### 測試前
 
@@ -128,7 +225,7 @@ SwimLab 會以時間－距離線性回歸計算：
 
 ---
 
-## 4. 智慧課表產生
+## 6. 智慧課表產生
 
 可依據：
 
@@ -158,7 +255,7 @@ SwimLab 會以時間－距離線性回歸計算：
 
 ---
 
-## 5. 課表文字解析器
+## 7. 課表文字解析器
 
 可直接貼自然語言課表，例如：
 
@@ -185,7 +282,7 @@ SwimLab 會以時間－距離線性回歸計算：
 
 ---
 
-## 6. 器材 Tag
+## 8. 器材 Tag
 
 支援例如：
 
@@ -203,7 +300,7 @@ SwimLab 會以時間－距離線性回歸計算：
 
 ---
 
-## 7. Drill Tag
+## 9. Drill Tag
 
 包含例如：
 
@@ -233,7 +330,7 @@ Tag 說明頁會列出：
 
 ---
 
-## 8. Garmin FIT 匯入
+## 10. Garmin FIT 匯入
 
 Garmin Swim 2 建議使用：
 
@@ -255,7 +352,7 @@ Length 則作為組內細節與泳姿判讀輔助。
 
 ---
 
-## 9. Garmin CSV 匯入
+## 11. Garmin CSV 匯入
 
 支援 Garmin Connect 匯出的 CSV。
 
@@ -270,7 +367,7 @@ Length 則作為組內細節與泳姿判讀輔助。
 
 ---
 
-## 10. Garmin 智慧配對引擎
+## 12. Garmin 智慧配對引擎
 
 課表：
 
@@ -317,15 +414,16 @@ Garmin 實測休息時間會被保留。
 
 ---
 
-## 11. 訓練後分析
+## 13. 訓練後分析
 
-SwimLab 目前分析包含：
+SwimLab 分析包含：
 
 - 配速穩定度 Pace Stability
 - 划水效率 Stroke Efficiency
 - 技術耐力 Technique Durability
 - 有氧效率 Aerobic Efficiency
 - CSS 執行度 CSS Execution
+- 臨界速度耐受度 Critical Speed Durability
 - 器材 → 裸游轉換 Equipment → Naked Transfer
 - 身體位置 / 踢腿 Body Position / Kick
 - 整體訓練品質 Overall Session Quality
@@ -336,11 +434,13 @@ SwimLab 目前分析包含：
 - 哪裡開始掉速
 - 哪一段技術崩潰
 - 器材能力有沒有轉移到裸游
+- CSS 能維持多久
+- 是否出現假性進步
 - 下一堂應該練什麼
 
 ---
 
-## 12. 器材 → 裸游轉換
+## 14. 器材 → 裸游轉換
 
 例如：
 
@@ -368,7 +468,7 @@ Agility 50m = 43 秒
 
 ---
 
-## 13. 臨界速度訓練進階
+## 15. 臨界速度訓練進階
 
 核心原則：
 
@@ -426,7 +526,7 @@ Agility 50m = 43 秒
 
 ---
 
-## 14. 重新測試
+## 16. 重新測試
 
 建議約每：
 
@@ -436,6 +536,7 @@ Agility 50m = 43 秒
 
 - CSS
 - Critical Speed
+- Critical Speed Durability
 - R²
 - 短距離速度
 - 中長距離表現
@@ -445,13 +546,14 @@ Agility 50m = 43 秒
 
 ---
 
-## 15. 長期訓練紀錄
+## 17. 長期訓練紀錄
 
 SwimLab 使用瀏覽器本地儲存保存訓練資料，可追蹤：
 
 - 配速
 - CSS
 - Critical Speed
+- Critical Speed Durability
 - SWOLF
 - 划水效率
 - HR
@@ -459,7 +561,14 @@ SwimLab 使用瀏覽器本地儲存保存訓練資料，可追蹤：
 - 技術耐力
 - Session Quality
 
-目標是支援數十到上百次訓練的長期比較。
+長期趨勢可用來判斷：
+
+```text
+CSS Speed ↑
+CSS Durability ↑
+```
+
+是否同時成立。
 
 ---
 
@@ -479,6 +588,7 @@ SwimLab 的核心不是單純堆訓練量，而是：
 - 提高水感
 - 器材訓練最後必須轉回裸游
 - 速度、距離、趟數與休息逐步增加
+- 同時追蹤速度與耐受度
 - 用測量資料決定下一堂，而不是只憑感覺
 
 ---
@@ -496,7 +606,7 @@ SwimLab 目前為單一 HTML 檔案。
 直接下載：
 
 ```text
-SwimLab_Training_System_v3.0.1.html
+SwimLab_Training_System_v3.1.0.html
 ```
 
 以瀏覽器開啟即可。
@@ -547,6 +657,8 @@ Tag Reconstruction
     ↓
 Training Analysis
     ↓
+Critical Speed Durability
+    ↓
 Long-Term Trend
     ↓
 Next Workout
@@ -591,6 +703,7 @@ SwimLab 將游泳教材中的概念轉成可執行工具，而不是逐字重製
 - 換氣
 - 技術 Drill
 - CSS / Critical Swimming Speed
+- Critical Speed Durability
 - 速度耐力
 - 間歇進階
 - 重量與核心穩定
@@ -619,7 +732,7 @@ SwimLab 是訓練輔助與數據分析工具。
 # Version
 
 ```text
-SwimLab v3.0.1
+SwimLab v3.1.0
 ```
 
 # Author

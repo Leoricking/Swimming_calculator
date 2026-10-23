@@ -1,4 +1,4 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SwimLab v3.0.1</title><style>
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SwimLab v3.1.0</title><style>
 :root{--bg:#06111d;--p:#0d2031;--p2:#0a1927;--t:#eaf6ff;--m:#98b2c8;--c:#51e1ff;--g:#4ed79a;--y:#ffc95c;--r:#ff6b6b;--l:#23425a}*{box-sizing:border-box}body{margin:0;background:linear-gradient(#06111d,#081827);color:var(--t);font-family:Inter,"Microsoft JhengHei",sans-serif}header{position:sticky;top:0;z-index:9;background:#071521eF;border-bottom:1px solid var(--l);backdrop-filter:blur(10px)}.top{max-width:1400px;margin:auto;padding:12px 18px;display:flex;gap:12px;align-items:center}.brand{font-weight:900;font-size:20px}.brand b{color:var(--c)}nav{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}nav button,.tab{border:1px solid var(--l);background:#0b1e2d;color:#afc7d8;border-radius:999px;padding:7px 10px;cursor:pointer}nav button.active,.tab:hover{color:#fff;border-color:#4b9fc1}main{max-width:1400px;margin:auto;padding:24px 18px 80px}.hero,.g2,.g3{display:grid;gap:15px}.hero{grid-template-columns:1.35fr .65fr}.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.card{background:linear-gradient(180deg,#0e2235,#0a1a29);border:1px solid var(--l);border-radius:18px;padding:19px;box-shadow:0 18px 55px #0004}.hero h1{font-size:clamp(34px,5vw,60px);line-height:1.04;margin:6px 0 10px}.hero h1 span{color:var(--c)}p,li{line-height:1.65}.muted{color:var(--m)}.badge,.pill{display:inline-block;border:1px solid #2a5874;background:#0c2940;color:#a9e7f5;border-radius:999px;padding:5px 9px;font-size:12px;margin:3px}.kpis{display:grid;grid-template-columns:1fr 1fr;gap:9px}.kpi{background:#071725;border:1px solid var(--l);border-radius:14px;padding:12px}.kpi small{color:var(--m)}.kpi b{display:block;font-size:28px;margin-top:4px}.sec{display:none}.sec.active{display:block}h2{font-size:29px;margin:0 0 7px}h3{margin:4px 0 11px}.field{display:flex;flex-direction:column;gap:5px;margin-bottom:11px}.field label{font-size:13px;color:#a8c0d2}input,select{width:100%;padding:10px 11px;border-radius:10px;border:1px solid #2a4b63;background:#071826;color:#fff}.btn{border:0;border-radius:10px;padding:10px 13px;font-weight:800;cursor:pointer;background:linear-gradient(90deg,var(--c),#7b9eff);color:#06121b}.btn.s{background:#102b40;color:#d8efff;border:1px solid #2a536e}.btn.g{background:linear-gradient(90deg,#55e09f,#52d8c9)}.result,.call{background:#071725;border:1px solid #29475f;border-radius:13px;padding:14px;margin-top:11px}.call{border-left:4px solid var(--c)}.warn{border-left-color:var(--y)}.danger{border-left-color:var(--r)}.big{font-size:39px;font-weight:900;color:var(--c)}table{width:100%;border-collapse:collapse;font-size:14px}th,td{padding:9px;border-bottom:1px solid var(--l);text-align:left}th{color:#91dff0}.zone{display:grid;grid-template-columns:80px 1fr 120px;gap:9px;padding:10px 0;border-bottom:1px solid var(--l);align-items:center}.bar{height:8px;background:#081724;border-radius:99px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--c),#6f86ff)}.checks{display:grid;grid-template-columns:1fr 1fr;gap:7px}.checks label{display:flex;gap:7px;align-items:center;padding:8px;border:1px solid #1d3a52;border-radius:10px;background:#081a29}.checks input{width:auto}.set{display:grid;grid-template-columns:110px 1fr 95px;gap:10px;background:#081a29;border:1px solid #1d3d55;border-radius:12px;padding:11px;margin:8px 0}.set b{color:#92e9f8}.set em{font-style:normal;color:#95acbf;text-align:right}.drill{background:#081a29;border:1px solid #24465f;border-radius:14px;padding:14px}.drill h4{margin:5px 0}.drill p{color:#adc3d3;margin:6px 0}.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}.accordion details{background:#081a29;border:1px solid #24445c;border-radius:12px;padding:11px 13px;margin:8px 0}.accordion summary{font-weight:800;cursor:pointer}.footer{font-size:12px;color:#6f899e;margin-top:30px}.source{font-size:12px;color:#7892a7}@media(max-width:900px){.hero,.g2,.g3{grid-template-columns:1fr}nav{display:none}.checks{grid-template-columns:1fr}.set{grid-template-columns:90px 1fr}.set em{grid-column:2;text-align:left}.zone{grid-template-columns:65px 1fr}.zone span:last-child{grid-column:2}}
 
 .tagchip{display:inline-block;padding:3px 7px;border-radius:999px;background:#133047;border:1px solid #2a536f;color:#9fe8f5;font-size:11px;margin:2px}
@@ -225,7 +225,7 @@
 }
 
 
-/* v3.0.1 visibility fix + clearer card layout */
+/* v3.1.0 visibility fix + clearer card layout */
 #trainingInputTable tr.training-row{
   grid-template-columns:130px minmax(0,1fr);
 }
@@ -314,7 +314,7 @@
   .cs-kpis{grid-template-columns:1fr 1fr}
 }
 
-</style></head><body><header><div class="top"><div class="brand">🏊 <b>SwimLab</b> v3.0.1</div><nav id="nav"></nav></div></header><main>
+</style></head><body><header><div class="top"><div class="brand">🏊 <b>SwimLab</b> v3.1.0</div><nav id="nav"></nav></div></header><main>
 <div class="hero"><div class="card"><span class="badge">泳力評估 × 技術診斷 × 個人化課表</span><h1>把訓練數據轉成<br><span>真正有效的游泳進步策略</span></h1><p class="muted">輸入 50 / 100 / 200 / 400 / 800 / 1500m 成績，估算泳力、CSS、六區泳速；再依程度、目標、弱點與器材，自動組合技術、耐力、速度、蝶式、三鐵與自潛訓練。</p><span class="pill">3E</span><span class="pill">十類技術</span><span class="pill">CSS</span><span class="pill">泳力</span><span class="pill">裸游轉換</span><span class="pill">固定課表診斷</span></div><div class="card"><h3>目前基準</h3><div class="kpis"><div class="kpi"><small>400m</small><b id="h400">8:00</b></div><div class="kpi"><small>200m</small><b id="h200">3:45</b></div><div class="kpi"><small>CSS</small><b id="hcss">2:07.5</b></div><div class="kpi"><small>泳力</small><b id="hpow">≈49</b></div></div><button class="btn s" style="width:100%;margin-top:10px" onclick="go('calc')">更新成績</button></div></div>
 <section id="home" class="sec active"><div class="g3"><div class="card"><h3>① 先換算</h3><p class="muted">任意距離＋時間，自動換算 25 / 50 / 100 / 200 / 400 / 800 / 1500m 配速。</p><button class="btn s" onclick="go('pace')">配速計算器</button></div><div class="card"><h3>② 再診斷與選工具</h3><p class="muted">踢腿、水感、滾動、換氣、節奏、均速、抓水與轉換。</p><button class="btn s" onclick="go('drill')">Drill 資料庫</button></div><div class="card"><h3>③ 組成課表</h3><p class="muted">把技術、CSS、速度與器材整合成一堂可執行課表。</p><button class="btn" onclick="go('plan')">產生課表</button></div></div><div class="card" style="margin-top:15px"><h3>核心邏輯</h3><div class="call"><b>診斷由外而內，訓練由內而外。</b> 掉速、腿沉、換氣亂、划次增加是表象；先找平衡、節奏、水感、支撐與協調，再處理表面動作。</div><div class="g3"><p><b>Effortless｜省力</b><br><span class="muted">先減阻、放鬆、水平身體。</span></p><p><b>Efficient｜效率</b><br><span class="muted">同速更少無效動作、速度更穩。</span></p><p><b>Enduring｜耐力</b><br><span class="muted">動作品質延長，再把速度加上去。</span></p></div></div></section>
 
@@ -538,7 +538,7 @@
     <div class="field">
       <label>Garmin FIT</label>
       <input id="garminFitFile" type="file" accept=".fit,application/octet-stream">
-      <div class="smallnote">FIT 是二進位格式。v3.0.1 先保留匯入入口與檔案偵測；離線完整解析器將放在後續版本。</div>
+      <div class="smallnote">FIT 是二進位格式。v3.1.0 支援離線 FIT 解析；建議 Garmin Swim 2 使用 Interval / Lap 模式。</div>
     </div>
   </div>
   <div style="display:flex;gap:8px;flex-wrap:wrap">
@@ -597,6 +597,12 @@
 <div class="card"><h3>主要問題與建議</h3><div id="trainingDiagnosis" class="muted">輸入資料後按「分析訓練」。</div></div>
 </div>
 
+<div class="card" style="margin-top:15px">
+  <h3>臨界速度耐受度 Critical Speed Durability</h3>
+  <p class="muted">用 CSS 主課判斷「速度能不能維持」，避免只看短距離或單次 CSS 數字造成假性進步。</p>
+  <div id="cssDurabilityDetail" class="muted">至少需要 4 筆裸游 CSS 成績才會計算。</div>
+</div>
+
 <div class="card" style="margin-top:15px"><h3>下一堂建議</h3><div id="nextWorkoutSuggestion" class="muted">完成分析後，系統會根據本次問題產生下一堂重點。</div></div>
 <div class="card" style="margin-top:15px"><h3>已儲存訓練紀錄</h3><div id="trainingHistory"></div></div>
 </section>
@@ -644,6 +650,8 @@
         <option value="dps">裸游 DPS proxy</option>
         <option value="aerobic">有氧效率 Aerobic Efficiency</option>
         <option value="transfer">器材→裸游轉換率</option>
+        <option value="cssPace">CSS / 臨界配速</option>
+        <option value="cssDurability">臨界速度耐受度 Critical Speed Durability</option>
         <option value="css">CSS 執行品質 CSS Execution</option>
         <option value="tech">技術耐力 Technique Durability</option>
       </select>
@@ -695,8 +703,8 @@
 </div>
 </section>
 
-<section id="src" class="sec"><h2>來源與方法</h2><div class="card"><p>此工具將教材與公開資料轉成摘要、計算、診斷與課表邏輯，不逐字重製整本書或網站。</p><ul class="muted"><li>《在水裡自由練功》：減阻、水平身體、水感、五階段划手、轉肩、划頻／划距、換氣、腿部與游泳力量。</li><li>《提升泳速的50堂訓練課》：各泳式分解 Drill、打水、換氣、抓水、出發與轉身。</li><li>《自由式的科學化訓練》：泳力、臨界游速／CSS、時間－距離回歸、測試流程、耐力與速度框架。</li><li>《InSwim核心游泳》＋ inswim.tw 公開架構：3E、十類技術、診斷循環、固定課表。</li></ul><p class="source"></p></div></section>
-<div class="footer">SwimLab v3.0.1｜訓練規劃工具。疼痛、暈眩、胸悶或異常疲勞時停止訓練。</div></main><script>
+<section id="src" class="sec"><h2>來源與方法</h2><div class="card"><p>此工具將教材與公開資料轉成摘要、計算、診斷與課表邏輯，不逐字重製整本書或網站。</p><ul class="muted"><li>《在水裡自由練功》：減阻、水平身體、水感、五階段划手、轉肩、划頻／划距、換氣、腿部與游泳力量。</li><li>《提升泳速的50堂訓練課》：各泳式分解 Drill、打水、換氣、抓水、出發與轉身。</li><li>《自由式的科學化訓練》：泳力、臨界游速／CSS、時間－距離回歸、臨界速度耐受度、假性進步、測試流程、耐力與速度框架。</li><li>《InSwim核心游泳》＋ inswim.tw 公開架構：3E、十類技術、診斷循環、固定課表。</li></ul><p class="source"></p></div></section>
+<div class="footer">SwimLab v3.1.0｜訓練規劃工具。疼痛、暈眩、胸悶或異常疲勞時停止訓練。</div></main><script>
 const pages=[['home','首頁'],['pace','配速換算'],['calc','泳力 / CSS'],['csslab','CSS測試'],['plan','課表'],['diag','診斷'],['drill','Drill'],['equip','器材'],['know','知識庫'],['strength','重訓'],['freedive','自潛'],['analysis','訓練分析'],['tags','Tag說明'],['trends','長期趨勢'],['src','來源']];pages.forEach(([id,n])=>{let b=document.createElement('button');b.textContent=n;b.dataset.id=id;b.onclick=()=>go(id);nav.appendChild(b)});function go(id){document.querySelectorAll('.sec').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('active',x.dataset.id===id));scrollTo({top:0,behavior:'smooth'})}go('home');
 function sec(v){if(!v)return null;let s=String(v).trim();if(/^\d+(\.\d+)?$/.test(s))return +s;let p=s.split(':').map(Number);if(p.some(isNaN))return null;return p.length===2?p[0]*60+p[1]:p[0]*3600+p[1]*60+p[2]}function fmt(s,d=false){if(!s||!isFinite(s))return'—';let m=Math.floor(s/60),r=s-m*60;return m+':'+r.toFixed(d?1:0).padStart(d?4:2,'0')}
 const eqD=[25,50,100,200,400,800,1500];
@@ -805,7 +813,7 @@ function saveProfile(){let r=calc();localStorage.setItem('swimlab',JSON.stringif
 const D=[['踢腿','流線小幅打水','降低腿部阻力、建立髖帶動。','身體拉長，膝蓋放鬆，腳背延伸，水花小。','髖近水面、腿不張大。'],['踢腿','6 Kick Switch','側身平衡、滾動、髖腿控制。','側身打6下再由核心換邊。','不剪刀腳、不抬頭。'],['踢腿','2-beat Kick','1500m／三鐵省能節奏。','每手臂週期兩下主要踢腿，配合轉體。','踢腿像節拍器。'],['踢腿','6-beat Kick','高速穩定髖位。','每週期六下小幅打水，25–50m。','頻率高但幅度小。'],['水感','Scull','建立掌＋前臂水壓感。','手肘相對穩定，小幅內外掃。','前臂持續有壓力。'],['水感','Agility → 裸游','把方向回饋轉成裸游。','50m Agility + 50m 裸游。','裸游划次不暴增。'],['抓水','Catch / Hold','避免聳肩、拉肘、滑手。','肩放鬆，先讓前臂形成受力面再向後。','手掌與前臂同向。'],['抓水','單臂自由式','隔離抓水、推水與軀幹。','一手前伸固定，另一手完整划水。','不蛇行、不跨中線。'],['節奏','3-3-3 Drill','單臂控制接回完整游。','右3、左3、完整3。','切換不斷節奏。'],['節奏','拳頭游 → 正常','提高前臂參與。','25m拳頭＋25m正常。','恢復手掌後推進更明顯。'],['換氣','側身換氣','避免抬頭腿沉。','一眼留水中，頭隨軀幹轉。','前伸手不塌。'],['換氣','呼吸管直線游','去掉換氣干擾。','100–200m專注頭位與身體線。','左右划手對稱。'],['均速','50m 均速控制','減少加速—滑掉—再加速。','同趟維持連續划頻。','前後25m差距小。'],['均速','100m Pace Lock','建立CSS配速感。','固定出發，誤差±2秒。','後半不暴力加頻。'],['滾動','側躺平衡＋轉體','肩髖同步、減少蛇行。','髖肩一起滾動。','頭穩、腿不交叉。'],['滾動','Shark Drill','高肘恢復＋側身穩定。','高肘恢復位置停住，側身打水。','肩不聳。'],['蝶式','Body Dolphin','胸→髖→腿波動鏈。','胸微壓、髖跟進、膝只末端傳遞。','不是膝蓋猛踢。'],['蝶式','3-3-3 Fly','降低完整蝶負荷。','右3、左3、完整3。','完整蝶保留波動。'],['蝶式','第二下腿配推水','強化出水與前進。','手臂推水末段做第二下腿。','把身體送前不是送上。'],['轉換','DMC → 裸游','把高髖感轉回裸游。','50m DMC + 50m裸游2-beat。','拿掉蛙鞋髖不沉。'],['轉換','MP → Agility → 裸游','力量→方向→自然游。','25m MP +25m Agility +50m裸游。','裸游抓水穩、肩仍鬆。'],['自潛','Streamline + Fin','流線與蛙鞋效率。','低頻高效率，維持窄長身體線。','每踢推進距離增加。']];let cat='全部';function drawDrills(){let cs=['全部',...new Set(D.map(x=>x[0]))];tabs.innerHTML=cs.map(c=>`<button class="tab" onclick="cat='${c}';drawDrills()">${c}</button>`).join('');drills.innerHTML=D.filter(x=>cat==='全部'||x[0]===cat).map(x=>`<div class="drill"><span class="pill">${x[0]}</span><h4>${x[1]}</h4><p><b>目的：</b>${x[2]}</p><p><b>做法：</b>${x[3]}</p><p><b>成功標準：</b>${x[4]}</p></div>`).join('')}drawDrills();
 const M={sink:['身體平衡／頭位／踢腿協調','重踢腿、重滾動','呼吸管流線打水、6 Kick Switch、DMC→裸游'],breath:['換氣破壞頭位與支撐','重換氣、重前伸手','側身換氣、單臂＋呼吸管'],drop:['過度滑行、划頻低','重節奏、重均速','50m均速、拳頭→正常、25m節奏'],rate:['等待時間太長','重節奏、重水感','3-3-3、Scull、節拍器25m'],catch:['肩抬／肘先拉／前臂沒支撐','重水感、重水中划手','Catch/Hold、Agility→裸游'],cross:['前伸不穩、滾動過度','重滾動、重前伸','側躺平衡、單臂、呼吸管'],gear:['器材補了身體位置或推進','轉換、均速','DMC→裸游、MP→Agility→裸游'],fatigue:['技術耐力不足','重均速＋CSS','100m Pace Lock、200–400m CSS'],kick:['膝主導、幅度大','重踢腿','流線小幅、2-beat、6-beat'],fly:['第二下腿與手腳時機','蝶式節奏','Body Dolphin、3-3-3 Fly、第二下腿']};function diagnose(){let xs=[...document.querySelectorAll('#problems input:checked')].map(x=>x.value);diagOut.innerHTML=xs.length?'<h3>優先處理</h3>'+xs.map(k=>`<div class="call"><b>${M[k][0]}</b><br><span class="muted">${M[k][1]}</span><br>${M[k][2]}</div>`).join(''):'<p class="muted">至少選一項。</p>'}
 function gears(){return[...document.querySelectorAll('#gear input:checked')].map(x=>x.value)}function makePlan(){let G=goal.value,V=+vol.value,S=state.value,C=(JSON.parse(localStorage.getItem('swimlab')||'{}').c)||css()||127.5,gs=gears(),A=[];let add=(n,d,m)=>A.push([n,d,m]);add('暖身',S==='tired'?'300m easy：自由式＋仰式':'400m：200 easy + 4×50漸快',400);if(G==='tech'){add('技術1','4×50 呼吸管：頭位＋水平身體',200);add('技術2',gs.includes('agility')?'4×50 Agility + 4×50 裸游':'8×50 Scull／單臂／3-3-3',400);if(gs.includes('dmc'))add('轉換','4×(50 DMC + 50 裸游 2-beat)',400);add('裸游主課',`8×100 @ ${fmt(C+8,true)}–${fmt(C+3,true)}，休20s；看划次與掉速`,800);add('速度','8×25 裸游快，全休',200)}else if(G==='1500'||G==='tri'){add('技術','6×50：2呼吸管＋2 Agility＋2裸游',300);add('CSS',`6×200 @ ${fmt(C+5,true)}–${fmt(C,true)}，休20–30s`,1200);add('速度耐力',`6×50 @ ${fmt(C-12,true)} 感覺，休30–40s`,300);if(G==='tri')add('三鐵','4×100 sighting：抬頭2–4次後回低頭節奏',400)}else if(G==='fly'){add('蝶技術','4×50 Body Dolphin / 3-3-3 Fly',200);add('蝶節奏','8×25 第二下腿配推水',200);add('主課','6×50 蝶：25快＋25 easy free',300);add('自由式有氧',`6×100 @ ${fmt(C+5,true)}`,600)}else if(G==='sprint'){add('技術','6×50 水感＋均速＋3-3-3',300);add('神經速度','2組×(4×25 95–100% +100 easy)，全休',400);add('速度耐力','6×50 90%，休45–60s',300);add('轉換','4×50器材快感→4×50裸游',400)}else if(G==='recovery'){add('技術巡迴','8×50：踢腿／水感／側身／換氣／單臂／3-3-3／拳頭／完整',400);add('有氧',`6×100 @ ${fmt(C+20,true)}–${fmt(C+12,true)}`,600)}else{add('流線＋蛙鞋','8×50 easy，流線與踢腿效率',400);add('技術自由式','6×50 呼吸管／裸游轉換',300);add('有氧','6×100 easy–steady；不做水中極限閉氣',600);add('安全','CO₂／靜態閉氣另做；水中需 buddy',0)}let cur=A.reduce((s,x)=>s+x[2],0);if(cur<V-300)add('補量',`${Math.round((V-cur)/100)}×100 easy–steady @ ${fmt(C+18,true)}–${fmt(C+10,true)}`,V-cur);add('收操','100–200m easy + 胸椎／闊背／小腿放鬆',150);planOut.innerHTML=`<div class="result"><b>CSS：</b>${fmt(C,true)}/100m　<b>總量：</b>約 ${A.reduce((s,x)=>s+x[2],0)}m</div>`+A.map(x=>`<div class="set"><b>${x[0]}</b><span>${x[1]}</span><em>${x[2]?x[2]+'m':'陸上'}</em></div>`).join('');localStorage.setItem('lastPlan',planOut.innerText)}function copyPlan(){navigator.clipboard.writeText(planOut.innerText||'');alert('已複製')}
-const K=[['先減阻，再增加推進','身體線差、頭位高、髖腿沉時，先加力通常只會一起放大阻力。先做長、做窄、做穩，再談推進。'],['水平身體線與髖腿','頭、胸、髖、腳接近同一長軸。呼吸管、側身平衡、小幅打水與核心穩定可降低腿沉。'],['水感與支撐','有效划水不是快速把手拉過水，而是先建立支撐，再讓身體越過支撐點。掌＋前臂一起感受水壓。'],['五階段划手','Entry 入水、Catch 抓水、Hold 抱水、Push 推水、Recovery 提臂。每段都服務於減阻、支撐或推進。'],['高肘抓水','目的不是抬肩，而是讓肘相對穩定、前臂形成受力面。聳肩、拉肘容易讓手掌側翻、失去水感。'],['划頻 vs 划距','划距太短浪費能量；刻意滑太久也會掉速。長距離要找可持續的划頻與足夠划距，不在每划之間停住。'],['均速','每划大幅加速再滑慢，需要一直重新加速身體，能耗高。均速訓練就是縮小速度谷底。'],['轉肩與軀幹','滾動要肩髖協調，不是腰單獨扭。核心把手臂支撐、軀幹旋轉與腿部節奏連成動力鏈。'],['換氣','先吐氣、快速吸氣；頭隨軀幹轉，不抬下巴。換氣若造成前伸手塌或腿沉，先修平衡與支撐。'],['打水','自由式以小幅、高效率為主；髖帶動、膝放鬆、腳踝延伸。2-beat省能，6-beat支援高速。'],['3E','省力 Effortless → 效率 Efficient → 耐力 Enduring；速度是三者累積的結果。'],['十類技術','1重踢腿、2重水感、3重滾動及軀幹穩定、4重換氣、5重節奏、6重均速、7重提臂、8重前伸手、9重划手時踢腿幅度、10重水中划手。'],['固定課表＝試紙','課表內容固定，身體狀態成為變數。觀察第幾趟掉速、划次增加、換氣亂或動作崩，就能定位弱點。'],['CSS／六區','CSS在主要耐力與臨界速度之間。先把Z3技術耐力拉長，再用Z4–Z6補無氧耐力、VO₂與衝刺。'],['臨界泳速＝CSS嗎？','概念高度相近。400/200兩點法可直接換成CSS配速；多距離時間－距離回歸則是更完整的Critical Speed估計。SwimLab同時保留兩者，避免混為一談。'],['臨界泳速測試','測試前兩天避免高強度；盡量同週完成。25–400m可同日先長後短；800/1500m建議分日。時間有限可用50/100/200/400m四點回歸。'],['臨界速度進階','提高速度耐力時一次只改一個變數：增加趟數、縮短休息、增加距離、最後才縮短到岸時間。每個階段先維持至少約2週，掉速或技術崩就退階。'],['器材策略','呼吸管、手槳、蛙鞋是放大感覺或限制錯誤的工具。每段器材都要明確知道拿掉後要保留什麼。'],['蝶式','重點是胸—髖—腿波動、兩次踢腿時機、低阻力前進與呼吸節奏。25–50m高品質比疲勞硬游更有效。'],['力量訓練','肩胛穩定、背闊／胸／三頭、核心抗旋轉與髖伸是重點。力量要轉成水中穩定支撐，不是單純增加肌力。'],['技術耐力','會做正確動作，不等於能在400–1500m保持。把25m的正確動作逐步延長，就是技術耐力。'],['訓練順序','暖身→技術→器材／限制式Drill→裸游轉換→CSS主課→速度→收操。動作崩時不再硬加速。'],['自潛整合','放鬆、呼吸控制、CO₂耐受、流線、蛙鞋效率與耳壓平衡可提升水感；閉氣訓練必須遵守安全規範。']];knowledge.innerHTML=K.map((x,i)=>`<details ${i<2?'open':''}><summary>${String(i+1).padStart(2,'0')}｜${x[0]}</summary><p class="muted">${x[1]}</p></details>`).join('');makePlan();
+const K=[['先減阻，再增加推進','身體線差、頭位高、髖腿沉時，先加力通常只會一起放大阻力。先做長、做窄、做穩，再談推進。'],['水平身體線與髖腿','頭、胸、髖、腳接近同一長軸。呼吸管、側身平衡、小幅打水與核心穩定可降低腿沉。'],['水感與支撐','有效划水不是快速把手拉過水，而是先建立支撐，再讓身體越過支撐點。掌＋前臂一起感受水壓。'],['五階段划手','Entry 入水、Catch 抓水、Hold 抱水、Push 推水、Recovery 提臂。每段都服務於減阻、支撐或推進。'],['高肘抓水','目的不是抬肩，而是讓肘相對穩定、前臂形成受力面。聳肩、拉肘容易讓手掌側翻、失去水感。'],['划頻 vs 划距','划距太短浪費能量；刻意滑太久也會掉速。長距離要找可持續的划頻與足夠划距，不在每划之間停住。'],['均速','每划大幅加速再滑慢，需要一直重新加速身體，能耗高。均速訓練就是縮小速度谷底。'],['轉肩與軀幹','滾動要肩髖協調，不是腰單獨扭。核心把手臂支撐、軀幹旋轉與腿部節奏連成動力鏈。'],['換氣','先吐氣、快速吸氣；頭隨軀幹轉，不抬下巴。換氣若造成前伸手塌或腿沉，先修平衡與支撐。'],['打水','自由式以小幅、高效率為主；髖帶動、膝放鬆、腳踝延伸。2-beat省能，6-beat支援高速。'],['3E','省力 Effortless → 效率 Efficient → 耐力 Enduring；速度是三者累積的結果。'],['十類技術','1重踢腿、2重水感、3重滾動及軀幹穩定、4重換氣、5重節奏、6重均速、7重提臂、8重前伸手、9重划手時踢腿幅度、10重水中划手。'],['固定課表＝試紙','課表內容固定，身體狀態成為變數。觀察第幾趟掉速、划次增加、換氣亂或動作崩，就能定位弱點。'],['CSS／六區','CSS在主要耐力與臨界速度之間。先把Z3技術耐力拉長，再用Z4–Z6補無氧耐力、VO₂與衝刺。'],['臨界泳速＝CSS嗎？','概念高度相近。400/200兩點法可直接換成CSS配速；多距離時間－距離回歸則是更完整的Critical Speed估計。SwimLab同時保留兩者，避免混為一談。'],['臨界泳速測試','測試前兩天避免高強度；盡量同週完成。25–400m可同日先長後短；800/1500m建議分日。時間有限可用50/100/200/400m四點回歸。'],['臨界速度進階','提高速度耐力時一次只改一個變數：增加趟數、縮短休息、增加距離、最後才縮短到岸時間。每個階段先維持至少約2週，掉速或技術崩就退階。'],['臨界速度耐受度','真正進步不是只有 CSS 變快，而是新速度能維持得久。SwimLab 以達標率、平均偏差、後段掉速、可持續距離與配速變異計算 Durability；CSS 變快但耐受度明顯下降時會標示可能的假性進步。'],['器材策略','呼吸管、手槳、蛙鞋是放大感覺或限制錯誤的工具。每段器材都要明確知道拿掉後要保留什麼。'],['蝶式','重點是胸—髖—腿波動、兩次踢腿時機、低阻力前進與呼吸節奏。25–50m高品質比疲勞硬游更有效。'],['力量訓練','肩胛穩定、背闊／胸／三頭、核心抗旋轉與髖伸是重點。力量要轉成水中穩定支撐，不是單純增加肌力。'],['技術耐力','會做正確動作，不等於能在400–1500m保持。把25m的正確動作逐步延長，就是技術耐力。'],['訓練順序','暖身→技術→器材／限制式Drill→裸游轉換→CSS主課→速度→收操。動作崩時不再硬加速。'],['自潛整合','放鬆、呼吸控制、CO₂耐受、流線、蛙鞋效率與耳壓平衡可提升水感；閉氣訓練必須遵守安全規範。']];knowledge.innerHTML=K.map((x,i)=>`<details ${i<2?'open':''}><summary>${String(i+1).padStart(2,'0')}｜${x[0]}</summary><p class="muted">${x[1]}</p></details>`).join('');makePlan();
 
 const TRAIN_TYPES=['自由式裸游 Freestyle','熱身 Warm-up','臨界泳速 CSS','衝刺 Sprint','分解動作 Drill','蝶式 Butterfly','抬頭捷 Head-up Freestyle','恢復 Recovery','踢腿 Kick','混合 Mixed'];
 const EQUIP_TAGS=['Agility','MP Strength Paddle','DMC Elite Max','Zoomer Z2','EDGE FIN','FINIS 呼吸管','腰間挖水器','Pull Buoy','Kickboard','腳蹼/蛙鞋其他','划手板其他'];
@@ -1036,6 +1044,65 @@ function avg(a){return a.length?a.reduce((x,y)=>x+y,0)/a.length:null}
 function clamp(v,a=0,b=100){return Math.max(a,Math.min(b,v))}
 function scoreClass(v){if(v==null||!isFinite(v))return'';return v>=80?'good':v>=60?'mid':'bad'}
 
+
+function stddev(a){
+  if(!a.length)return null;
+  const m=avg(a);return Math.sqrt(avg(a.map(x=>(x-m)*(x-m))));
+}
+function calcCssDurability(cssSets,cssv){
+  const sets=(cssSets||[]).filter(x=>x&&isFinite(x.pace)&&x.dist>0);
+  if(sets.length<4||!isFinite(cssv)||cssv<=0)return null;
+  const paces=sets.map(x=>x.pace);
+  const tol=5; // CSS ±5s/100m is the default quality band.
+  const hit=sets.filter(x=>Math.abs(x.pace-cssv)<=tol).length;
+  const hitRate=hit/sets.length;
+  const avgAbsDev=avg(paces.map(p=>Math.abs(p-cssv)));
+  const devScore=clamp(100-avgAbsDev*8,0,100);
+
+  const k=Math.max(1,Math.floor(sets.length/3));
+  const first=avg(paces.slice(0,k));
+  const last=avg(paces.slice(-k));
+  const fade=last-first;
+  const fadeScore=clamp(100-Math.max(0,fade)*10,0,100);
+
+  // Sustainable distance: accumulate until two consecutive reps are slower than CSS+5s.
+  // A single miss is tolerated because turns / traffic / timing error can create one noisy lap.
+  let sustainableDistance=0,miss=0,pendingMissDistance=0;
+  for(const x of sets){
+    if(x.pace<=cssv+tol){
+      // A single slow rep is tolerated as noise; if the next rep recovers, include it.
+      if(miss===1)sustainableDistance+=pendingMissDistance;
+      sustainableDistance+=x.dist;miss=0;pendingMissDistance=0;
+    }else{
+      miss++;
+      if(miss===1){pendingMissDistance=x.dist;continue;}
+      if(miss>=2)break;
+    }
+  }
+  const totalDistance=sets.reduce((s,x)=>s+x.dist,0);
+  const sustainRate=totalDistance?sustainableDistance/totalDistance:0;
+  const sustainScore=clamp(sustainRate*100,0,100);
+
+  const cv=stddev(paces)/avg(paces);
+  const stabilityScore=clamp(100-cv*900,0,100);
+  // Weight the book's idea of "hold the speed" most heavily: target hit + late fade + sustainable distance.
+  const score=Math.round(clamp(hitRate*100*.35 + fadeScore*.25 + devScore*.20 + sustainScore*.15 + stabilityScore*.05,0,100));
+  return {
+    score,hit,repCount:sets.length,hitRate,avgAbsDev,fade,
+    sustainableDistance,totalDistance,sustainRate,cv,tol,
+    avgPace:avg(paces),firstPace:first,lastPace:last,
+    components:{hitScore:hitRate*100,fadeScore,devScore,sustainScore,stabilityScore}
+  };
+}
+function cssDurabilityGrade(v){
+  if(v==null)return '資料不足';
+  if(v>=90)return '非常穩定';
+  if(v>=80)return '穩定';
+  if(v>=70)return '尚可';
+  if(v>=60)return '需要加強';
+  return '耐受度不足';
+}
+
 function analyzeTraining(){
   const rows=collectTrainingRows();
   if(!rows.length){trainingDiagnosis.innerHTML='請先輸入至少一組訓練。';return}
@@ -1102,6 +1169,26 @@ function analyzeTraining(){
     cssScore=Math.round(cssRate*100);
   }
 
+  // 5b) Critical Speed Durability: naked CSS reps only.
+  const cssNakedSets=cssSets.filter(x=>(x.equip||[]).length===0&&!['Drill','Kick','Warm-up','Recovery'].includes(x.type));
+  const cssDur=calcCssDurability(cssNakedSets,cssv);
+  const cssDurability=cssDur?.score??null;
+
+  // Previous-session comparison for false-progress detection.
+  const histForDur=JSON.parse(localStorage.getItem('swimlabTrainingHistory')||'[]');
+  const prevDurSession=histForDur.find(h=>h?.summary?.cssDurability!=null&&h?.summary?.cssPace!=null);
+  let falseProgress=false,falseProgressText='';
+  if(prevDurSession&&cssDurability!=null){
+    const prevPace=+prevDurSession.summary.cssPace;
+    const prevDur=+prevDurSession.summary.cssDurability;
+    const speedGain=prevPace-cssv; // positive = current CSS faster
+    const durDrop=prevDur-cssDurability;
+    if(speedGain>=2&&durDrop>=10){
+      falseProgress=true;
+      falseProgressText=`CSS 比上一個可比較 Session 快 <b>${speedGain.toFixed(1)}s/100m</b>，但耐受度下降 <b>${durDrop.toFixed(0)} 分</b>；可能屬於「假性進步」，先把新速度維持能力補起來。`;
+    }
+  }
+
   // 6) Equipment -> Naked Transfer: neighboring same-distance equipment then naked.
   for(let i=0;i<rows.length-1;i++){
     const a=rows[i],b=rows[i+1];
@@ -1124,6 +1211,7 @@ function analyzeTraining(){
     ['技術耐力 Technique Durability',techDur,'至少 3 筆裸游成績＋划水數'],
     ['有氧效率 Aerobic Efficiency',aerobic,'至少 3 筆裸游「成績＋平均心率」'],
     ['CSS 執行品質 CSS Execution',cssScore,'至少 3 筆標記為 CSS 的成績'],
+    ['臨界速度耐受度 Critical Speed Durability',cssDurability,'至少 4 筆裸游 CSS 成績'],
     ['器材→裸游轉換 Equipment → Naked Transfer',transferScore,'相同距離的「器材組 → 下一列裸游組」'],
     ['身體位置／踢腿 Body Position / Kick',bodyScore,'蛙鞋器材組 → 相同距離裸游組']
   ];
@@ -1140,11 +1228,34 @@ function analyzeTraining(){
       ${v==null?`<div class="smallnote">需要：${need}</div>`:''}
     </div>`).join('')}</div>`;
 
+  const durBox=document.getElementById('cssDurabilityDetail');
+  if(durBox){
+    if(!cssDur){
+      durBox.innerHTML='<div class="call">至少需要 <b>4 筆裸游 CSS</b> 成績。請把主課訓練目的標記為「臨界泳速 CSS」，器材組不列入耐受度。</div>';
+    }else{
+      const durClass=scoreClass(cssDur.score);
+      durBox.innerHTML=`
+        <div class="scoregrid">
+          <div class="scorebox"><small>耐受度分數</small><strong class="${durClass}">${cssDur.score}</strong><div class="smallnote">${cssDurabilityGrade(cssDur.score)}</div></div>
+          <div class="scorebox"><small>達標趟數 CSS ±${cssDur.tol}s</small><strong>${cssDur.hit}/${cssDur.repCount}</strong><div class="smallnote">${(cssDur.hitRate*100).toFixed(0)}%</div></div>
+          <div class="scorebox"><small>平均配速偏差</small><strong>${cssDur.avgAbsDev.toFixed(1)}s</strong><div class="smallnote">越小越好</div></div>
+          <div class="scorebox"><small>後段掉速</small><strong class="${scoreClass(100-Math.max(0,cssDur.fade)*10)}">${cssDur.fade>=0?'+':''}${cssDur.fade.toFixed(1)}s</strong><div class="smallnote">最後 1/3 vs 前 1/3</div></div>
+          <div class="scorebox"><small>CSS 可持續距離</small><strong>${Math.round(cssDur.sustainableDistance)}m</strong><div class="smallnote">本組 ${Math.round(cssDur.totalDistance)}m</div></div>
+          <div class="scorebox"><small>配速變異 CV</small><strong>${(cssDur.cv*100).toFixed(1)}%</strong><div class="smallnote">越小越穩定</div></div>
+        </div>
+        <div class="call" style="margin-top:10px"><b>判讀：</b>CSS ${fmtFull(cssv)}/100m；本組平均 ${fmtFull(cssDur.avgPace)}/100m。系統重點不是單趟最快，而是新速度能否在整組中維持。</div>
+        ${falseProgress?`<div class="call warn" style="margin-top:10px"><b>⚠ 假性進步警示：</b>${falseProgressText}</div>`:''}`;
+    }
+  }
+
   let probs=[];
   if(naked.length<3) probs.push(`目前只有 <b>${naked.length}</b> 筆可比較的裸游成績；至少 3 筆才適合判斷配速穩定度。`);
   if(fade!=null&&fade>4) probs.push(`後段配速比前段慢 <b>${fade.toFixed(1)} 秒/100m</b>，優先改善技術耐力與前段配速控制。`);
   if(strokeRise!=null&&strokeRise>=2) probs.push(`後段划水數平均增加 <b>${strokeRise.toFixed(1)}</b>，可能是疲勞後划距縮短或抓水效率下降。`);
   if(cssScore==null) probs.push(`尚未有足夠 <b>CSS 標記</b> 的成績，因此 CSS 執行品質不評分。`);
+  if(cssDurability==null) probs.push(`至少需要 <b>4 筆裸游 CSS</b> 成績，才能計算臨界速度耐受度。`);
+  if(cssDur&&cssDur.fade>4) probs.push(`CSS 主課後段比前段慢 <b>${cssDur.fade.toFixed(1)}s/100m</b>；目前速度耐受度不足，先不要再提高目標速度。`);
+  if(falseProgress) probs.unshift(falseProgressText);
   if(aerobic==null) probs.push(`平均心率資料不足，因此 <b>有氧效率</b> 不評分。`);
   if(transferScore==null) probs.push(`沒有找到「<b>相同距離器材組 → 裸游組</b>」配對，因此器材→裸游轉換率不評分。`);
   if(bodyScore==null) probs.push(`沒有找到蛙鞋→裸游配對，因此 <b>身體位置／踢腿</b> 暫不評分。`);
@@ -1156,6 +1267,7 @@ function analyzeTraining(){
   let next=[];
   if(transferScore!=null&&transferScore<90) next.push('4×(50m 器材 + 50m 裸游)，裸游划水數增加 ≤2，立即轉換水感。');
   if(techDur!=null&&techDur<75) next.push('2×(5×100m 裸游 @ CSS+3~6s)，組間休90s；組內配速差 ≤3s。');
+  if(cssDurability!=null&&cssDurability<75) next.push('CSS 耐受度優先：維持目前 CSS，不加速；用 6–10×100m，先把達標率拉到 ≥80%、後段掉速 ≤3s，再增加趟數。');
   if(paceStability!=null&&paceStability<75) next.push('6×100m 均速控制，前兩趟刻意壓住，不要前快後崩。');
   if(strokeEff!=null&&strokeEff<70) next.push('4×50m Agility / Scull + 4×50m 裸游，專注前臂支撐與不過度滑行。');
   if(!next.length){
@@ -1166,11 +1278,15 @@ function analyzeTraining(){
 
   localStorage.setItem('swimlabLastAnalysis',JSON.stringify({
     date:new Date().toISOString(),rows,scores,overall,probs,next,
+    cssDurability:cssDur,
+    cssPace:cssv,
+    falseProgress,
     dataCoverage:{
       naked:naked.length,
       stroke:effObs.length,
       hr:ae.length,
       css:cssSets.length,
+      cssDurability:cssNakedSets.length,
       transfer:transferPairs.length
     }
   }));
@@ -1224,6 +1340,10 @@ function buildSessionSummary(rows,analysis){
     aerobic:scores['有氧效率 Aerobic Efficiency']??null,
     transfer:scores['器材→裸游轉換 Equipment → Naked Transfer']??null,
     css:scores['CSS 執行品質 CSS Execution']??null,
+    cssPace:analysis?.cssPace??null,
+    cssDurability:scores['臨界速度耐受度 Critical Speed Durability']??analysis?.cssDurability?.score??null,
+    cssSustainableDistance:analysis?.cssDurability?.sustainableDistance??null,
+    cssFade:analysis?.cssDurability?.fade??null,
     tech:scores['技術耐力 Technique Durability']??null,
     paceStability:scores['配速穩定度 Pace Stability']??null,
     strokeEfficiency:scores['划水效率 Stroke Efficiency']??null,
@@ -1240,13 +1360,15 @@ function metricMeta(k){
     dps:['划距 DPS proxy','m/stroke','higher'],
     aerobic:['有氧效率 Aerobic Efficiency','分','higher'],
     transfer:['器材→裸游轉換率','%','higher'],
+    cssPace:['CSS / 臨界配速','秒/100m','lower'],
+    cssDurability:['臨界速度耐受度 Critical Speed Durability','分','higher'],
     css:['CSS 執行品質 CSS Execution','分','higher'],
     tech:['技術耐力 Technique Durability','分','higher']
   };return m[k]||[k,'','higher'];
 }
 function fmtMetric(k,v){
   if(v==null||!isFinite(v))return'—';
-  if(k==='nakedPace')return fmtFull(v)+'/100m';
+  if(k==='nakedPace'||k==='cssPace')return fmtFull(v)+'/100m';
   if(k==='dps')return v.toFixed(2)+' m/stroke';
   if(k==='transfer')return v.toFixed(1)+'%';
   return v.toFixed(1);
@@ -1271,7 +1393,7 @@ function renderTrendSvg(data,key){
   const path=points.map((p,i)=>(i?'L':'M')+x(i).toFixed(1)+','+y(p.v).toFixed(1)).join(' ');
   const grid=[0,.25,.5,.75,1].map(f=>{
     const yy=T+(H-T-B)*f, val=max-(max-min)*f;
-    return `<line x1="${L}" y1="${yy}" x2="${W-R}" y2="${yy}" class="trend-grid"/><text x="${L-8}" y="${yy+4}" text-anchor="end" class="trend-label">${key==='nakedPace'?fmtFull(val):val.toFixed(1)}</text>`;
+    return `<line x1="${L}" y1="${yy}" x2="${W-R}" y2="${yy}" class="trend-grid"/><text x="${L-8}" y="${yy+4}" text-anchor="end" class="trend-label">${(key==='nakedPace'||key==='cssPace')?fmtFull(val):val.toFixed(1)}</text>`;
   }).join('');
   const dots=points.map((p,i)=>{
     const show=i===0||i===points.length-1||points.length<=12||i%Math.ceil(points.length/10)===0;
@@ -2138,7 +2260,7 @@ function smartMatchPlanToGarmin(){
 
   box.style.display='block';
   box.innerHTML=`
-    <h3>Garmin 智慧配對結果 <small class="muted">v3.0.1</small></h3>
+    <h3>Garmin 智慧配對結果 <small class="muted">v3.1.0</small></h3>
     <div class="smart-match-summary">
       <div><small>課表組數</small><strong>${saved.rows.length}</strong></div>
       <div><small>Garmin Interval</small><strong>${actual.length}</strong></div>
